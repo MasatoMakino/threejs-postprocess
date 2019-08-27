@@ -1,0 +1,42 @@
+{
+  "name": "threejs-postprocess",
+  "discription": "Collection of post process modules for three.js",
+  "version": "0.1.0",
+  "main": "./bin/index.js",
+  "repository": "https://MasatoMakino@github.com/MasatoMakino/threejs-postprocess.git",
+  "author": "MasatoMakino <unagiinu.g@gmail.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "three": "^0.107.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "dat.gui": "^0.7.6",
+    "gulp": "^4.0.2",
+    "gulptask-dev-server": "https://github.com/MasatoMakino/gulptask-dev-server.git",
+    "gulptask-tsc": "https://github.com/MasatoMakino/gulptask-tsc.git",
+    "gulptask-tsdoc": "https://github.com/MasatoMakino/gulptask-tsdoc.git",
+    "gulptask-webpack": "https://github.com/MasatoMakino/gulptask-webpack.git",
+    "husky": "^3.0.4",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1",
+    "three": "^0.107.0",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3"
+  },
+  "scripts": {
+    "start:dev": "gulp start_dev",
+    "build": "npm run prettier:src && gulp build && npm run doc:card",
+    "build:clean": "npm run prettier:src && gulp build_clean && npm run doc:card",
+    "prettier:src": "prettier --write './**/*.{js,ts,json}' ",
+    "doc:card": "repoimg -n MasatoMakino/threejs-postprocess -o ./docs/card.png",
+    "checkout:docs": "git checkout HEAD ./docs/api/ ./docs/demo/"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}
