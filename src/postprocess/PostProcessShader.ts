@@ -6,6 +6,7 @@ import { IUniform } from "three";
  */
 export class PostProcessShader {
   uniforms: { [uniform: string]: IUniform };
+  //language=GLSL
   vertexShader: string = `
     varying vec2 vUv;
     void main() {
