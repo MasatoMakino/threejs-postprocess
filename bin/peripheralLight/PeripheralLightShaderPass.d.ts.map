@@ -1,0 +1,1 @@
+{"version":3,"file":"PeripheralLightShaderPass.d.ts","sourceRoot":"","sources":["../../src/peripheralLight/PeripheralLightShaderPass.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,KAAK,EAAE,MAAM,OAAO,CAAC;AAC9B,OAAO,EAAE,qBAAqB,EAAE,MAAM,UAAU,CAAC;AAEjD;;GAEG;AACH,qBAAa,yBAA0B,SAAQ,qBAAqB;IAC9D,IAAI,EAAI,MAAM;IAOd,WAAW,EAAI,MAAM;IAOrB,WAAW,EAAI,MAAM;IAOrB,KAAK,EAAI,KAAK;;CAUnB"}

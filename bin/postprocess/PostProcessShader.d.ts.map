@@ -1,0 +1,1 @@
+{"version":3,"file":"PostProcessShader.d.ts","sourceRoot":"","sources":["../../src/postprocess/PostProcessShader.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,QAAQ,EAAE,MAAM,OAAO,CAAC;AAEjC;;;GAGG;AACH,qBAAa,iBAAiB;IAC5B,QAAQ,EAAE;QAAE,CAAC,OAAO,EAAE,MAAM,GAAG,QAAQ,CAAA;KAAE,CAAC;IAE1C,YAAY,EAAE,MAAM,CAMlB;IACF,cAAc,EAAE,MAAM,CAAC;;IAKvB,SAAS,CAAC,WAAW;CAKtB"}
