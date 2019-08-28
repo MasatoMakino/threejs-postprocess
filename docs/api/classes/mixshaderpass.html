@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>PostProcessShaderPass | threejs-postprocess</title>
+	<title>MixShaderPass | threejs-postprocess</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,35 +56,31 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="postprocessshaderpass.html">PostProcessShaderPass</a>
+					<a href="mixshaderpass.html">MixShaderPass</a>
 				</li>
 			</ul>
-			<h1>Class PostProcessShaderPass</h1>
+			<h1>Class MixShaderPass</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>他のエフェクトコンポーザーの描画結果を受け取り、自身のレンダリング結果に乗算するShaderPass</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="tsd-signature-type">ShaderPass</span>
+						<a href="postprocessshaderpass.html" class="tsd-signature-type">PostProcessShaderPass</a>
 						<ul class="tsd-hierarchy">
 							<li>
-								<span class="target">PostProcessShaderPass</span>
-								<ul class="tsd-hierarchy">
-									<li>
-										<a href="peripherallightshaderpass.html" class="tsd-signature-type">PeripheralLightShaderPass</a>
-									</li>
-									<li>
-										<a href="chromaticaberrationshaderpass.html" class="tsd-signature-type">ChromaticAberrationShaderPass</a>
-									</li>
-									<li>
-										<a href="mixshaderpass.html" class="tsd-signature-type">MixShaderPass</a>
-									</li>
-								</ul>
+								<span class="target">MixShaderPass</span>
 							</li>
 						</ul>
 					</li>
@@ -94,67 +90,69 @@
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section tsd-is-inherited">
+						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="postprocessshaderpass.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="mixshaderpass.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-inherited">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="mixshaderpass.html#clear" class="tsd-kind-icon">clear</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="mixshaderpass.html#enabled" class="tsd-kind-icon">enabled</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="mixshaderpass.html#fsquad" class="tsd-kind-icon">fs<wbr>Quad</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="mixshaderpass.html#material" class="tsd-kind-icon">material</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="mixshaderpass.html#needsswap" class="tsd-kind-icon">needs<wbr>Swap</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="mixshaderpass.html#rendertoscreen" class="tsd-kind-icon">render<wbr>ToScreen</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="mixshaderpass.html#textureid" class="tsd-kind-icon">textureID</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="mixshaderpass.html#uniforms" class="tsd-kind-icon">uniforms</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
-							<h3>Properties</h3>
+							<h3>Accessors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="postprocessshaderpass.html#clear" class="tsd-kind-icon">clear</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="postprocessshaderpass.html#enabled" class="tsd-kind-icon">enabled</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="postprocessshaderpass.html#fsquad" class="tsd-kind-icon">fs<wbr>Quad</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="postprocessshaderpass.html#material" class="tsd-kind-icon">material</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="postprocessshaderpass.html#needsswap" class="tsd-kind-icon">needs<wbr>Swap</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="postprocessshaderpass.html#rendertoscreen" class="tsd-kind-icon">render<wbr>ToScreen</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="postprocessshaderpass.html#textureid" class="tsd-kind-icon">textureID</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="postprocessshaderpass.html#uniforms" class="tsd-kind-icon">uniforms</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="mixshaderpass.html#mixtexture" class="tsd-kind-icon">mix<wbr>Texture</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-inherited">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="postprocessshaderpass.html#render" class="tsd-kind-icon">render</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="postprocessshaderpass.html#setsize" class="tsd-kind-icon">set<wbr>Size</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="mixshaderpass.html#render" class="tsd-kind-icon">render</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="mixshaderpass.html#setsize" class="tsd-kind-icon">set<wbr>Size</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Constructors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
-					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Post<wbr>Process<wbr>Shader<wbr>Pass<span class="tsd-signature-symbol">(</span>shader<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span>, textureID<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="postprocessshaderpass.html" class="tsd-signature-type">PostProcessShaderPass</a></li>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Mix<wbr>Shader<wbr>Pass<span class="tsd-signature-symbol">(</span>mixTexture<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Texture</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="mixshaderpass.html" class="tsd-signature-type">MixShaderPass</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from ShaderPass.__constructor</p>
-								<p>Overrides Pass.__constructor</p>
+								<p>Overrides ShaderPass.__constructor</p>
 								<ul>
-									<li>Defined in node_modules/three/examples/jsm/postprocessing/ShaderPass.d.ts:7</li>
+									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/4a7b6d4/src/mix/MixShaderPass.ts#L14">mix/MixShaderPass.ts:14</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>shader: <span class="tsd-signature-type">object</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> textureID: <span class="tsd-signature-type">string</span></h5>
+									<h5>mixTexture: <span class="tsd-signature-type">Texture</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="postprocessshaderpass.html" class="tsd-signature-type">PostProcessShaderPass</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="mixshaderpass.html" class="tsd-signature-type">MixShaderPass</a></h4>
 						</li>
 					</ul>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
+			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="clear" class="tsd-anchor"></a>
@@ -233,11 +231,12 @@
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
 					<a name="uniforms" class="tsd-anchor"></a>
 					<h3>uniforms</h3>
 					<div class="tsd-signature tsd-kind-icon">uniforms<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from <a href="postprocessshaderpass.html">PostProcessShaderPass</a>.<a href="postprocessshaderpass.html#uniforms">uniforms</a></p>
 						<p>Overrides ShaderPass.uniforms</p>
 						<ul>
 							<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/4a7b6d4/src/postprocess/PostProcessShaderPass.ts#L5">postprocess/PostProcessShaderPass.ts:5</a></li>
@@ -251,6 +250,41 @@
 							</li>
 						</ul>
 					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Accessors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class">
+					<a name="mixtexture" class="tsd-anchor"></a>
+					<h3>mix<wbr>Texture</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> mixTexture<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Texture</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> mixTexture<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Texture</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/4a7b6d4/src/mix/MixShaderPass.ts#L9">mix/MixShaderPass.ts:9</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Texture</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/4a7b6d4/src/mix/MixShaderPass.ts#L12">mix/MixShaderPass.ts:12</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">Texture</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
@@ -339,9 +373,51 @@
 					<li class=" tsd-kind-class">
 						<a href="mixshader.html" class="tsd-kind-icon">Mix<wbr>Shader</a>
 					</li>
-					<li class=" tsd-kind-class">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class">
 						<a href="mixshaderpass.html" class="tsd-kind-icon">Mix<wbr>Shader<wbr>Pass</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
+								<a href="mixshaderpass.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="mixshaderpass.html#clear" class="tsd-kind-icon">clear</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="mixshaderpass.html#enabled" class="tsd-kind-icon">enabled</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="mixshaderpass.html#fsquad" class="tsd-kind-icon">fs<wbr>Quad</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="mixshaderpass.html#material" class="tsd-kind-icon">material</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="mixshaderpass.html#needsswap" class="tsd-kind-icon">needs<wbr>Swap</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="mixshaderpass.html#rendertoscreen" class="tsd-kind-icon">render<wbr>ToScreen</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="mixshaderpass.html#textureid" class="tsd-kind-icon">textureID</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+								<a href="mixshaderpass.html#uniforms" class="tsd-kind-icon">uniforms</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class">
+								<a href="mixshaderpass.html#mixtexture" class="tsd-kind-icon">mix<wbr>Texture</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="mixshaderpass.html#render" class="tsd-kind-icon">render</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="mixshaderpass.html#setsize" class="tsd-kind-icon">set<wbr>Size</a>
+							</li>
+						</ul>
 					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-class">
 						<a href="peripherallightshader.html" class="tsd-kind-icon">Peripheral<wbr>Light<wbr>Shader</a>
 					</li>
@@ -354,48 +430,9 @@
 					<li class=" tsd-kind-class">
 						<a href="postprocessshader.html" class="tsd-kind-icon">Post<wbr>Process<wbr>Shader</a>
 					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-class">
+					<li class=" tsd-kind-class">
 						<a href="postprocessshaderpass.html" class="tsd-kind-icon">Post<wbr>Process<wbr>Shader<wbr>Pass</a>
-						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
-								<a href="postprocessshaderpass.html#constructor" class="tsd-kind-icon">constructor</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="postprocessshaderpass.html#clear" class="tsd-kind-icon">clear</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="postprocessshaderpass.html#enabled" class="tsd-kind-icon">enabled</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="postprocessshaderpass.html#fsquad" class="tsd-kind-icon">fs<wbr>Quad</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="postprocessshaderpass.html#material" class="tsd-kind-icon">material</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="postprocessshaderpass.html#needsswap" class="tsd-kind-icon">needs<wbr>Swap</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="postprocessshaderpass.html#rendertoscreen" class="tsd-kind-icon">render<wbr>ToScreen</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="postprocessshaderpass.html#textureid" class="tsd-kind-icon">textureID</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
-								<a href="postprocessshaderpass.html#uniforms" class="tsd-kind-icon">uniforms</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="postprocessshaderpass.html#render" class="tsd-kind-icon">render</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="postprocessshaderpass.html#setsize" class="tsd-kind-icon">set<wbr>Size</a>
-							</li>
-						</ul>
 					</li>
-				</ul>
-				<ul class="after-current">
 				</ul>
 			</nav>
 		</div>

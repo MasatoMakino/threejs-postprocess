@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ChromaticAberrationShader | threejs-postprocess</title>
+	<title>MixShader | threejs-postprocess</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="chromaticaberrationshader.html">ChromaticAberrationShader</a>
+					<a href="mixshader.html">MixShader</a>
 				</li>
 			</ul>
-			<h1>Class ChromaticAberrationShader</h1>
+			<h1>Class MixShader</h1>
 		</div>
 	</div>
 </header>
@@ -73,7 +73,7 @@
 						<a href="postprocessshader.html" class="tsd-signature-type">PostProcessShader</a>
 						<ul class="tsd-hierarchy">
 							<li>
-								<span class="target">ChromaticAberrationShader</span>
+								<span class="target">MixShader</span>
 							</li>
 						</ul>
 					</li>
@@ -86,21 +86,21 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="chromaticaberrationshader.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="mixshader.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-inherited">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="chromaticaberrationshader.html#fragmentshader" class="tsd-kind-icon">fragment<wbr>Shader</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="chromaticaberrationshader.html#uniforms" class="tsd-kind-icon">uniforms</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="chromaticaberrationshader.html#vertexshader" class="tsd-kind-icon">vertex<wbr>Shader</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="mixshader.html#fragmentshader" class="tsd-kind-icon">fragment<wbr>Shader</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="mixshader.html#uniforms" class="tsd-kind-icon">uniforms</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="mixshader.html#vertexshader" class="tsd-kind-icon">vertex<wbr>Shader</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-private-protected">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected"><a href="chromaticaberrationshader.html#inituniform" class="tsd-kind-icon">init<wbr>Uniform</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected"><a href="mixshader.html#inituniform" class="tsd-kind-icon">init<wbr>Uniform</a></li>
 							</ul>
 						</section>
 					</div>
@@ -112,17 +112,17 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Chromatic<wbr>Aberration<wbr>Shader<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="chromaticaberrationshader.html" class="tsd-signature-type">ChromaticAberrationShader</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Mix<wbr>Shader<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="mixshader.html" class="tsd-signature-type">MixShader</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides <a href="postprocessshader.html">PostProcessShader</a>.<a href="postprocessshader.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/4a7b6d4/src/chromaticAberration/ChromaticAberrationShader.ts#L5">chromaticAberration/ChromaticAberrationShader.ts:5</a></li>
+									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/4a7b6d4/src/mix/MixShader.ts#L5">mix/MixShader.ts:5</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <a href="chromaticaberrationshader.html" class="tsd-signature-type">ChromaticAberrationShader</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="mixshader.html" class="tsd-signature-type">MixShader</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -184,7 +184,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="postprocessshader.html">PostProcessShader</a>.<a href="postprocessshader.html#inituniform">initUniform</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/4a7b6d4/src/chromaticAberration/ChromaticAberrationShader.ts#L11">chromaticAberration/ChromaticAberrationShader.ts:11</a></li>
+									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/4a7b6d4/src/mix/MixShader.ts#L11">mix/MixShader.ts:11</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -203,36 +203,36 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-class">
+						<a href="chromaticaberrationshader.html" class="tsd-kind-icon">Chromatic<wbr>Aberration<wbr>Shader</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="chromaticaberrationshaderpass.html" class="tsd-kind-icon">Chromatic<wbr>Aberration<wbr>Shader<wbr>Pass</a>
+					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class">
-						<a href="chromaticaberrationshader.html" class="tsd-kind-icon">Chromatic<wbr>Aberration<wbr>Shader</a>
+						<a href="mixshader.html" class="tsd-kind-icon">Mix<wbr>Shader</a>
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-								<a href="chromaticaberrationshader.html#constructor" class="tsd-kind-icon">constructor</a>
+								<a href="mixshader.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="chromaticaberrationshader.html#fragmentshader" class="tsd-kind-icon">fragment<wbr>Shader</a>
+								<a href="mixshader.html#fragmentshader" class="tsd-kind-icon">fragment<wbr>Shader</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="chromaticaberrationshader.html#uniforms" class="tsd-kind-icon">uniforms</a>
+								<a href="mixshader.html#uniforms" class="tsd-kind-icon">uniforms</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="chromaticaberrationshader.html#vertexshader" class="tsd-kind-icon">vertex<wbr>Shader</a>
+								<a href="mixshader.html#vertexshader" class="tsd-kind-icon">vertex<wbr>Shader</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
-								<a href="chromaticaberrationshader.html#inituniform" class="tsd-kind-icon">init<wbr>Uniform</a>
+								<a href="mixshader.html#inituniform" class="tsd-kind-icon">init<wbr>Uniform</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-class">
-						<a href="chromaticaberrationshaderpass.html" class="tsd-kind-icon">Chromatic<wbr>Aberration<wbr>Shader<wbr>Pass</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="mixshader.html" class="tsd-kind-icon">Mix<wbr>Shader</a>
-					</li>
 					<li class=" tsd-kind-class">
 						<a href="mixshaderpass.html" class="tsd-kind-icon">Mix<wbr>Shader<wbr>Pass</a>
 					</li>
