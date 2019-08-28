@@ -2,7 +2,7 @@ import { IUniform } from "three";
 
 /**
  * EffectComposer用のShaderオブジェクトに必要な要素を定義したクラス。
- * このクラスのインスタンスをEffectComposerに渡すことで、任意のシェーダーエフェクトコンポーザーになる。
+ * このクラスのインスタンスをShaderPassに渡すことで、任意のシェーダーエフェクトコンポーザーになる。
  */
 export class PostProcessShader {
   uniforms: { [uniform: string]: IUniform };

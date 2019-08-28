@@ -16,6 +16,7 @@ const { tsc, tscClean, watchTsc } = require("gulptask-tsc").get();
 const watchTasks = cb => {
   watchBundle();
   watchTsc();
+  copyHTML();
   cb();
 };
 

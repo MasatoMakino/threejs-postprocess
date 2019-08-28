@@ -3,6 +3,7 @@
   "discription": "Collection of post process modules for three.js",
   "version": "0.1.0",
   "main": "./bin/index.js",
+  "types": "./bin/index.d.ts",
   "repository": "https://MasatoMakino@github.com/MasatoMakino/threejs-postprocess.git",
   "author": "MasatoMakino <unagiinu.g@gmail.com>",
   "license": "MIT",
