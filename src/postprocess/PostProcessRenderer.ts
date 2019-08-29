@@ -4,7 +4,7 @@ import { PerspectiveCamera } from "three";
 import { Vector2 } from "three";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass";
 import { Pass } from "three/examples/jsm/postprocessing/Pass";
-import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer";
+import { PostProcessEffectComposer } from "./PostProcessEffectComposer";
 
 /**
  * 複数のエフェクトコンポーザーと、WebGLRendererを管理し、
@@ -12,7 +12,7 @@ import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer
  */
 export class PostProcessRenderer {
   protected renderer: WebGLRenderer;
-  protected composers: EffectComposer[] = [];
+  protected composers: PostProcessEffectComposer[] = [];
   protected scene: Scene;
   protected camera: PerspectiveCamera;
   protected id: number;
@@ -42,9 +42,12 @@ export class PostProcessRenderer {
    * シェーダーパスを挟んだEffectComposerを初期化する。
    * @param renderer
    */
-  public initComposer(passes: Pass[], renderer: WebGLRenderer): EffectComposer {
+  public initComposer(
+    passes: Pass[],
+    renderer: WebGLRenderer
+  ): PostProcessEffectComposer {
     const renderPass = this.getRenderPass();
-    const composer = new EffectComposer(renderer);
+    const composer = new PostProcessEffectComposer(renderer);
     composer.addPass(renderPass);
     passes.forEach(p => {
       composer.addPass(p);
@@ -115,7 +118,11 @@ export class PostProcessRenderer {
 
   protected render(delta): void {
     this.composers.forEach(composer => {
+      if (!composer.enabled) return;
+
+      if (composer.onBeforeRender) composer.onBeforeRender(delta);
       composer.render(delta);
+      if (composer.onAfterRender) composer.onAfterRender(delta);
     });
   }
 
