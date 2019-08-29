@@ -1,9 +1,7 @@
-import { Vector2, WebGLRenderer } from "three";
+import { Vector2, WebGLRenderer, Scene, Texture } from "three";
 import { PostProcessEffectComposer } from "../postprocess/PostProcessEffectComposer";
 import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass";
 import { RenderPassOption } from "../postprocess";
-import { Scene } from "three";
-import { Texture } from "three";
 
 export class BloomComposer extends PostProcessEffectComposer {
   public bloomPass: UnrealBloomPass;
