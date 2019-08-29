@@ -5,6 +5,7 @@ import { Vector2 } from "three";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass";
 import { Pass } from "three/examples/jsm/postprocessing/Pass";
 import { PostProcessEffectComposer } from "./PostProcessEffectComposer";
+import { Camera } from "three";
 
 /**
  * 複数のエフェクトコンポーザーと、WebGLRendererを管理し、
@@ -28,31 +29,44 @@ export class PostProcessRenderer {
     this.camera = camera;
   }
 
-  protected getRenderPass(): RenderPass {
-    return new RenderPass(
-      this.scene,
-      this.camera,
-      undefined,
-      undefined,
-      undefined
-    );
+  /**
+   * シェーダーパスを挟んだEffectComposerを生成、登録する。
+   * @param passes
+   * @param renderer
+   * @param renderPass
+   */
+  public addComposer(
+    passes: Pass[],
+    renderer: WebGLRenderer,
+    renderPass?: RenderPass
+  ): PostProcessEffectComposer {
+    const composer = PostProcessRenderer.getComposer(passes, renderer, {
+      scene: this.scene,
+      camera: this.camera,
+      renderPass: renderPass
+    });
+
+    this.composers.push(composer);
+    return composer;
   }
 
   /**
-   * シェーダーパスを挟んだEffectComposerを初期化する。
+   * コンポーザーを生成する。
+   * @param passes
    * @param renderer
+   * @param renderPassOption
    */
-  public initComposer(
+  public static getComposer(
     passes: Pass[],
-    renderer: WebGLRenderer
+    renderer: WebGLRenderer,
+    renderPassOption: RenderPassOption
   ): PostProcessEffectComposer {
-    const renderPass = this.getRenderPass();
+    RenderPassOption.init(renderPassOption);
     const composer = new PostProcessEffectComposer(renderer);
-    composer.addPass(renderPass);
+    composer.addPass(renderPassOption.renderPass);
     passes.forEach(p => {
       composer.addPass(p);
     });
-    this.composers.push(composer);
     return composer;
   }
 
@@ -131,4 +145,23 @@ export class PostProcessRenderer {
    * インスタンスに代入可能なので、任意の処理をさせたい場合はこの関数を書き換える。
    */
   public onBeforeRequestAnimationFrame: (timestamp?: number) => void;
+}
+
+/**
+ * getComposer関数で利用するRenderPass初期化オプション
+ *
+ * sceneとcameraのセット、もしくはrenderPassインスタンスを代入する必要がある。
+ * sceneとcameraのセットの場合 : RenderPassインスタンスを生成する。
+ * renderPassインスタンスの場合 : そのままrenderPassインスタンスを利用する。
+ */
+export class RenderPassOption {
+  scene?: Scene;
+  camera?: Camera;
+  renderPass?: RenderPass;
+
+  public static init(option: RenderPassOption) {
+    if (option.renderPass == null) {
+      option.renderPass = new RenderPass(option.scene, option.camera);
+    }
+  }
 }
