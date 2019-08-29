@@ -3,9 +3,16 @@ import { PostProcessEffectComposer } from "../postprocess/PostProcessEffectCompo
 import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass";
 import { RenderPassOption } from "../postprocess";
 
-export class BloomComposer extends PostProcessEffectComposer {
+/**
+ * 切り替え可能なUnrealBloomPassを内包したEffectComposer.
+ * BloomEffectComposer.BLOOMレイヤーに含まれるオブジェクトのみをBloomさせる.
+ */
+export class BloomEffectComposer extends PostProcessEffectComposer {
   public bloomPass: UnrealBloomPass;
   protected scene: Scene;
+
+  public static readonly ENTIRE: number = 0;
+  public static readonly BLOOM: number = 30;
 
   constructor(
     scene: Scene,
