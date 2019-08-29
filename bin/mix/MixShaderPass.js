@@ -12,6 +12,6 @@ export class MixShaderPass extends PostProcessShaderPass {
     }
     constructor(mixTexture) {
         super(new MixShader());
-        this.needsSwap = true;
+        this.mixTexture = mixTexture;
     }
 }
