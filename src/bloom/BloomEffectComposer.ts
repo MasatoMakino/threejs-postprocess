@@ -3,6 +3,7 @@ import { PostProcessEffectComposer } from "../postprocess/PostProcessEffectCompo
 import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass";
 import { RenderPassOption } from "../postprocess";
 import { Scene } from "three";
+import { Texture } from "three";
 
 export class BloomComposer extends PostProcessEffectComposer {
   public bloomPass: UnrealBloomPass;
@@ -27,5 +28,12 @@ export class BloomComposer extends PostProcessEffectComposer {
     RenderPassOption.init(renderPassOption);
     this.addPass(renderPassOption.renderPass);
     this.addPass(this.bloomPass);
+  }
+
+  /**
+   * 描画結果を反映したテクスチャを取得する。
+   */
+  get result(): Texture {
+    return this.renderTarget2.texture;
   }
 }
