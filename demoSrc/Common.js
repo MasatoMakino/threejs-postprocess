@@ -38,18 +38,20 @@ export class Common {
     return control;
   }
 
-  static initRenderer(
-    W,
-    H,
-    color = 0x000000,
-    id = "webgl-canvas",
-    antialias = true
-  ) {
+  static initRenderer(W, H, option) {
+    option = Object.assign(
+      {
+        color: 0x000000,
+        id: "webgl-canvas",
+        antialias: true
+      },
+      option
+    );
     const renderer = new WebGLRenderer({
-      canvas: document.getElementById(id),
-      antialias: antialias
+      canvas: document.getElementById(option.id),
+      antialias: option.antialias
     });
-    renderer.setClearColor(new Color(color));
+    renderer.setClearColor(new Color(option.color));
     renderer.setSize(W, H);
     renderer.setPixelRatio(window.devicePixelRatio);
     return renderer;

@@ -13,7 +13,7 @@ class Study {
     scene.fog = new Fog(0xffffff, 80, 160);
     Common.initLight(scene);
     const camera = Common.initCamera(scene, W, H);
-    const renderer = Common.initRenderer(W, H, 0xffffff);
+    const renderer = Common.initRenderer(W, H, { color: 0xffffff });
     const control = Common.initControl(camera, renderer);
     Common.initHelper(scene);
     this.initObject(scene);
