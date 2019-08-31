@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ChromaticAberrationShaderPass | threejs-postprocess</title>
+	<title>FXAAShaderPass | threejs-postprocess</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,16 +56,23 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="chromaticaberrationshaderpass.html">ChromaticAberrationShaderPass</a>
+					<a href="fxaashaderpass.html">FXAAShaderPass</a>
 				</li>
 			</ul>
-			<h1>Class ChromaticAberrationShaderPass</h1>
+			<h1>Class FXAAShaderPass</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>FXAAShaderを組み込み済みのShaderPass</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -73,7 +80,7 @@
 						<a href="postprocessshaderpass.html" class="tsd-signature-type">PostProcessShaderPass</a>
 						<ul class="tsd-hierarchy">
 							<li>
-								<span class="target">ChromaticAberrationShaderPass</span>
+								<span class="target">FXAAShaderPass</span>
 							</li>
 						</ul>
 					</li>
@@ -86,36 +93,33 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="chromaticaberrationshaderpass.html#constructor" class="tsd-kind-icon">constructor</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section tsd-is-inherited">
-							<h3>Properties</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="chromaticaberrationshaderpass.html#clear" class="tsd-kind-icon">clear</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="chromaticaberrationshaderpass.html#enabled" class="tsd-kind-icon">enabled</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="chromaticaberrationshaderpass.html#fsquad" class="tsd-kind-icon">fs<wbr>Quad</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="chromaticaberrationshaderpass.html#material" class="tsd-kind-icon">material</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="chromaticaberrationshaderpass.html#needsswap" class="tsd-kind-icon">needs<wbr>Swap</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="chromaticaberrationshaderpass.html#rendertoscreen" class="tsd-kind-icon">render<wbr>ToScreen</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="chromaticaberrationshaderpass.html#textureid" class="tsd-kind-icon">textureID</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="chromaticaberrationshaderpass.html#uniforms" class="tsd-kind-icon">uniforms</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="fxaashaderpass.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
-							<h3>Accessors</h3>
+							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="chromaticaberrationshaderpass.html#radiusinner" class="tsd-kind-icon">radius<wbr>Inner</a></li>
-								<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="chromaticaberrationshaderpass.html#radiusouter" class="tsd-kind-icon">radius<wbr>Outer</a></li>
-								<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="chromaticaberrationshaderpass.html#rate" class="tsd-kind-icon">rate</a></li>
-								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><a href="chromaticaberrationshaderpass.html#tdiffuse" class="tsd-kind-icon">t<wbr>Diffuse</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="fxaashaderpass.html#clear" class="tsd-kind-icon">clear</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="fxaashaderpass.html#enabled" class="tsd-kind-icon">enabled</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="fxaashaderpass.html#fsquad" class="tsd-kind-icon">fs<wbr>Quad</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="fxaashaderpass.html#material" class="tsd-kind-icon">material</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="fxaashaderpass.html#needsswap" class="tsd-kind-icon">needs<wbr>Swap</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="fxaashaderpass.html#rendertoscreen" class="tsd-kind-icon">render<wbr>ToScreen</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="fxaashaderpass.html#textureid" class="tsd-kind-icon">textureID</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="fxaashaderpass.html#uniforms" class="tsd-kind-icon">uniforms</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-inherited">
+							<h3>Accessors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><a href="fxaashaderpass.html#tdiffuse" class="tsd-kind-icon">t<wbr>Diffuse</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="chromaticaberrationshaderpass.html#render" class="tsd-kind-icon">render</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="chromaticaberrationshaderpass.html#setsize" class="tsd-kind-icon">set<wbr>Size</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="fxaashaderpass.html#render" class="tsd-kind-icon">render</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="fxaashaderpass.html#setsize" class="tsd-kind-icon">set<wbr>Size</a></li>
 							</ul>
 						</section>
 					</div>
@@ -127,22 +131,27 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Chromatic<wbr>Aberration<wbr>Shader<wbr>Pass<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="chromaticaberrationshaderpass.html" class="tsd-signature-type">ChromaticAberrationShaderPass</a></li>
+						<li class="tsd-signature tsd-kind-icon">new FXAAShader<wbr>Pass<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="fxaashaderpass.html" class="tsd-signature-type">FXAAShaderPass</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides ShaderPass.__constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/4196ec4/src/chromaticAberration/ChromaticAberrationShaderPass.ts#L24">chromaticAberration/ChromaticAberrationShaderPass.ts:24</a></li>
+									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/4196ec4/src/fxaa/FXAAShaderPass.ts#L9">fxaa/FXAAShaderPass.ts:9</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <a href="chromaticaberrationshaderpass.html" class="tsd-signature-type">ChromaticAberrationShaderPass</a></h4>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>コンストラクタ</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="fxaashaderpass.html" class="tsd-signature-type">FXAAShaderPass</a></h4>
 						</li>
 					</ul>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="clear" class="tsd-anchor"></a>
@@ -177,14 +186,14 @@
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
 					<a name="material" class="tsd-anchor"></a>
 					<h3>material</h3>
-					<div class="tsd-signature tsd-kind-icon">material<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Material</span></div>
+					<div class="tsd-signature tsd-kind-icon">material<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ShaderMaterial</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from ShaderPass.material</p>
+						<p>Overrides ShaderPass.material</p>
 						<ul>
-							<li>Defined in node_modules/three/examples/jsm/postprocessing/ShaderPass.d.ts:11</li>
+							<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/4196ec4/src/fxaa/FXAAShaderPass.ts#L9">fxaa/FXAAShaderPass.ts:9</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -242,104 +251,8 @@
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
+			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
 				<h2>Accessors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class">
-					<a name="radiusinner" class="tsd-anchor"></a>
-					<h3>radius<wbr>Inner</h3>
-					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> radiusInner<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> radiusInner<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/4196ec4/src/chromaticAberration/ChromaticAberrationShaderPass.ts#L12">chromaticAberration/ChromaticAberrationShaderPass.ts:12</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
-						</li>
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/4196ec4/src/chromaticAberration/ChromaticAberrationShaderPass.ts#L15">chromaticAberration/ChromaticAberrationShaderPass.ts:15</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>value: <span class="tsd-signature-type">number</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class">
-					<a name="radiusouter" class="tsd-anchor"></a>
-					<h3>radius<wbr>Outer</h3>
-					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> radiusOuter<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> radiusOuter<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/4196ec4/src/chromaticAberration/ChromaticAberrationShaderPass.ts#L19">chromaticAberration/ChromaticAberrationShaderPass.ts:19</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
-						</li>
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/4196ec4/src/chromaticAberration/ChromaticAberrationShaderPass.ts#L22">chromaticAberration/ChromaticAberrationShaderPass.ts:22</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>value: <span class="tsd-signature-type">number</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class">
-					<a name="rate" class="tsd-anchor"></a>
-					<h3>rate</h3>
-					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> rate<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> rate<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/4196ec4/src/chromaticAberration/ChromaticAberrationShaderPass.ts#L5">chromaticAberration/ChromaticAberrationShaderPass.ts:5</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
-						</li>
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/4196ec4/src/chromaticAberration/ChromaticAberrationShaderPass.ts#L8">chromaticAberration/ChromaticAberrationShaderPass.ts:8</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>value: <span class="tsd-signature-type">number</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
 				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited">
 					<a name="tdiffuse" class="tsd-anchor"></a>
 					<h3>t<wbr>Diffuse</h3>
@@ -375,7 +288,7 @@
 					</ul>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="render" class="tsd-anchor"></a>
@@ -413,18 +326,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 					<a name="setsize" class="tsd-anchor"></a>
 					<h3>set<wbr>Size</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 						<li class="tsd-signature tsd-kind-icon">set<wbr>Size<span class="tsd-signature-symbol">(</span>width<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Pass.setSize</p>
+								<p>Overrides Pass.setSize</p>
 								<ul>
-									<li>Defined in node_modules/three/examples/jsm/postprocessing/Pass.d.ts:14</li>
+									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/4196ec4/src/fxaa/FXAAShaderPass.ts#L18">fxaa/FXAAShaderPass.ts:18</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -458,63 +371,54 @@
 					<li class=" tsd-kind-class">
 						<a href="chromaticaberrationshader.html" class="tsd-kind-icon">Chromatic<wbr>Aberration<wbr>Shader</a>
 					</li>
+					<li class=" tsd-kind-class">
+						<a href="chromaticaberrationshaderpass.html" class="tsd-kind-icon">Chromatic<wbr>Aberration<wbr>Shader<wbr>Pass</a>
+					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class">
-						<a href="chromaticaberrationshaderpass.html" class="tsd-kind-icon">Chromatic<wbr>Aberration<wbr>Shader<wbr>Pass</a>
+						<a href="fxaashaderpass.html" class="tsd-kind-icon">FXAAShader<wbr>Pass</a>
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-								<a href="chromaticaberrationshaderpass.html#constructor" class="tsd-kind-icon">constructor</a>
+								<a href="fxaashaderpass.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="chromaticaberrationshaderpass.html#clear" class="tsd-kind-icon">clear</a>
+								<a href="fxaashaderpass.html#clear" class="tsd-kind-icon">clear</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="chromaticaberrationshaderpass.html#enabled" class="tsd-kind-icon">enabled</a>
+								<a href="fxaashaderpass.html#enabled" class="tsd-kind-icon">enabled</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="chromaticaberrationshaderpass.html#fsquad" class="tsd-kind-icon">fs<wbr>Quad</a>
+								<a href="fxaashaderpass.html#fsquad" class="tsd-kind-icon">fs<wbr>Quad</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+								<a href="fxaashaderpass.html#material" class="tsd-kind-icon">material</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="chromaticaberrationshaderpass.html#material" class="tsd-kind-icon">material</a>
+								<a href="fxaashaderpass.html#needsswap" class="tsd-kind-icon">needs<wbr>Swap</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="chromaticaberrationshaderpass.html#needsswap" class="tsd-kind-icon">needs<wbr>Swap</a>
+								<a href="fxaashaderpass.html#rendertoscreen" class="tsd-kind-icon">render<wbr>ToScreen</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="chromaticaberrationshaderpass.html#rendertoscreen" class="tsd-kind-icon">render<wbr>ToScreen</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="chromaticaberrationshaderpass.html#textureid" class="tsd-kind-icon">textureID</a>
+								<a href="fxaashaderpass.html#textureid" class="tsd-kind-icon">textureID</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
-								<a href="chromaticaberrationshaderpass.html#uniforms" class="tsd-kind-icon">uniforms</a>
-							</li>
-							<li class=" tsd-kind-accessor tsd-parent-kind-class">
-								<a href="chromaticaberrationshaderpass.html#radiusinner" class="tsd-kind-icon">radius<wbr>Inner</a>
-							</li>
-							<li class=" tsd-kind-accessor tsd-parent-kind-class">
-								<a href="chromaticaberrationshaderpass.html#radiusouter" class="tsd-kind-icon">radius<wbr>Outer</a>
-							</li>
-							<li class=" tsd-kind-accessor tsd-parent-kind-class">
-								<a href="chromaticaberrationshaderpass.html#rate" class="tsd-kind-icon">rate</a>
+								<a href="fxaashaderpass.html#uniforms" class="tsd-kind-icon">uniforms</a>
 							</li>
 							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited">
-								<a href="chromaticaberrationshaderpass.html#tdiffuse" class="tsd-kind-icon">t<wbr>Diffuse</a>
+								<a href="fxaashaderpass.html#tdiffuse" class="tsd-kind-icon">t<wbr>Diffuse</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="chromaticaberrationshaderpass.html#render" class="tsd-kind-icon">render</a>
+								<a href="fxaashaderpass.html#render" class="tsd-kind-icon">render</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="chromaticaberrationshaderpass.html#setsize" class="tsd-kind-icon">set<wbr>Size</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+								<a href="fxaashaderpass.html#setsize" class="tsd-kind-icon">set<wbr>Size</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-class">
-						<a href="fxaashaderpass.html" class="tsd-kind-icon">FXAAShader<wbr>Pass</a>
-					</li>
 					<li class=" tsd-kind-class">
 						<a href="materialstorage.html" class="tsd-kind-icon">Material<wbr>Storage</a>
 					</li>
