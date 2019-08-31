@@ -15,13 +15,13 @@ export class MaterialSwitcher {
     this.layers.set(BloomEffectComposer.BLOOM);
   }
 
-  public darkenNonBloomed(): void {
+  public darkenNonBloomed = () => {
     this.scene.traverseVisible(this.switchToDarken);
-  }
+  };
 
-  public restoreMaterial(): void {
+  public restoreMaterial = () => {
     this.scene.traverseVisible(this.switchToOriginalMaterial);
-  }
+  };
 
   /**
    * scene上の各オブジェクトに対して、マテリアルの切り替えを行う。

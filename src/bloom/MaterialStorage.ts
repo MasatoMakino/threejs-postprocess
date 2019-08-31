@@ -44,7 +44,7 @@ export class MaterialStorage {
 
   private copyToDark(): void {
     const isArrayOriginal = Array.isArray(this.original);
-    if (!isArrayOriginal) {
+    if (isArrayOriginal) {
       (this.dark as Material[]).forEach((drk, index) => {
         drk.copy(this.original[index]);
       });
@@ -55,7 +55,7 @@ export class MaterialStorage {
 
   private cloneToDark(): void {
     const isArrayOriginal = Array.isArray(this.original);
-    if (!isArrayOriginal) {
+    if (isArrayOriginal) {
       this.dark = (this.original as Material[]).map(val => {
         return val.clone();
       });

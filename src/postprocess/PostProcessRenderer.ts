@@ -12,8 +12,12 @@ import { Camera } from "three";
  * 連続してポストエフェクト処理を行うためのクラス。
  */
 export class PostProcessRenderer {
+  get composers(): PostProcessEffectComposer[] {
+    return this._composers;
+  }
+
   protected renderer: WebGLRenderer;
-  protected composers: PostProcessEffectComposer[] = [];
+  private _composers: PostProcessEffectComposer[] = [];
   protected scene: Scene;
   protected camera: PerspectiveCamera;
   protected id: number;
@@ -46,7 +50,7 @@ export class PostProcessRenderer {
       renderPass: renderPass
     });
 
-    this.composers.push(composer);
+    this._composers.push(composer);
     return composer;
   }
 
@@ -98,7 +102,7 @@ export class PostProcessRenderer {
     this.renderer.setPixelRatio(window.devicePixelRatio);
     this.renderer.setSize(w, h);
 
-    this.composers.forEach(composer => {
+    this._composers.forEach(composer => {
       composer.setSize(w, h);
     });
   }
@@ -131,7 +135,7 @@ export class PostProcessRenderer {
   };
 
   protected render(delta): void {
-    this.composers.forEach(composer => {
+    this._composers.forEach(composer => {
       if (!composer.enabled) return;
 
       if (composer.onBeforeRender) composer.onBeforeRender(delta);
