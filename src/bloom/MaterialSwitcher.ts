@@ -1,9 +1,6 @@
-import { Scene } from "three";
-import { Layers } from "three";
+import { Scene, Layers, Object3D, Mesh } from "three";
 import { BloomEffectComposer } from "./BloomEffectComposer";
 import { MaterialStorage } from "./MaterialStorage";
-import { Object3D } from "three";
-import { Mesh } from "three";
 
 /**
  * 切り替え可能なUnrealBloomPassにおいて、マテリアルの切り替え処理を担当するクラス。
@@ -39,7 +36,7 @@ export class MaterialSwitcher {
       obj.userData.materialStorage = new MaterialStorage();
     }
     const storage: MaterialStorage = obj.userData.materialStorage;
-    const mesh:Mesh = obj as Mesh;
+    const mesh: Mesh = obj as Mesh;
 
     storage.updateMaterial(mesh.material);
     mesh.material = storage.dark;
@@ -51,7 +48,7 @@ export class MaterialSwitcher {
    */
   protected switchToOriginalMaterial = (obj: Object3D) => {
     if (!this.isDarken(obj)) return;
-    const mesh:Mesh = obj as Mesh;
+    const mesh: Mesh = obj as Mesh;
     mesh.material = obj.userData.materialStorage.original;
   };
 
