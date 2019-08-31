@@ -2,6 +2,8 @@ import { Scene } from "three";
 import { Layers } from "three";
 import { BloomEffectComposer } from "./BloomEffectComposer";
 import { MaterialStorage } from "./MaterialStorage";
+import { Object3D } from "three";
+import { Mesh } from "three";
 
 /**
  * 切り替え可能なUnrealBloomPassにおいて、マテリアルの切り替え処理を担当するクラス。
@@ -17,10 +19,12 @@ export class MaterialSwitcher {
   }
 
   public darkenNonBloomed(): void {
-    this.scene.traverse(this.switchToDarken);
+    this.scene.traverseVisible(this.switchToDarken);
   }
 
-  public restoreMaterial(): void {}
+  public restoreMaterial(): void {
+    this.scene.traverseVisible(this.switchToOriginalMaterial);
+  }
 
   /**
    * scene上の各オブジェクトに対して、マテリアルの切り替えを行う。
@@ -28,15 +32,27 @@ export class MaterialSwitcher {
    *
    * @param obj sceneをtraverseして取得したオブジェクト。
    */
-  protected switchToDarken = (obj: any) => {
+  protected switchToDarken = (obj: Object3D) => {
     if (!this.isDarken(obj)) return;
 
     if (obj.userData.materialStorage == null) {
       obj.userData.materialStorage = new MaterialStorage();
     }
     const storage: MaterialStorage = obj.userData.materialStorage;
-    storage.updateMaterial(obj.material);
-    obj.material = storage.darken;
+    const mesh:Mesh = obj as Mesh;
+
+    storage.updateMaterial(mesh.material);
+    mesh.material = storage.dark;
+  };
+
+  /**
+   * マテリアルストレージに格納されたオリジナルのマテリアル設定に復帰する。
+   * @param obj
+   */
+  protected switchToOriginalMaterial = (obj: Object3D) => {
+    if (!this.isDarken(obj)) return;
+    const mesh:Mesh = obj as Mesh;
+    mesh.material = obj.userData.materialStorage.original;
   };
 
   /**

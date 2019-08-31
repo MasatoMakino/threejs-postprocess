@@ -144,7 +144,7 @@ export class PostProcessRenderer {
    * レンダリング処理の前に処理を挟み込むための関数
    * インスタンスに代入可能なので、任意の処理をさせたい場合はこの関数を書き換える。
    */
-  public onBeforeRequestAnimationFrame: (timestamp?: number) => void;
+  public onBeforeRequestAnimationFrame: (delta?: number) => void;
 }
 
 /**

@@ -5,6 +5,6 @@ import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer
  */
 export class PostProcessEffectComposer extends EffectComposer {
   enabled: boolean = true;
-  public onBeforeRender?: (timestamp?: number) => void;
-  public onAfterRender?: (timestamp?: number) => void;
+  public onBeforeRender?: (delta?: number) => void;
+  public onAfterRender?: (delta?: number) => void;
 }
