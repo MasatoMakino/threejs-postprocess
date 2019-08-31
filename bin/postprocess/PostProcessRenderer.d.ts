@@ -4,25 +4,35 @@ import { PerspectiveCamera } from "three";
 import { Vector2 } from "three";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass";
 import { Pass } from "three/examples/jsm/postprocessing/Pass";
-import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer";
+import { PostProcessEffectComposer } from "./PostProcessEffectComposer";
+import { Camera } from "three";
 /**
  * 複数のエフェクトコンポーザーと、WebGLRendererを管理し、
  * 連続してポストエフェクト処理を行うためのクラス。
  */
 export declare class PostProcessRenderer {
+    readonly composers: PostProcessEffectComposer[];
     protected renderer: WebGLRenderer;
-    protected composers: EffectComposer[];
+    private _composers;
     protected scene: Scene;
     protected camera: PerspectiveCamera;
     protected id: number;
     protected lastUpdateTimestamp: number;
     constructor(scene: Scene, camera: PerspectiveCamera, renderer: WebGLRenderer);
-    protected getRenderPass(): RenderPass;
     /**
-     * シェーダーパスを挟んだEffectComposerを初期化する。
+     * シェーダーパスを挟んだEffectComposerを生成、登録する。
+     * @param passes
      * @param renderer
+     * @param renderPass
      */
-    initComposer(passes: Pass[], renderer: WebGLRenderer): EffectComposer;
+    addComposer(passes: Pass[], renderer: WebGLRenderer, renderPass?: RenderPass): PostProcessEffectComposer;
+    /**
+     * コンポーザーを生成する。
+     * @param passes
+     * @param renderer
+     * @param renderPassOption
+     */
+    static getComposer(passes: Pass[], renderer: WebGLRenderer, renderPassOption: RenderPassOption): PostProcessEffectComposer;
     /**
      * レンダリングを開始する。
      */
@@ -51,6 +61,19 @@ export declare class PostProcessRenderer {
      * レンダリング処理の前に処理を挟み込むための関数
      * インスタンスに代入可能なので、任意の処理をさせたい場合はこの関数を書き換える。
      */
-    onBeforeRequestAnimationFrame: (timestamp?: number) => void;
+    onBeforeRequestAnimationFrame: (delta?: number) => void;
+}
+/**
+ * getComposer関数で利用するRenderPass初期化オプション
+ *
+ * sceneとcameraのセット、もしくはrenderPassインスタンスを代入する必要がある。
+ * sceneとcameraのセットの場合 : RenderPassインスタンスを生成する。
+ * renderPassインスタンスの場合 : そのままrenderPassインスタンスを利用する。
+ */
+export declare class RenderPassOption {
+    scene?: Scene;
+    camera?: Camera;
+    renderPass?: RenderPass;
+    static init(option: RenderPassOption): void;
 }
 //# sourceMappingURL=PostProcessRenderer.d.ts.map

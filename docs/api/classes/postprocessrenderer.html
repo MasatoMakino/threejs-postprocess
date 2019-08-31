@@ -95,8 +95,8 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="postprocessrenderer.html#_composers" class="tsd-kind-icon">_composers</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="postprocessrenderer.html#camera" class="tsd-kind-icon">camera</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="postprocessrenderer.html#composers" class="tsd-kind-icon">composers</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="postprocessrenderer.html#id" class="tsd-kind-icon">id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="postprocessrenderer.html#lastupdatetimestamp" class="tsd-kind-icon">last<wbr>Update<wbr>Timestamp</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="postprocessrenderer.html#onbeforerequestanimationframe" class="tsd-kind-icon">on<wbr>Before<wbr>Request<wbr>Animation<wbr>Frame</a></li>
@@ -105,16 +105,22 @@
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
+							<h3>Accessors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="postprocessrenderer.html#composers" class="tsd-kind-icon">composers</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="postprocessrenderer.html#getrenderpass" class="tsd-kind-icon">get<wbr>Render<wbr>Pass</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="postprocessrenderer.html#addcomposer" class="tsd-kind-icon">add<wbr>Composer</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="postprocessrenderer.html#getsize" class="tsd-kind-icon">get<wbr>Size</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="postprocessrenderer.html#initcomposer" class="tsd-kind-icon">init<wbr>Composer</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="postprocessrenderer.html#onrequestanimationframe" class="tsd-kind-icon">on<wbr>Request<wbr>Animation<wbr>Frame</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="postprocessrenderer.html#render" class="tsd-kind-icon">render</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="postprocessrenderer.html#setsize" class="tsd-kind-icon">set<wbr>Size</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="postprocessrenderer.html#start" class="tsd-kind-icon">start</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="postprocessrenderer.html#stop" class="tsd-kind-icon">stop</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="postprocessrenderer.html#getcomposer" class="tsd-kind-icon">get<wbr>Composer</a></li>
 							</ul>
 						</section>
 					</div>
@@ -132,7 +138,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/eb7c5a3/src/postprocess/PostProcessRenderer.ts#L19">postprocess/PostProcessRenderer.ts:19</a></li>
+									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/f9c0564/src/postprocess/PostProcessRenderer.ts#L24">postprocess/PostProcessRenderer.ts:24</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -154,23 +160,23 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="_composers" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _composers</h3>
+					<div class="tsd-signature tsd-kind-icon">_composers<span class="tsd-signature-symbol">:</span> <a href="postprocesseffectcomposer.html" class="tsd-signature-type">PostProcessEffectComposer</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/f9c0564/src/postprocess/PostProcessRenderer.ts#L20">postprocess/PostProcessRenderer.ts:20</a></li>
+						</ul>
+					</aside>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 					<a name="camera" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> camera</h3>
 					<div class="tsd-signature tsd-kind-icon">camera<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">PerspectiveCamera</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/eb7c5a3/src/postprocess/PostProcessRenderer.ts#L17">postprocess/PostProcessRenderer.ts:17</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
-					<a name="composers" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagProtected">Protected</span> composers</h3>
-					<div class="tsd-signature tsd-kind-icon">composers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">EffectComposer</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[]</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/eb7c5a3/src/postprocess/PostProcessRenderer.ts#L15">postprocess/PostProcessRenderer.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/f9c0564/src/postprocess/PostProcessRenderer.ts#L22">postprocess/PostProcessRenderer.ts:22</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -180,7 +186,7 @@
 					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/eb7c5a3/src/postprocess/PostProcessRenderer.ts#L18">postprocess/PostProcessRenderer.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/f9c0564/src/postprocess/PostProcessRenderer.ts#L23">postprocess/PostProcessRenderer.ts:23</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -190,7 +196,7 @@
 					<div class="tsd-signature tsd-kind-icon">last<wbr>Update<wbr>Timestamp<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/eb7c5a3/src/postprocess/PostProcessRenderer.ts#L19">postprocess/PostProcessRenderer.ts:19</a></li>
+							<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/f9c0564/src/postprocess/PostProcessRenderer.ts#L24">postprocess/PostProcessRenderer.ts:24</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -200,7 +206,7 @@
 					<div class="tsd-signature tsd-kind-icon">on<wbr>Before<wbr>Request<wbr>Animation<wbr>Frame<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/eb7c5a3/src/postprocess/PostProcessRenderer.ts#L126">postprocess/PostProcessRenderer.ts:126</a></li>
+							<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/f9c0564/src/postprocess/PostProcessRenderer.ts#L152">postprocess/PostProcessRenderer.ts:152</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -214,14 +220,14 @@
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter-siganture">
 								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>timestamp<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>delta<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
 										<h4 class="tsd-parameters-title">Parameters</h4>
 										<ul class="tsd-parameters">
 											<li>
-												<h5><span class="tsd-flag ts-flagOptional">Optional</span> timestamp: <span class="tsd-signature-type">number</span></h5>
+												<h5><span class="tsd-flag ts-flagOptional">Optional</span> delta: <span class="tsd-signature-type">number</span></h5>
 											</li>
 										</ul>
 										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -237,7 +243,7 @@
 					<div class="tsd-signature tsd-kind-icon">renderer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">WebGLRenderer</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/eb7c5a3/src/postprocess/PostProcessRenderer.ts#L14">postprocess/PostProcessRenderer.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/f9c0564/src/postprocess/PostProcessRenderer.ts#L19">postprocess/PostProcessRenderer.ts:19</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -247,27 +253,66 @@
 					<div class="tsd-signature tsd-kind-icon">scene<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Scene</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/eb7c5a3/src/postprocess/PostProcessRenderer.ts#L16">postprocess/PostProcessRenderer.ts:16</a></li>
+							<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/f9c0564/src/postprocess/PostProcessRenderer.ts#L21">postprocess/PostProcessRenderer.ts:21</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
-					<a name="getrenderpass" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagProtected">Protected</span> get<wbr>Render<wbr>Pass</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Render<wbr>Pass<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">RenderPass</span></li>
+				<h2>Accessors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+					<a name="composers" class="tsd-anchor"></a>
+					<h3>composers</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> composers<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="postprocesseffectcomposer.html" class="tsd-signature-type">PostProcessEffectComposer</a><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/eb7c5a3/src/postprocess/PostProcessRenderer.ts#L31">postprocess/PostProcessRenderer.ts:31</a></li>
+									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/f9c0564/src/postprocess/PostProcessRenderer.ts#L15">postprocess/PostProcessRenderer.ts:15</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">RenderPass</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="postprocesseffectcomposer.html" class="tsd-signature-type">PostProcessEffectComposer</a><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="addcomposer" class="tsd-anchor"></a>
+					<h3>add<wbr>Composer</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Composer<span class="tsd-signature-symbol">(</span>passes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Pass</span><span class="tsd-signature-symbol">[]</span>, renderer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebGLRenderer</span>, renderPass<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">RenderPass</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="postprocesseffectcomposer.html" class="tsd-signature-type">PostProcessEffectComposer</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/f9c0564/src/postprocess/PostProcessRenderer.ts#L43">postprocess/PostProcessRenderer.ts:43</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>シェーダーパスを挟んだEffectComposerを生成、登録する。</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>passes: <span class="tsd-signature-type">Pass</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+								<li>
+									<h5>renderer: <span class="tsd-signature-type">WebGLRenderer</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> renderPass: <span class="tsd-signature-type">RenderPass</span></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="postprocesseffectcomposer.html" class="tsd-signature-type">PostProcessEffectComposer</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -281,7 +326,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/eb7c5a3/src/postprocess/PostProcessRenderer.ts#L92">postprocess/PostProcessRenderer.ts:92</a></li>
+									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/f9c0564/src/postprocess/PostProcessRenderer.ts#L114">postprocess/PostProcessRenderer.ts:114</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -290,39 +335,6 @@
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Vector2</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="initcomposer" class="tsd-anchor"></a>
-					<h3>init<wbr>Composer</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">init<wbr>Composer<span class="tsd-signature-symbol">(</span>passes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Pass</span><span class="tsd-signature-symbol">[]</span>, renderer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebGLRenderer</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">EffectComposer</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/eb7c5a3/src/postprocess/PostProcessRenderer.ts#L45">postprocess/PostProcessRenderer.ts:45</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>シェーダーパスを挟んだEffectComposerを初期化する。</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>passes: <span class="tsd-signature-type">Pass</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-								<li>
-									<h5>renderer: <span class="tsd-signature-type">WebGLRenderer</span></h5>
-									<div class="tsd-comment tsd-typography">
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">EffectComposer</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -336,7 +348,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/eb7c5a3/src/postprocess/PostProcessRenderer.ts#L100">postprocess/PostProcessRenderer.ts:100</a></li>
+									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/f9c0564/src/postprocess/PostProcessRenderer.ts#L122">postprocess/PostProcessRenderer.ts:122</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -368,7 +380,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/eb7c5a3/src/postprocess/PostProcessRenderer.ts#L116">postprocess/PostProcessRenderer.ts:116</a></li>
+									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/f9c0564/src/postprocess/PostProcessRenderer.ts#L138">postprocess/PostProcessRenderer.ts:138</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -391,7 +403,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/eb7c5a3/src/postprocess/PostProcessRenderer.ts#L78">postprocess/PostProcessRenderer.ts:78</a></li>
+									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/f9c0564/src/postprocess/PostProcessRenderer.ts#L100">postprocess/PostProcessRenderer.ts:100</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -424,7 +436,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/eb7c5a3/src/postprocess/PostProcessRenderer.ts#L59">postprocess/PostProcessRenderer.ts:59</a></li>
+									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/f9c0564/src/postprocess/PostProcessRenderer.ts#L81">postprocess/PostProcessRenderer.ts:81</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -446,7 +458,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/eb7c5a3/src/postprocess/PostProcessRenderer.ts#L67">postprocess/PostProcessRenderer.ts:67</a></li>
+									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/f9c0564/src/postprocess/PostProcessRenderer.ts#L89">postprocess/PostProcessRenderer.ts:89</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -455,6 +467,42 @@
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="getcomposer" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> get<wbr>Composer</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Composer<span class="tsd-signature-symbol">(</span>passes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Pass</span><span class="tsd-signature-symbol">[]</span>, renderer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebGLRenderer</span>, renderPassOption<span class="tsd-signature-symbol">: </span><a href="renderpassoption.html" class="tsd-signature-type">RenderPassOption</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="postprocesseffectcomposer.html" class="tsd-signature-type">PostProcessEffectComposer</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/f9c0564/src/postprocess/PostProcessRenderer.ts#L64">postprocess/PostProcessRenderer.ts:64</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>コンポーザーを生成する。</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>passes: <span class="tsd-signature-type">Pass</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+								<li>
+									<h5>renderer: <span class="tsd-signature-type">WebGLRenderer</span></h5>
+								</li>
+								<li>
+									<h5>renderPassOption: <a href="renderpassoption.html" class="tsd-signature-type">RenderPassOption</a></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="postprocesseffectcomposer.html" class="tsd-signature-type">PostProcessEffectComposer</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -471,10 +519,19 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-class">
+						<a href="bloomeffectcomposer.html" class="tsd-kind-icon">Bloom<wbr>Effect<wbr>Composer</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="chromaticaberrationshader.html" class="tsd-kind-icon">Chromatic<wbr>Aberration<wbr>Shader</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="chromaticaberrationshaderpass.html" class="tsd-kind-icon">Chromatic<wbr>Aberration<wbr>Shader<wbr>Pass</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="materialstorage.html" class="tsd-kind-icon">Material<wbr>Storage</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="materialswitcher.html" class="tsd-kind-icon">Material<wbr>Switcher</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="mixshader.html" class="tsd-kind-icon">Mix<wbr>Shader</a>
@@ -488,6 +545,9 @@
 					<li class=" tsd-kind-class">
 						<a href="peripherallightshaderpass.html" class="tsd-kind-icon">Peripheral<wbr>Light<wbr>Shader<wbr>Pass</a>
 					</li>
+					<li class=" tsd-kind-class">
+						<a href="postprocesseffectcomposer.html" class="tsd-kind-icon">Post<wbr>Process<wbr>Effect<wbr>Composer</a>
+					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class">
@@ -496,11 +556,11 @@
 							<li class=" tsd-kind-constructor tsd-parent-kind-class">
 								<a href="postprocessrenderer.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
-								<a href="postprocessrenderer.html#camera" class="tsd-kind-icon">camera</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="postprocessrenderer.html#_composers" class="tsd-kind-icon">_composers</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
-								<a href="postprocessrenderer.html#composers" class="tsd-kind-icon">composers</a>
+								<a href="postprocessrenderer.html#camera" class="tsd-kind-icon">camera</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 								<a href="postprocessrenderer.html#id" class="tsd-kind-icon">id</a>
@@ -517,14 +577,14 @@
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 								<a href="postprocessrenderer.html#scene" class="tsd-kind-icon">scene</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
-								<a href="postprocessrenderer.html#getrenderpass" class="tsd-kind-icon">get<wbr>Render<wbr>Pass</a>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
+								<a href="postprocessrenderer.html#composers" class="tsd-kind-icon">composers</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="postprocessrenderer.html#addcomposer" class="tsd-kind-icon">add<wbr>Composer</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="postprocessrenderer.html#getsize" class="tsd-kind-icon">get<wbr>Size</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="postprocessrenderer.html#initcomposer" class="tsd-kind-icon">init<wbr>Composer</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
 								<a href="postprocessrenderer.html#onrequestanimationframe" class="tsd-kind-icon">on<wbr>Request<wbr>Animation<wbr>Frame</a>
@@ -541,6 +601,9 @@
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="postprocessrenderer.html#stop" class="tsd-kind-icon">stop</a>
 							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="postprocessrenderer.html#getcomposer" class="tsd-kind-icon">get<wbr>Composer</a>
+							</li>
 						</ul>
 					</li>
 				</ul>
@@ -550,6 +613,9 @@
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="postprocessshaderpass.html" class="tsd-kind-icon">Post<wbr>Process<wbr>Shader<wbr>Pass</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="renderpassoption.html" class="tsd-kind-icon">Render<wbr>Pass<wbr>Option</a>
 					</li>
 				</ul>
 			</nav>

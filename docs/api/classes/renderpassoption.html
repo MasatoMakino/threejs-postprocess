@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>PostProcessShader | threejs-postprocess</title>
+	<title>RenderPassOption | threejs-postprocess</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="postprocessshader.html">PostProcessShader</a>
+					<a href="renderpassoption.html">RenderPassOption</a>
 				</li>
 			</ul>
-			<h1>Class PostProcessShader</h1>
+			<h1>Class RenderPassOption</h1>
 		</div>
 	</div>
 </header>
@@ -69,27 +69,18 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>EffectComposer用のShaderオブジェクトに必要な要素を定義したクラス。
-						このクラスのインスタンスをShaderPassに渡すことで、任意のシェーダーエフェクトコンポーザーになる。</p>
+						<p>getComposer関数で利用するRenderPass初期化オプション</p>
 					</div>
+					<p>sceneとcameraのセット、もしくはrenderPassインスタンスを代入する必要がある。
+						sceneとcameraのセットの場合 : RenderPassインスタンスを生成する。
+					renderPassインスタンスの場合 : そのままrenderPassインスタンスを利用する。</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">PostProcessShader</span>
-						<ul class="tsd-hierarchy">
-							<li>
-								<a href="peripherallightshader.html" class="tsd-signature-type">PeripheralLightShader</a>
-							</li>
-							<li>
-								<a href="chromaticaberrationshader.html" class="tsd-signature-type">ChromaticAberrationShader</a>
-							</li>
-							<li>
-								<a href="mixshader.html" class="tsd-signature-type">MixShader</a>
-							</li>
-						</ul>
+						<span class="target">RenderPassOption</span>
 					</li>
 				</ul>
 			</section>
@@ -98,104 +89,76 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Constructors</h3>
+							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="postprocessshader.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="renderpassoption.html#camera" class="tsd-kind-icon">camera</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="renderpassoption.html#renderpass" class="tsd-kind-icon">render<wbr>Pass</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="renderpassoption.html#scene" class="tsd-kind-icon">scene</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
-							<h3>Properties</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="postprocessshader.html#fragmentshader" class="tsd-kind-icon">fragment<wbr>Shader</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="postprocessshader.html#uniforms" class="tsd-kind-icon">uniforms</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="postprocessshader.html#vertexshader" class="tsd-kind-icon">vertex<wbr>Shader</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section tsd-is-private-protected">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="postprocessshader.html#inituniform" class="tsd-kind-icon">init<wbr>Uniform</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="renderpassoption.html#init" class="tsd-kind-icon">init</a></li>
 							</ul>
 						</section>
 					</div>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Constructors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
-					<a name="constructor" class="tsd-anchor"></a>
-					<h3>constructor</h3>
-					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Post<wbr>Process<wbr>Shader<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="postprocessshader.html" class="tsd-signature-type">PostProcessShader</a></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/f9c0564/src/postprocess/PostProcessShader.ts#L17">postprocess/PostProcessShader.ts:17</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <a href="postprocessshader.html" class="tsd-signature-type">PostProcessShader</a></h4>
-						</li>
-					</ul>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="fragmentshader" class="tsd-anchor"></a>
-					<h3>fragment<wbr>Shader</h3>
-					<div class="tsd-signature tsd-kind-icon">fragment<wbr>Shader<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="camera" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> camera</h3>
+					<div class="tsd-signature tsd-kind-icon">camera<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Camera</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/f9c0564/src/postprocess/PostProcessShader.ts#L17">postprocess/PostProcessShader.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/f9c0564/src/postprocess/PostProcessRenderer.ts#L164">postprocess/PostProcessRenderer.ts:164</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="uniforms" class="tsd-anchor"></a>
-					<h3>uniforms</h3>
-					<div class="tsd-signature tsd-kind-icon">uniforms<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<a name="renderpass" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> render<wbr>Pass</h3>
+					<div class="tsd-signature tsd-kind-icon">render<wbr>Pass<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RenderPass</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/f9c0564/src/postprocess/PostProcessShader.ts#L8">postprocess/PostProcessShader.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/f9c0564/src/postprocess/PostProcessRenderer.ts#L165">postprocess/PostProcessRenderer.ts:165</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter-index-signature">
-								<h5><span class="tsd-signature-symbol">[</span>uniform: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">IUniform</span></h5>
-							</li>
-						</ul>
-					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="vertexshader" class="tsd-anchor"></a>
-					<h3>vertex<wbr>Shader</h3>
-					<div class="tsd-signature tsd-kind-icon">vertex<wbr>Shader<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&#x60;varying vec2 vUv;void main() {vUv &#x3D; uv;gl_Position &#x3D; projectionMatrix * modelViewMatrix * vec4( position, 1.0 );}&#x60;</span></div>
+					<a name="scene" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> scene</h3>
+					<div class="tsd-signature tsd-kind-icon">scene<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Scene</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/f9c0564/src/postprocess/PostProcessShader.ts#L10">postprocess/PostProcessShader.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/f9c0564/src/postprocess/PostProcessRenderer.ts#L163">postprocess/PostProcessRenderer.ts:163</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-private-protected">
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
-					<a name="inituniform" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagProtected">Protected</span> init<wbr>Uniform</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
-						<li class="tsd-signature tsd-kind-icon">init<wbr>Uniform<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="init" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> init</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">init<span class="tsd-signature-symbol">(</span>option<span class="tsd-signature-symbol">: </span><a href="renderpassoption.html" class="tsd-signature-type">RenderPassOption</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/f9c0564/src/postprocess/PostProcessShader.ts#L22">postprocess/PostProcessShader.ts:22</a></li>
+									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/f9c0564/src/postprocess/PostProcessRenderer.ts#L167">postprocess/PostProcessRenderer.ts:167</a></li>
 								</ul>
 							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>option: <a href="renderpassoption.html" class="tsd-signature-type">RenderPassOption</a></h5>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
@@ -245,36 +208,33 @@
 					<li class=" tsd-kind-class">
 						<a href="postprocessrenderer.html" class="tsd-kind-icon">Post<wbr>Process<wbr>Renderer</a>
 					</li>
+					<li class=" tsd-kind-class">
+						<a href="postprocessshader.html" class="tsd-kind-icon">Post<wbr>Process<wbr>Shader</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="postprocessshaderpass.html" class="tsd-kind-icon">Post<wbr>Process<wbr>Shader<wbr>Pass</a>
+					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class">
-						<a href="postprocessshader.html" class="tsd-kind-icon">Post<wbr>Process<wbr>Shader</a>
+						<a href="renderpassoption.html" class="tsd-kind-icon">Render<wbr>Pass<wbr>Option</a>
 						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="postprocessshader.html#constructor" class="tsd-kind-icon">constructor</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="renderpassoption.html#camera" class="tsd-kind-icon">camera</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="postprocessshader.html#fragmentshader" class="tsd-kind-icon">fragment<wbr>Shader</a>
+								<a href="renderpassoption.html#renderpass" class="tsd-kind-icon">render<wbr>Pass</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="postprocessshader.html#uniforms" class="tsd-kind-icon">uniforms</a>
+								<a href="renderpassoption.html#scene" class="tsd-kind-icon">scene</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="postprocessshader.html#vertexshader" class="tsd-kind-icon">vertex<wbr>Shader</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
-								<a href="postprocessshader.html#inituniform" class="tsd-kind-icon">init<wbr>Uniform</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="renderpassoption.html#init" class="tsd-kind-icon">init</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-class">
-						<a href="postprocessshaderpass.html" class="tsd-kind-icon">Post<wbr>Process<wbr>Shader<wbr>Pass</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="renderpassoption.html" class="tsd-kind-icon">Render<wbr>Pass<wbr>Option</a>
-					</li>
 				</ul>
 			</nav>
 		</div>
