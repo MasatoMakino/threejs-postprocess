@@ -20,7 +20,7 @@ class Study {
 
     const render = new PostProcessRenderer(scene, camera, renderer);
     const pass = new PeripheralLightShaderPass();
-    render.addComposer([pass], renderer);
+    render.addComposer([pass]);
 
     render.onBeforeRequestAnimationFrame = () => {
       control.update();

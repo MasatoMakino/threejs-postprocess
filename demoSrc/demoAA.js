@@ -37,7 +37,7 @@ export class StudyBloom {
     this.smaaPass = new SMAAPass(size.width, size.height);
     this.fxaaPass = new FXAAShaderPass();
 
-    this.postRenderer.addComposer([this.fxaaPass, this.smaaPass], renderer);
+    this.postRenderer.addComposer([this.fxaaPass, this.smaaPass]);
     this.postRenderer.start();
 
     this.initGUI();

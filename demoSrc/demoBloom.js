@@ -42,7 +42,7 @@ export class StudyBloom {
     const smaaPass = new SMAAPass(size.width, size.height);
 
     this.postRenderer.composers.push(this.bloom);
-    this.postRenderer.addComposer([mixPass, smaaPass], renderer, renderPass);
+    this.postRenderer.addComposer([mixPass, smaaPass], renderPass);
     this.postRenderer.start();
 
     this.initGUI();

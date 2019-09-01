@@ -28,7 +28,7 @@ export class Study {
 
     const postProcessRender = new PostProcessRenderer(scene, camera, renderer);
     const pass = new ChromaticAberrationShaderPass();
-    postProcessRender.addComposer([pass], renderer);
+    postProcessRender.addComposer([pass]);
 
     postProcessRender.onBeforeRequestAnimationFrame = () => {
       control.update();
