@@ -22,10 +22,9 @@ export declare class PostProcessRenderer {
     /**
      * シェーダーパスを挟んだEffectComposerを生成、登録する。
      * @param passes
-     * @param renderer
      * @param renderPass
      */
-    addComposer(passes: Pass[], renderer: WebGLRenderer, renderPass?: RenderPass): PostProcessEffectComposer;
+    addComposer(passes: Pass[], renderPass?: RenderPass): PostProcessEffectComposer;
     /**
      * コンポーザーを生成する。
      * @param passes

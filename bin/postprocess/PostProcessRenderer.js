@@ -34,11 +34,10 @@ export class PostProcessRenderer {
     /**
      * シェーダーパスを挟んだEffectComposerを生成、登録する。
      * @param passes
-     * @param renderer
      * @param renderPass
      */
-    addComposer(passes, renderer, renderPass) {
-        const composer = PostProcessRenderer.getComposer(passes, renderer, {
+    addComposer(passes, renderPass) {
+        const composer = PostProcessRenderer.getComposer(passes, this.renderer, {
             scene: this.scene,
             camera: this.camera,
             renderPass: renderPass
