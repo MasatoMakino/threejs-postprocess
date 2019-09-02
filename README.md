@@ -12,6 +12,8 @@ Collection of post process module for three.js
 
 [Peripheral Light](https://masatomakino.github.io/threejs-postprocess/demo/peripheral)
 
+[DisplacementMap](https://masatomakino.github.io/threejs-postprocess/demo/displacement)
+
 ## Getting Started
 
 ### Install
