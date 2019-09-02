@@ -16,6 +16,7 @@ import {
 } from "../bin";
 import * as dat from "dat.gui";
 import { SMAAPass } from "three/examples/jsm/postprocessing/SMAAPass";
+import { CommonGUI } from "./CommonGUI";
 
 export class StudyBloom {
   constructor() {
@@ -34,6 +35,7 @@ export class StudyBloom {
     this.postRenderer = new PostProcessRenderer(scene, camera, renderer);
 
     const size = renderer.getSize(new Vector2());
+    //TODO : PR d.ts. SMAAPass(w,h) is optional.
     this.smaaPass = new SMAAPass(size.width, size.height);
     this.fxaaPass = new FXAAShaderPass();
 
@@ -65,7 +67,7 @@ export class StudyBloom {
   initGUI() {
     const gui = new dat.GUI();
     this.initPassGUI(gui);
-    this.initGUIResolution(gui);
+    CommonGUI.initGUIResolution(gui, this.postRenderer);
   }
 
   initPassGUI(gui) {
@@ -98,28 +100,6 @@ export class StudyBloom {
     folder.open();
 
     onChanged(prop.AA_Type);
-  }
-
-  initGUIResolution(gui) {
-    const size = this.postRenderer.getSize();
-    const prop = {
-      width: size.width,
-      height: size.height
-    };
-
-    const onChange = () => {
-      this.postRenderer.setSize(prop.width, prop.height);
-    };
-    const folder = gui.addFolder("Resolution");
-    folder
-      .add(prop, "width", 2, 1920)
-      .step(1)
-      .onChange(onChange);
-    folder
-      .add(prop, "height", 2, 1080)
-      .step(1)
-      .onChange(onChange);
-    folder.open();
   }
 }
 

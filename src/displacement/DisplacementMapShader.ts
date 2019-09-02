@@ -1,6 +1,7 @@
 import { UniformsUtils, Color } from "three";
 import { PostProcessShader } from "../index";
 import FragmentShader from "./DisplacementMap.frag.glsl";
+import { Vector2 } from "three";
 
 export class DisplacementMapShader extends PostProcessShader {
   constructor() {
@@ -17,7 +18,7 @@ export class DisplacementMapShader extends PostProcessShader {
         strengthY: { value: 0.0 },
         map: { value: null },
         hasMap: { value: false },
-        aspect: { value: 1.0 }
+        aspect: { value: new Vector2(1.0, 1.0) }
       }
     ]);
   }

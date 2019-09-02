@@ -3,6 +3,8 @@ import { Common } from "./Common";
 import * as dat from "dat.gui";
 import { PostProcessRenderer } from "../bin";
 import { DisplacementMapShaderPass } from "../bin";
+import { CommonGUI } from "./CommonGUI";
+import { SMAAPass } from "three/examples/jsm/postprocessing/SMAAPass";
 
 class Study {
   constructor() {
@@ -18,15 +20,19 @@ class Study {
     Common.initHelper(scene);
     this.initObject(scene);
 
-    const render = new PostProcessRenderer(scene, camera, renderer);
+    this.postRenderer = new PostProcessRenderer(scene, camera, renderer);
     const pass = new DisplacementMapShaderPass();
     pass.loadMap("./texture/caust_001.png");
-    render.addComposer([pass]);
+    // pass.loadMap("./texture/uv_grid_h.jpg");
+    // pass.loadMap("./texture/uv_grid_w.jpg");
 
-    render.onBeforeRequestAnimationFrame = () => {
+    const aa = new SMAAPass();
+    this.postRenderer.addComposer([pass, aa]);
+
+    this.postRenderer.onBeforeRequestAnimationFrame = () => {
       control.update();
     };
-    render.start();
+    this.postRenderer.start();
 
     this.initGUI(pass);
   }
@@ -37,7 +43,7 @@ class Study {
       fog: scene.fog !== undefined
     });
     mat.color = new Color(0xff6666);
-    mat.wireframe = true;
+    // mat.wireframe = true;
     const center = new Mesh(geo, mat);
     scene.add(center);
 
@@ -53,6 +59,7 @@ class Study {
   initGUI(pass) {
     const gui = new dat.GUI();
     this.initGUIEffect(gui, pass);
+    CommonGUI.initGUIResolution(gui, this.postRenderer);
   }
 
   initGUIEffect(gui, pass) {
