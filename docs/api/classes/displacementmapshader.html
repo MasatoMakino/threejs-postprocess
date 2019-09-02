@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>PostProcessShader | threejs-postprocess</title>
+	<title>DisplacementMapShader | threejs-postprocess</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,41 +56,24 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="postprocessshader.html">PostProcessShader</a>
+					<a href="displacementmapshader.html">DisplacementMapShader</a>
 				</li>
 			</ul>
-			<h1>Class PostProcessShader</h1>
+			<h1>Class DisplacementMapShader</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>EffectComposer用のShaderオブジェクトに必要な要素を定義したクラス。
-						このクラスのインスタンスをShaderPassに渡すことで、任意のシェーダーエフェクトコンポーザーになる。</p>
-					</div>
-				</div>
-			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">PostProcessShader</span>
+						<a href="postprocessshader.html" class="tsd-signature-type">PostProcessShader</a>
 						<ul class="tsd-hierarchy">
 							<li>
-								<a href="peripherallightshader.html" class="tsd-signature-type">PeripheralLightShader</a>
-							</li>
-							<li>
-								<a href="chromaticaberrationshader.html" class="tsd-signature-type">ChromaticAberrationShader</a>
-							</li>
-							<li>
-								<a href="mixshader.html" class="tsd-signature-type">MixShader</a>
-							</li>
-							<li>
-								<a href="displacementmapshader.html" class="tsd-signature-type">DisplacementMapShader</a>
+								<span class="target">DisplacementMapShader</span>
 							</li>
 						</ul>
 					</li>
@@ -103,21 +86,21 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="postprocessshader.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="displacementmapshader.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section ">
+						<section class="tsd-index-section tsd-is-inherited">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="postprocessshader.html#fragmentshader" class="tsd-kind-icon">fragment<wbr>Shader</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="postprocessshader.html#uniforms" class="tsd-kind-icon">uniforms</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="postprocessshader.html#vertexshader" class="tsd-kind-icon">vertex<wbr>Shader</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="displacementmapshader.html#fragmentshader" class="tsd-kind-icon">fragment<wbr>Shader</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="displacementmapshader.html#uniforms" class="tsd-kind-icon">uniforms</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="displacementmapshader.html#vertexshader" class="tsd-kind-icon">vertex<wbr>Shader</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-private-protected">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="postprocessshader.html#inituniform" class="tsd-kind-icon">init<wbr>Uniform</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected"><a href="displacementmapshader.html#inituniform" class="tsd-kind-icon">init<wbr>Uniform</a></li>
 							</ul>
 						</section>
 					</div>
@@ -125,41 +108,44 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Constructors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
-					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Post<wbr>Process<wbr>Shader<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="postprocessshader.html" class="tsd-signature-type">PostProcessShader</a></li>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Displacement<wbr>Map<wbr>Shader<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="displacementmapshader.html" class="tsd-signature-type">DisplacementMapShader</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Overrides <a href="postprocessshader.html">PostProcessShader</a>.<a href="postprocessshader.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/fb0126f/src/postprocess/PostProcessShader.ts#L17">postprocess/PostProcessShader.ts:17</a></li>
+									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/fb0126f/src/displacement/DisplacementMapShader.ts#L6">displacement/DisplacementMapShader.ts:6</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <a href="postprocessshader.html" class="tsd-signature-type">PostProcessShader</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="displacementmapshader.html" class="tsd-signature-type">DisplacementMapShader</a></h4>
 						</li>
 					</ul>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
+			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="fragmentshader" class="tsd-anchor"></a>
 					<h3>fragment<wbr>Shader</h3>
 					<div class="tsd-signature tsd-kind-icon">fragment<wbr>Shader<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from <a href="postprocessshader.html">PostProcessShader</a>.<a href="postprocessshader.html#fragmentshader">fragmentShader</a></p>
 						<ul>
 							<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/fb0126f/src/postprocess/PostProcessShader.ts#L17">postprocess/PostProcessShader.ts:17</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="uniforms" class="tsd-anchor"></a>
 					<h3>uniforms</h3>
 					<div class="tsd-signature tsd-kind-icon">uniforms<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from <a href="postprocessshader.html">PostProcessShader</a>.<a href="postprocessshader.html#uniforms">uniforms</a></p>
 						<ul>
 							<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/fb0126f/src/postprocess/PostProcessShader.ts#L8">postprocess/PostProcessShader.ts:8</a></li>
 						</ul>
@@ -173,11 +159,12 @@
 						</ul>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="vertexshader" class="tsd-anchor"></a>
 					<h3>vertex<wbr>Shader</h3>
 					<div class="tsd-signature tsd-kind-icon">vertex<wbr>Shader<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&#x60;varying vec2 vUv;void main() {vUv &#x3D; uv;gl_Position &#x3D; projectionMatrix * modelViewMatrix * vec4( position, 1.0 );}&#x60;</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from <a href="postprocessshader.html">PostProcessShader</a>.<a href="postprocessshader.html#vertexshader">vertexShader</a></p>
 						<ul>
 							<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/fb0126f/src/postprocess/PostProcessShader.ts#L10">postprocess/PostProcessShader.ts:10</a></li>
 						</ul>
@@ -186,17 +173,18 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-private-protected">
 				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
 					<a name="inituniform" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> init<wbr>Uniform</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
 						<li class="tsd-signature tsd-kind-icon">init<wbr>Uniform<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Overrides <a href="postprocessshader.html">PostProcessShader</a>.<a href="postprocessshader.html#inituniform">initUniform</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/fb0126f/src/postprocess/PostProcessShader.ts#L22">postprocess/PostProcessShader.ts:22</a></li>
+									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/fb0126f/src/displacement/DisplacementMapShader.ts#L12">displacement/DisplacementMapShader.ts:12</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -224,9 +212,30 @@
 					<li class=" tsd-kind-class">
 						<a href="chromaticaberrationshaderpass.html" class="tsd-kind-icon">Chromatic<wbr>Aberration<wbr>Shader<wbr>Pass</a>
 					</li>
-					<li class=" tsd-kind-class">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class">
 						<a href="displacementmapshader.html" class="tsd-kind-icon">Displacement<wbr>Map<wbr>Shader</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
+								<a href="displacementmapshader.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="displacementmapshader.html#fragmentshader" class="tsd-kind-icon">fragment<wbr>Shader</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="displacementmapshader.html#uniforms" class="tsd-kind-icon">uniforms</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="displacementmapshader.html#vertexshader" class="tsd-kind-icon">vertex<wbr>Shader</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
+								<a href="displacementmapshader.html#inituniform" class="tsd-kind-icon">init<wbr>Uniform</a>
+							</li>
+						</ul>
 					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-class">
 						<a href="displacementmapshaderpass.html" class="tsd-kind-icon">Displacement<wbr>Map<wbr>Shader<wbr>Pass</a>
 					</li>
@@ -257,30 +266,9 @@
 					<li class=" tsd-kind-class">
 						<a href="postprocessrenderer.html" class="tsd-kind-icon">Post<wbr>Process<wbr>Renderer</a>
 					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-class">
+					<li class=" tsd-kind-class">
 						<a href="postprocessshader.html" class="tsd-kind-icon">Post<wbr>Process<wbr>Shader</a>
-						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="postprocessshader.html#constructor" class="tsd-kind-icon">constructor</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="postprocessshader.html#fragmentshader" class="tsd-kind-icon">fragment<wbr>Shader</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="postprocessshader.html#uniforms" class="tsd-kind-icon">uniforms</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="postprocessshader.html#vertexshader" class="tsd-kind-icon">vertex<wbr>Shader</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
-								<a href="postprocessshader.html#inituniform" class="tsd-kind-icon">init<wbr>Uniform</a>
-							</li>
-						</ul>
 					</li>
-				</ul>
-				<ul class="after-current">
 					<li class=" tsd-kind-class">
 						<a href="postprocessshaderpass.html" class="tsd-kind-icon">Post<wbr>Process<wbr>Shader<wbr>Pass</a>
 					</li>

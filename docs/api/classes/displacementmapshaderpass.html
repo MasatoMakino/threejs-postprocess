@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>PeripheralLightShaderPass | threejs-postprocess</title>
+	<title>DisplacementMapShaderPass | threejs-postprocess</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="peripherallightshaderpass.html">PeripheralLightShaderPass</a>
+					<a href="displacementmapshaderpass.html">DisplacementMapShaderPass</a>
 				</li>
 			</ul>
-			<h1>Class PeripheralLightShaderPass</h1>
+			<h1>Class DisplacementMapShaderPass</h1>
 		</div>
 	</div>
 </header>
@@ -69,7 +69,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>周辺光量の減光を表現するフィルタ。</p>
+						<p>DisplacementMapによって画面を歪ませるShaderPass</p>
 					</div>
 				</div>
 			</section>
@@ -80,7 +80,7 @@
 						<a href="postprocessshaderpass.html" class="tsd-signature-type">PostProcessShaderPass</a>
 						<ul class="tsd-hierarchy">
 							<li>
-								<span class="target">PeripheralLightShaderPass</span>
+								<span class="target">DisplacementMapShaderPass</span>
 							</li>
 						</ul>
 					</li>
@@ -93,37 +93,42 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="peripherallightshaderpass.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="displacementmapshaderpass.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section tsd-is-inherited">
+						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="peripherallightshaderpass.html#clear" class="tsd-kind-icon">clear</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="peripherallightshaderpass.html#enabled" class="tsd-kind-icon">enabled</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="peripherallightshaderpass.html#fsquad" class="tsd-kind-icon">fs<wbr>Quad</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="peripherallightshaderpass.html#material" class="tsd-kind-icon">material</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="peripherallightshaderpass.html#needsswap" class="tsd-kind-icon">needs<wbr>Swap</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="peripherallightshaderpass.html#rendertoscreen" class="tsd-kind-icon">render<wbr>ToScreen</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="peripherallightshaderpass.html#textureid" class="tsd-kind-icon">textureID</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="peripherallightshaderpass.html#uniforms" class="tsd-kind-icon">uniforms</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="displacementmapshaderpass.html#clear" class="tsd-kind-icon">clear</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="displacementmapshaderpass.html#enabled" class="tsd-kind-icon">enabled</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="displacementmapshaderpass.html#fsquad" class="tsd-kind-icon">fs<wbr>Quad</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="displacementmapshaderpass.html#mapsizeh" class="tsd-kind-icon">map<wbr>SizeH</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="displacementmapshaderpass.html#mapsizew" class="tsd-kind-icon">map<wbr>SizeW</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="displacementmapshaderpass.html#material" class="tsd-kind-icon">material</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="displacementmapshaderpass.html#needsswap" class="tsd-kind-icon">needs<wbr>Swap</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="displacementmapshaderpass.html#rendertoscreen" class="tsd-kind-icon">render<wbr>ToScreen</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="displacementmapshaderpass.html#renderersizeh" class="tsd-kind-icon">renderer<wbr>SizeH</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="displacementmapshaderpass.html#renderersizew" class="tsd-kind-icon">renderer<wbr>SizeW</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="displacementmapshaderpass.html#textureid" class="tsd-kind-icon">textureID</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="displacementmapshaderpass.html#uniforms" class="tsd-kind-icon">uniforms</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Accessors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="peripherallightshaderpass.html#color" class="tsd-kind-icon">color</a></li>
-								<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="peripherallightshaderpass.html#radiusinner" class="tsd-kind-icon">radius<wbr>Inner</a></li>
-								<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="peripherallightshaderpass.html#radiusouter" class="tsd-kind-icon">radius<wbr>Outer</a></li>
-								<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="peripherallightshaderpass.html#rate" class="tsd-kind-icon">rate</a></li>
-								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><a href="peripherallightshaderpass.html#tdiffuse" class="tsd-kind-icon">t<wbr>Diffuse</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="displacementmapshaderpass.html#map" class="tsd-kind-icon">map</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="displacementmapshaderpass.html#strengthx" class="tsd-kind-icon">strengthX</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="displacementmapshaderpass.html#strengthy" class="tsd-kind-icon">strengthY</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><a href="displacementmapshaderpass.html#tdiffuse" class="tsd-kind-icon">t<wbr>Diffuse</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section tsd-is-inherited">
+						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="peripherallightshaderpass.html#render" class="tsd-kind-icon">render</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="peripherallightshaderpass.html#setsize" class="tsd-kind-icon">set<wbr>Size</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="displacementmapshaderpass.html#loadmap" class="tsd-kind-icon">load<wbr>Map</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="displacementmapshaderpass.html#render" class="tsd-kind-icon">render</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="displacementmapshaderpass.html#setsize" class="tsd-kind-icon">set<wbr>Size</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="displacementmapshaderpass.html#updateaspect" class="tsd-kind-icon">update<wbr>Aspect</a></li>
 							</ul>
 						</section>
 					</div>
@@ -135,22 +140,22 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Peripheral<wbr>Light<wbr>Shader<wbr>Pass<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="peripherallightshaderpass.html" class="tsd-signature-type">PeripheralLightShaderPass</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Displacement<wbr>Map<wbr>Shader<wbr>Pass<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="displacementmapshaderpass.html" class="tsd-signature-type">DisplacementMapShaderPass</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides ShaderPass.__constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/fb0126f/src/peripheralLight/PeripheralLightShaderPass.ts#L35">peripheralLight/PeripheralLightShaderPass.ts:35</a></li>
+									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/fb0126f/src/displacement/DisplacementMapShaderPass.ts#L47">displacement/DisplacementMapShaderPass.ts:47</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <a href="peripherallightshaderpass.html" class="tsd-signature-type">PeripheralLightShaderPass</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="displacementmapshaderpass.html" class="tsd-signature-type">DisplacementMapShaderPass</a></h4>
 						</li>
 					</ul>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="clear" class="tsd-anchor"></a>
@@ -185,6 +190,26 @@
 						</ul>
 					</aside>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="mapsizeh" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> map<wbr>SizeH</h3>
+					<div class="tsd-signature tsd-kind-icon">map<wbr>SizeH<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/fb0126f/src/displacement/DisplacementMapShaderPass.ts#L11">displacement/DisplacementMapShaderPass.ts:11</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="mapsizew" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> map<wbr>SizeW</h3>
+					<div class="tsd-signature tsd-kind-icon">map<wbr>SizeW<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/fb0126f/src/displacement/DisplacementMapShaderPass.ts#L10">displacement/DisplacementMapShaderPass.ts:10</a></li>
+						</ul>
+					</aside>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="material" class="tsd-anchor"></a>
 					<h3>material</h3>
@@ -215,6 +240,26 @@
 						<p>Inherited from Pass.renderToScreen</p>
 						<ul>
 							<li>Defined in node_modules/three/examples/jsm/postprocessing/Pass.d.ts:12</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="renderersizeh" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> renderer<wbr>SizeH</h3>
+					<div class="tsd-signature tsd-kind-icon">renderer<wbr>SizeH<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/fb0126f/src/displacement/DisplacementMapShaderPass.ts#L13">displacement/DisplacementMapShaderPass.ts:13</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="renderersizew" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> renderer<wbr>SizeW</h3>
+					<div class="tsd-signature tsd-kind-icon">renderer<wbr>SizeW<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/fb0126f/src/displacement/DisplacementMapShaderPass.ts#L12">displacement/DisplacementMapShaderPass.ts:12</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -252,50 +297,35 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Accessors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class">
-					<a name="color" class="tsd-anchor"></a>
-					<h3>color</h3>
-					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> color<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Color</span></li>
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> color<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Color</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+					<a name="map" class="tsd-anchor"></a>
+					<h3>map</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> map<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Texture</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/fb0126f/src/peripheralLight/PeripheralLightShaderPass.ts#L30">peripheralLight/PeripheralLightShaderPass.ts:30</a></li>
+									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/fb0126f/src/displacement/DisplacementMapShaderPass.ts#L15">displacement/DisplacementMapShaderPass.ts:15</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Color</span></h4>
-						</li>
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/fb0126f/src/peripheralLight/PeripheralLightShaderPass.ts#L33">peripheralLight/PeripheralLightShaderPass.ts:33</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>value: <span class="tsd-signature-type">Color</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Texture</span></h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class">
-					<a name="radiusinner" class="tsd-anchor"></a>
-					<h3>radius<wbr>Inner</h3>
+					<a name="strengthx" class="tsd-anchor"></a>
+					<h3>strengthX</h3>
 					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> radiusInner<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> radiusInner<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> strengthX<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> strengthX<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/fb0126f/src/peripheralLight/PeripheralLightShaderPass.ts#L16">peripheralLight/PeripheralLightShaderPass.ts:16</a></li>
+									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/fb0126f/src/displacement/DisplacementMapShaderPass.ts#L35">displacement/DisplacementMapShaderPass.ts:35</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -303,7 +333,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/fb0126f/src/peripheralLight/PeripheralLightShaderPass.ts#L19">peripheralLight/PeripheralLightShaderPass.ts:19</a></li>
+									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/fb0126f/src/displacement/DisplacementMapShaderPass.ts#L38">displacement/DisplacementMapShaderPass.ts:38</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -317,17 +347,17 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class">
-					<a name="radiusouter" class="tsd-anchor"></a>
-					<h3>radius<wbr>Outer</h3>
+					<a name="strengthy" class="tsd-anchor"></a>
+					<h3>strengthY</h3>
 					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> radiusOuter<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> radiusOuter<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> strengthY<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> strengthY<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/fb0126f/src/peripheralLight/PeripheralLightShaderPass.ts#L23">peripheralLight/PeripheralLightShaderPass.ts:23</a></li>
+									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/fb0126f/src/displacement/DisplacementMapShaderPass.ts#L42">displacement/DisplacementMapShaderPass.ts:42</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -335,39 +365,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/fb0126f/src/peripheralLight/PeripheralLightShaderPass.ts#L26">peripheralLight/PeripheralLightShaderPass.ts:26</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>value: <span class="tsd-signature-type">number</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class">
-					<a name="rate" class="tsd-anchor"></a>
-					<h3>rate</h3>
-					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> rate<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> rate<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/fb0126f/src/peripheralLight/PeripheralLightShaderPass.ts#L9">peripheralLight/PeripheralLightShaderPass.ts:9</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
-						</li>
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/fb0126f/src/peripheralLight/PeripheralLightShaderPass.ts#L12">peripheralLight/PeripheralLightShaderPass.ts:12</a></li>
+									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/fb0126f/src/displacement/DisplacementMapShaderPass.ts#L45">displacement/DisplacementMapShaderPass.ts:45</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -415,8 +413,39 @@
 					</ul>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="loadmap" class="tsd-anchor"></a>
+					<h3>load<wbr>Map</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">load<wbr>Map<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/fb0126f/src/displacement/DisplacementMapShaderPass.ts#L25">displacement/DisplacementMapShaderPass.ts:25</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>DisplacementMapを読み込む。
+									読み込み後にアスペクト比の補正を行う。</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>url: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="render" class="tsd-anchor"></a>
 					<h3>render</h3>
@@ -453,18 +482,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 					<a name="setsize" class="tsd-anchor"></a>
 					<h3>set<wbr>Size</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 						<li class="tsd-signature tsd-kind-icon">set<wbr>Size<span class="tsd-signature-symbol">(</span>width<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Pass.setSize</p>
+								<p>Overrides Pass.setSize</p>
 								<ul>
-									<li>Defined in node_modules/three/examples/jsm/postprocessing/Pass.d.ts:14</li>
+									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/fb0126f/src/displacement/DisplacementMapShaderPass.ts#L53">displacement/DisplacementMapShaderPass.ts:53</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -476,6 +505,23 @@
 									<h5>height: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="updateaspect" class="tsd-anchor"></a>
+					<h3>update<wbr>Aspect</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">update<wbr>Aspect<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/fb0126f/src/displacement/DisplacementMapShaderPass.ts#L60">displacement/DisplacementMapShaderPass.ts:60</a></li>
+								</ul>
+							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
@@ -504,9 +550,78 @@
 					<li class=" tsd-kind-class">
 						<a href="displacementmapshader.html" class="tsd-kind-icon">Displacement<wbr>Map<wbr>Shader</a>
 					</li>
-					<li class=" tsd-kind-class">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class">
 						<a href="displacementmapshaderpass.html" class="tsd-kind-icon">Displacement<wbr>Map<wbr>Shader<wbr>Pass</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
+								<a href="displacementmapshaderpass.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="displacementmapshaderpass.html#clear" class="tsd-kind-icon">clear</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="displacementmapshaderpass.html#enabled" class="tsd-kind-icon">enabled</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="displacementmapshaderpass.html#fsquad" class="tsd-kind-icon">fs<wbr>Quad</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="displacementmapshaderpass.html#mapsizeh" class="tsd-kind-icon">map<wbr>SizeH</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="displacementmapshaderpass.html#mapsizew" class="tsd-kind-icon">map<wbr>SizeW</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="displacementmapshaderpass.html#material" class="tsd-kind-icon">material</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="displacementmapshaderpass.html#needsswap" class="tsd-kind-icon">needs<wbr>Swap</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="displacementmapshaderpass.html#rendertoscreen" class="tsd-kind-icon">render<wbr>ToScreen</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="displacementmapshaderpass.html#renderersizeh" class="tsd-kind-icon">renderer<wbr>SizeH</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="displacementmapshaderpass.html#renderersizew" class="tsd-kind-icon">renderer<wbr>SizeW</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="displacementmapshaderpass.html#textureid" class="tsd-kind-icon">textureID</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+								<a href="displacementmapshaderpass.html#uniforms" class="tsd-kind-icon">uniforms</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
+								<a href="displacementmapshaderpass.html#map" class="tsd-kind-icon">map</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class">
+								<a href="displacementmapshaderpass.html#strengthx" class="tsd-kind-icon">strengthX</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class">
+								<a href="displacementmapshaderpass.html#strengthy" class="tsd-kind-icon">strengthY</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited">
+								<a href="displacementmapshaderpass.html#tdiffuse" class="tsd-kind-icon">t<wbr>Diffuse</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="displacementmapshaderpass.html#loadmap" class="tsd-kind-icon">load<wbr>Map</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="displacementmapshaderpass.html#render" class="tsd-kind-icon">render</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+								<a href="displacementmapshaderpass.html#setsize" class="tsd-kind-icon">set<wbr>Size</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="displacementmapshaderpass.html#updateaspect" class="tsd-kind-icon">update<wbr>Aspect</a>
+							</li>
+						</ul>
 					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-class">
 						<a href="fxaashaderpass.html" class="tsd-kind-icon">FXAAShader<wbr>Pass</a>
 					</li>
@@ -525,63 +640,9 @@
 					<li class=" tsd-kind-class">
 						<a href="peripherallightshader.html" class="tsd-kind-icon">Peripheral<wbr>Light<wbr>Shader</a>
 					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-class">
+					<li class=" tsd-kind-class">
 						<a href="peripherallightshaderpass.html" class="tsd-kind-icon">Peripheral<wbr>Light<wbr>Shader<wbr>Pass</a>
-						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-								<a href="peripherallightshaderpass.html#constructor" class="tsd-kind-icon">constructor</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="peripherallightshaderpass.html#clear" class="tsd-kind-icon">clear</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="peripherallightshaderpass.html#enabled" class="tsd-kind-icon">enabled</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="peripherallightshaderpass.html#fsquad" class="tsd-kind-icon">fs<wbr>Quad</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="peripherallightshaderpass.html#material" class="tsd-kind-icon">material</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="peripherallightshaderpass.html#needsswap" class="tsd-kind-icon">needs<wbr>Swap</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="peripherallightshaderpass.html#rendertoscreen" class="tsd-kind-icon">render<wbr>ToScreen</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="peripherallightshaderpass.html#textureid" class="tsd-kind-icon">textureID</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
-								<a href="peripherallightshaderpass.html#uniforms" class="tsd-kind-icon">uniforms</a>
-							</li>
-							<li class=" tsd-kind-accessor tsd-parent-kind-class">
-								<a href="peripherallightshaderpass.html#color" class="tsd-kind-icon">color</a>
-							</li>
-							<li class=" tsd-kind-accessor tsd-parent-kind-class">
-								<a href="peripherallightshaderpass.html#radiusinner" class="tsd-kind-icon">radius<wbr>Inner</a>
-							</li>
-							<li class=" tsd-kind-accessor tsd-parent-kind-class">
-								<a href="peripherallightshaderpass.html#radiusouter" class="tsd-kind-icon">radius<wbr>Outer</a>
-							</li>
-							<li class=" tsd-kind-accessor tsd-parent-kind-class">
-								<a href="peripherallightshaderpass.html#rate" class="tsd-kind-icon">rate</a>
-							</li>
-							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited">
-								<a href="peripherallightshaderpass.html#tdiffuse" class="tsd-kind-icon">t<wbr>Diffuse</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="peripherallightshaderpass.html#render" class="tsd-kind-icon">render</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="peripherallightshaderpass.html#setsize" class="tsd-kind-icon">set<wbr>Size</a>
-							</li>
-						</ul>
 					</li>
-				</ul>
-				<ul class="after-current">
 					<li class=" tsd-kind-class">
 						<a href="postprocesseffectcomposer.html" class="tsd-kind-icon">Post<wbr>Process<wbr>Effect<wbr>Composer</a>
 					</li>
