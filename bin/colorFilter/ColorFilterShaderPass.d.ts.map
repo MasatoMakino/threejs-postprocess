@@ -1,0 +1,1 @@
+{"version":3,"file":"ColorFilterShaderPass.d.ts","sourceRoot":"","sources":["../../src/colorFilter/ColorFilterShaderPass.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,qBAAqB,EAAE,MAAM,UAAU,CAAC;AAEjD;;;;;;GAMG;AACH,qBAAa,qBAAsB,SAAQ,qBAAqB;IAC1D,CAAC,EAAI,MAAM;IAMX,MAAM,EAAI,MAAM;IAMhB,MAAM,EAAI,MAAM;IAMhB,IAAI,EAAI,MAAM;IAMd,IAAI,EAAI,MAAM;;CASnB"}

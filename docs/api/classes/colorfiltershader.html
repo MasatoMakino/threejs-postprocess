@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>PeripheralLightShader | threejs-postprocess</title>
+	<title>ColorFilterShader | threejs-postprocess</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="peripherallightshader.html">PeripheralLightShader</a>
+					<a href="colorfiltershader.html">ColorFilterShader</a>
 				</li>
 			</ul>
-			<h1>Class PeripheralLightShader</h1>
+			<h1>Class ColorFilterShader</h1>
 		</div>
 	</div>
 </header>
@@ -73,7 +73,7 @@
 						<a href="postprocessshader.html" class="tsd-signature-type">PostProcessShader</a>
 						<ul class="tsd-hierarchy">
 							<li>
-								<span class="target">PeripheralLightShader</span>
+								<span class="target">ColorFilterShader</span>
 							</li>
 						</ul>
 					</li>
@@ -86,21 +86,21 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="peripherallightshader.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="colorfiltershader.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-inherited">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="peripherallightshader.html#fragmentshader" class="tsd-kind-icon">fragment<wbr>Shader</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="peripherallightshader.html#uniforms" class="tsd-kind-icon">uniforms</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="peripherallightshader.html#vertexshader" class="tsd-kind-icon">vertex<wbr>Shader</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="colorfiltershader.html#fragmentshader" class="tsd-kind-icon">fragment<wbr>Shader</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="colorfiltershader.html#uniforms" class="tsd-kind-icon">uniforms</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="colorfiltershader.html#vertexshader" class="tsd-kind-icon">vertex<wbr>Shader</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-private-protected">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected"><a href="peripherallightshader.html#inituniform" class="tsd-kind-icon">init<wbr>Uniform</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected"><a href="colorfiltershader.html#inituniform" class="tsd-kind-icon">init<wbr>Uniform</a></li>
 							</ul>
 						</section>
 					</div>
@@ -112,17 +112,17 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Peripheral<wbr>Light<wbr>Shader<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="peripherallightshader.html" class="tsd-signature-type">PeripheralLightShader</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Color<wbr>Filter<wbr>Shader<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="colorfiltershader.html" class="tsd-signature-type">ColorFilterShader</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides <a href="postprocessshader.html">PostProcessShader</a>.<a href="postprocessshader.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/73f436f/src/peripheralLight/PeripheralLightShader.ts#L5">peripheralLight/PeripheralLightShader.ts:5</a></li>
+									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/73f436f/src/colorFilter/ColorFilterShader.ts#L5">colorFilter/ColorFilterShader.ts:5</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <a href="peripherallightshader.html" class="tsd-signature-type">PeripheralLightShader</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="colorfiltershader.html" class="tsd-signature-type">ColorFilterShader</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -184,7 +184,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="postprocessshader.html">PostProcessShader</a>.<a href="postprocessshader.html#inituniform">initUniform</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/73f436f/src/peripheralLight/PeripheralLightShader.ts#L11">peripheralLight/PeripheralLightShader.ts:11</a></li>
+									<li>Defined in <a href="https://github.com/MasatoMakino/threejs-postprocess/blob/73f436f/src/colorFilter/ColorFilterShader.ts#L11">colorFilter/ColorFilterShader.ts:11</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -212,9 +212,30 @@
 					<li class=" tsd-kind-class">
 						<a href="chromaticaberrationshaderpass.html" class="tsd-kind-icon">Chromatic<wbr>Aberration<wbr>Shader<wbr>Pass</a>
 					</li>
-					<li class=" tsd-kind-class">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class">
 						<a href="colorfiltershader.html" class="tsd-kind-icon">Color<wbr>Filter<wbr>Shader</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
+								<a href="colorfiltershader.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="colorfiltershader.html#fragmentshader" class="tsd-kind-icon">fragment<wbr>Shader</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="colorfiltershader.html#uniforms" class="tsd-kind-icon">uniforms</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="colorfiltershader.html#vertexshader" class="tsd-kind-icon">vertex<wbr>Shader</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
+								<a href="colorfiltershader.html#inituniform" class="tsd-kind-icon">init<wbr>Uniform</a>
+							</li>
+						</ul>
 					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-class">
 						<a href="colorfiltershaderpass.html" class="tsd-kind-icon">Color<wbr>Filter<wbr>Shader<wbr>Pass</a>
 					</li>
@@ -245,30 +266,9 @@
 					<li class=" tsd-kind-class">
 						<a href="monotoneshaderpass.html" class="tsd-kind-icon">Monotone<wbr>Shader<wbr>Pass</a>
 					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-class">
+					<li class=" tsd-kind-class">
 						<a href="peripherallightshader.html" class="tsd-kind-icon">Peripheral<wbr>Light<wbr>Shader</a>
-						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-								<a href="peripherallightshader.html#constructor" class="tsd-kind-icon">constructor</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="peripherallightshader.html#fragmentshader" class="tsd-kind-icon">fragment<wbr>Shader</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="peripherallightshader.html#uniforms" class="tsd-kind-icon">uniforms</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="peripherallightshader.html#vertexshader" class="tsd-kind-icon">vertex<wbr>Shader</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
-								<a href="peripherallightshader.html#inituniform" class="tsd-kind-icon">init<wbr>Uniform</a>
-							</li>
-						</ul>
 					</li>
-				</ul>
-				<ul class="after-current">
 					<li class=" tsd-kind-class">
 						<a href="peripherallightshaderpass.html" class="tsd-kind-icon">Peripheral<wbr>Light<wbr>Shader<wbr>Pass</a>
 					</li>
