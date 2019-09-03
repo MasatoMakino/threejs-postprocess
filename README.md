@@ -14,6 +14,10 @@ Collection of post process module for three.js
 
 [DisplacementMap](https://masatomakino.github.io/threejs-postprocess/demo/displacement)
 
+[HSB Color Filter](https://masatomakino.github.io/threejs-postprocess/demo/color_filter)
+
+[Monotone](https://masatomakino.github.io/threejs-postprocess/demo/monotne)
+
 ## Getting Started
 
 ### Install
