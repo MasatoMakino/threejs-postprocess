@@ -16,7 +16,7 @@ Collection of post process module for three.js
 
 [HSB Color Filter](https://masatomakino.github.io/threejs-postprocess/demo/color_filter)
 
-[Monotone](https://masatomakino.github.io/threejs-postprocess/demo/monotne)
+[Monotone](https://masatomakino.github.io/threejs-postprocess/demo/monotone)
 
 ## Getting Started
 
