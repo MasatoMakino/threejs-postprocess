@@ -20,4 +20,14 @@ export class CommonGUI {
       .onChange(onChange);
     folder.open();
   }
+
+  static initColorGUI(folder, target, propName = "color") {
+    const prop = {};
+    const targetColor = target[propName];
+    prop[propName] = targetColor.getHex();
+    folder.addColor(prop, propName).onChange(val => {
+      targetColor.setHex(val);
+    });
+    return prop;
+  }
 }
