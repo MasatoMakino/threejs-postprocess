@@ -5,8 +5,10 @@ uniform sampler2D tDiffuse;
 varying vec2 vUv;
 
 uniform float h;
-uniform float s;
-uniform float b;
+uniform float multiS;
+uniform float multiB;
+uniform float addS;
+uniform float addB;
 
 //  Function Patricio Gonzalez Vivo
 //  https://thebookofshaders.com/06/
@@ -40,8 +42,10 @@ void main() {
   vec4 color = texture2D( tDiffuse, vUv );
   vec3 hsb = rgb2hsb(color.rgb);
   hsb.x += h;
-  hsb.y += s;
-  hsb.z += b;
+  hsb.y *= multiS;
+  hsb.z *= multiB;
+  hsb.y += addS;
+  hsb.z += addB;
   color.rgb = hsb2rgb(hsb);
 
   gl_FragColor = color;

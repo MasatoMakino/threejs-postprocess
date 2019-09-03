@@ -14,8 +14,10 @@ export class ColorFilterShader extends PostProcessShader {
       this.uniforms,
       {
         h: { value: 0.0 },
-        s: { value: 0.0 },
-        b: { value: 0.0 }
+        multiS: { value: 1.0 },
+        multiB: { value: 1.0 },
+        addS: { value: 0.0 },
+        addB: { value: 0.0 }
       }
     ]);
   }

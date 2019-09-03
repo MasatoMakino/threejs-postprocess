@@ -4,6 +4,7 @@ import * as dat from "dat.gui";
 import { PostProcessRenderer } from "../bin";
 import { ColorFilterShaderPass } from "../bin";
 import { CommonGUI } from "./CommonGUI";
+import { SMAAPass } from "three/examples/jsm/postprocessing/SMAAPass";
 
 class Study {
   constructor() {
@@ -11,7 +12,7 @@ class Study {
     const H = 480;
 
     const scene = Common.initScene();
-    scene.fog = new Fog(0xffffff, 80, 160);
+    // scene.fog = new Fog(0xffffff, 80, 160);
     Common.initLight(scene);
     const camera = Common.initCamera(scene, W, H);
     const renderer = Common.initRenderer(W, H, { color: 0xffffff });
@@ -21,7 +22,8 @@ class Study {
 
     const render = new PostProcessRenderer(scene, camera, renderer);
     const pass = new ColorFilterShaderPass();
-    render.addComposer([pass]);
+    const aa = new SMAAPass();
+    render.addComposer([pass, aa]);
     render.start();
 
     this.initGUI(pass);
@@ -43,7 +45,7 @@ class Study {
     scene.add(satellite);
 
     const matSatellite2 = mat.clone();
-    matSatellite2.color = new Color(0x0000ff);
+    matSatellite2.color = new Color(0x222266);
     const satellite02 = new Mesh(geo, matSatellite2);
     satellite02.position.set(-30, 0, 0);
     scene.add(satellite02);
@@ -57,9 +59,11 @@ class Study {
 
   initGUIEffect(gui, pass) {
     const folder = gui.addFolder("ColorFilter");
-    folder.add(pass, "h", -10.0, 10.0);
-    folder.add(pass, "s", -10.0, 10.0);
-    folder.add(pass, "b", -10.0, 10.0);
+    folder.add(pass, "h", -1.0, 1.0).step(0.01);
+    folder.add(pass, "multiS", 0.0, 1.0).step(0.01);
+    folder.add(pass, "multiB", 0.0, 1.0).step(0.01);
+    folder.add(pass, "addS", -1.0, 1.0).step(0.01);
+    folder.add(pass, "addB", -1.0, 1.0).step(0.01);
     folder.open();
   }
 }
