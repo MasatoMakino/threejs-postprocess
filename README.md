@@ -2,6 +2,8 @@
 
 Collection of post process module for three.js
 
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
+
 ## Demo
 
 [Anti-Aliasing](https://masatomakino.github.io/threejs-postprocess/demo/anti_aliasing)
