@@ -64,7 +64,10 @@ postProcessRender.addComposer([pass]);
 ### render
 
 ```javascript
-postProcessRender.start();
+ThreeTicker.addEventListener(
+  ThreeTickerEventType.tick,
+  postProcessRender.render
+);
 ```
 
 ## API documents
