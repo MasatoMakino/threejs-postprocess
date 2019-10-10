@@ -16,6 +16,7 @@ import {
 import * as dat from "dat.gui";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass";
 import { SMAAPass } from "three/examples/jsm/postprocessing/SMAAPass";
+import { ThreeTicker, ThreeTickerEventType } from "threejs-ticker";
 
 export class StudyBloom {
   constructor() {
@@ -43,7 +44,10 @@ export class StudyBloom {
 
     this.postRenderer.composers.push(this.bloom);
     this.postRenderer.addComposer([mixPass, smaaPass], renderPass);
-    this.postRenderer.start();
+    ThreeTicker.addEventListener(
+      ThreeTickerEventType.tick,
+      this.postRenderer.render
+    );
 
     this.initGUI();
   }

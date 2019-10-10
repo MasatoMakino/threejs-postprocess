@@ -3,6 +3,7 @@ import { Common } from "./Common";
 import * as dat from "dat.gui";
 import { PostProcessRenderer } from "../bin";
 import { PeripheralLightShaderPass } from "../bin";
+import { ThreeTicker, ThreeTickerEventType } from "threejs-ticker";
 
 class Study {
   constructor() {
@@ -21,11 +22,7 @@ class Study {
     const render = new PostProcessRenderer(scene, camera, renderer);
     const pass = new PeripheralLightShaderPass();
     render.addComposer([pass]);
-
-    render.onBeforeRequestAnimationFrame = () => {
-      control.update();
-    };
-    render.start();
+    ThreeTicker.addEventListener(ThreeTickerEventType.tick, render.render);
 
     this.initGUI(pass);
   }

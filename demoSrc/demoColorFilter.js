@@ -5,6 +5,7 @@ import { PostProcessRenderer } from "../bin";
 import { ColorFilterShaderPass } from "../bin";
 import { CommonGUI } from "./CommonGUI";
 import { SMAAPass } from "three/examples/jsm/postprocessing/SMAAPass";
+import { ThreeTicker, ThreeTickerEventType } from "threejs-ticker";
 
 class Study {
   constructor() {
@@ -24,9 +25,9 @@ class Study {
     const pass = new ColorFilterShaderPass();
     const aa = new SMAAPass();
     render.addComposer([pass, aa]);
-    render.start();
+    ThreeTicker.addEventListener(ThreeTickerEventType.tick, render.render);
 
-    this.initGUI(pass);
+    this.initGUI(pass, render);
   }
 
   initObject(scene) {
@@ -51,10 +52,10 @@ class Study {
     scene.add(satellite02);
   }
 
-  initGUI(pass) {
+  initGUI(pass, render) {
     const gui = new dat.GUI();
     this.initGUIEffect(gui, pass);
-    CommonGUI.initGUIResolution(gui, this.postRenderer);
+    CommonGUI.initGUIResolution(gui, render);
   }
 
   initGUIEffect(gui, pass) {

@@ -5,6 +5,7 @@ import { PostProcessRenderer } from "../bin";
 import { DisplacementMapShaderPass } from "../bin";
 import { CommonGUI } from "./CommonGUI";
 import { SMAAPass } from "three/examples/jsm/postprocessing/SMAAPass";
+import { ThreeTicker, ThreeTickerEventType } from "threejs-ticker";
 
 class Study {
   constructor() {
@@ -29,10 +30,10 @@ class Study {
     const aa = new SMAAPass();
     this.postRenderer.addComposer([pass, aa]);
 
-    this.postRenderer.onBeforeRequestAnimationFrame = () => {
-      control.update();
-    };
-    this.postRenderer.start();
+    ThreeTicker.addEventListener(
+      ThreeTickerEventType.tick,
+      this.postRenderer.render
+    );
 
     this.initGUI(pass);
   }

@@ -11,6 +11,7 @@ import { Common } from "./Common";
 import * as dat from "dat.gui";
 import { PostProcessRenderer } from "../bin";
 import { ChromaticAberrationShaderPass } from "../bin";
+import { ThreeTicker, ThreeTickerEventType } from "threejs-ticker";
 
 export class Study {
   constructor() {
@@ -30,10 +31,10 @@ export class Study {
     const pass = new ChromaticAberrationShaderPass();
     postProcessRender.addComposer([pass]);
 
-    postProcessRender.onBeforeRequestAnimationFrame = () => {
-      control.update();
-    };
-    postProcessRender.start();
+    ThreeTicker.addEventListener(
+      ThreeTickerEventType.tick,
+      postProcessRender.render
+    );
 
     this.initGUI(pass);
   }

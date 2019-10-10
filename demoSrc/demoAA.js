@@ -17,6 +17,7 @@ import {
 import * as dat from "dat.gui";
 import { SMAAPass } from "three/examples/jsm/postprocessing/SMAAPass";
 import { CommonGUI } from "./CommonGUI";
+import { ThreeTicker, ThreeTickerEventType } from "threejs-ticker";
 
 export class StudyBloom {
   constructor() {
@@ -40,7 +41,10 @@ export class StudyBloom {
     this.fxaaPass = new FXAAShaderPass();
 
     this.postRenderer.addComposer([this.fxaaPass, this.smaaPass]);
-    this.postRenderer.start();
+    ThreeTicker.addEventListener(
+      ThreeTickerEventType.tick,
+      this.postRenderer.render
+    );
 
     this.initGUI();
   }
