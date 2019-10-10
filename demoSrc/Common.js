@@ -64,7 +64,7 @@ export class Common {
 
   static render(control, renderer, scene, camera, onBeforeRender) {
     const rendering = () => {
-      Common.ts;
+
       if (onBeforeRender) {
         onBeforeRender();
       }
