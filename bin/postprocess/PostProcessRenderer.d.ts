@@ -1,11 +1,8 @@
-import { WebGLRenderer } from "three";
-import { Scene } from "three";
-import { PerspectiveCamera } from "three";
-import { Vector2 } from "three";
+import { WebGLRenderer, Scene, PerspectiveCamera, Vector2, Camera } from "three";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass";
 import { Pass } from "three/examples/jsm/postprocessing/Pass";
 import { PostProcessEffectComposer } from "./PostProcessEffectComposer";
-import { Camera } from "three";
+import { ThreeTickerEvent } from "threejs-ticker";
 /**
  * 複数のエフェクトコンポーザーと、WebGLRendererを管理し、
  * 連続してポストエフェクト処理を行うためのクラス。
@@ -16,8 +13,6 @@ export declare class PostProcessRenderer {
     private _composers;
     protected scene: Scene;
     protected camera: PerspectiveCamera;
-    protected id: number;
-    protected lastUpdateTimestamp: number;
     constructor(scene: Scene, camera: PerspectiveCamera, renderer: WebGLRenderer);
     /**
      * シェーダーパスを挟んだEffectComposerを生成、登録する。
@@ -33,14 +28,6 @@ export declare class PostProcessRenderer {
      */
     static getComposer(passes: Pass[], renderer: WebGLRenderer, renderPassOption: RenderPassOption): PostProcessEffectComposer;
     /**
-     * レンダリングを開始する。
-     */
-    start(): void;
-    /**
-     * レンダリングを停止する。
-     */
-    stop(): void;
-    /**
      * ウィンドウリサイズ時の処理
      * @param w
      * @param h
@@ -50,17 +37,7 @@ export declare class PostProcessRenderer {
      * WebGLRendererのレンダリングサイズを取得する。
      */
     getSize(): Vector2;
-    /**
-     * requestAnimationFrameハンドラ
-     * @param timestamp
-     */
-    protected onRequestAnimationFrame: (timestamp?: number) => void;
-    protected render(delta: any): void;
-    /**
-     * レンダリング処理の前に処理を挟み込むための関数
-     * インスタンスに代入可能なので、任意の処理をさせたい場合はこの関数を書き換える。
-     */
-    onBeforeRequestAnimationFrame: (delta?: number) => void;
+    render: (arg: number | ThreeTickerEvent) => void;
 }
 /**
  * getComposer関数で利用するRenderPass初期化オプション

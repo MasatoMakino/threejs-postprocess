@@ -1,6 +1,7 @@
 import { Vector2 } from "three";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass";
 import { PostProcessEffectComposer } from "./PostProcessEffectComposer";
+import { ThreeTickerEvent } from "threejs-ticker";
 /**
  * 複数のエフェクトコンポーザーと、WebGLRendererを管理し、
  * 連続してポストエフェクト処理を行うためのクラス。
@@ -8,21 +9,23 @@ import { PostProcessEffectComposer } from "./PostProcessEffectComposer";
 export class PostProcessRenderer {
     constructor(scene, camera, renderer) {
         this._composers = [];
-        /**
-         * requestAnimationFrameハンドラ
-         * @param timestamp
-         */
-        this.onRequestAnimationFrame = (timestamp) => {
-            if (this.lastUpdateTimestamp == null) {
-                this.lastUpdateTimestamp = timestamp;
+        this.render = (arg) => {
+            let delta;
+            if (arg instanceof ThreeTickerEvent) {
+                delta = arg.delta;
             }
-            const delta = timestamp - this.lastUpdateTimestamp;
-            if (this.onBeforeRequestAnimationFrame) {
-                this.onBeforeRequestAnimationFrame(timestamp);
+            else {
+                delta = arg;
             }
-            this.render(delta);
-            this.lastUpdateTimestamp = timestamp;
-            this.id = requestAnimationFrame(this.onRequestAnimationFrame);
+            this._composers.forEach(composer => {
+                if (!composer.enabled)
+                    return;
+                if (composer.onBeforeRender)
+                    composer.onBeforeRender(delta);
+                composer.render(delta);
+                if (composer.onAfterRender)
+                    composer.onAfterRender(delta);
+            });
         };
         this.renderer = renderer;
         this.scene = scene;
@@ -61,23 +64,6 @@ export class PostProcessRenderer {
         return composer;
     }
     /**
-     * レンダリングを開始する。
-     */
-    start() {
-        if (this.id != null)
-            return;
-        this.id = requestAnimationFrame(this.onRequestAnimationFrame);
-    }
-    /**
-     * レンダリングを停止する。
-     */
-    stop() {
-        if (this.id == null)
-            return;
-        cancelAnimationFrame(this.id);
-        this.lastUpdateTimestamp = null;
-    }
-    /**
      * ウィンドウリサイズ時の処理
      * @param w
      * @param h
@@ -96,17 +82,6 @@ export class PostProcessRenderer {
      */
     getSize() {
         return this.renderer.getSize(new Vector2());
-    }
-    render(delta) {
-        this._composers.forEach(composer => {
-            if (!composer.enabled)
-                return;
-            if (composer.onBeforeRender)
-                composer.onBeforeRender(delta);
-            composer.render(delta);
-            if (composer.onAfterRender)
-                composer.onAfterRender(delta);
-        });
     }
 }
 /**
