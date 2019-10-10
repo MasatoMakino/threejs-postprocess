@@ -1,11 +1,14 @@
-import { WebGLRenderer } from "three";
-import { Scene } from "three";
-import { PerspectiveCamera } from "three";
-import { Vector2 } from "three";
+import {
+  WebGLRenderer,
+  Scene,
+  PerspectiveCamera,
+  Vector2,
+  Camera
+} from "three";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass";
 import { Pass } from "three/examples/jsm/postprocessing/Pass";
 import { PostProcessEffectComposer } from "./PostProcessEffectComposer";
-import { Camera } from "three";
+import { ThreeTickerEvent } from "threejs-ticker";
 
 /**
  * 複数のエフェクトコンポーザーと、WebGLRendererを管理し、
@@ -20,8 +23,6 @@ export class PostProcessRenderer {
   private _composers: PostProcessEffectComposer[] = [];
   protected scene: Scene;
   protected camera: PerspectiveCamera;
-  protected id: number;
-  protected lastUpdateTimestamp: number;
 
   constructor(
     scene: Scene,
@@ -73,23 +74,6 @@ export class PostProcessRenderer {
   }
 
   /**
-   * レンダリングを開始する。
-   */
-  public start(): void {
-    if (this.id != null) return;
-    this.id = requestAnimationFrame(this.onRequestAnimationFrame);
-  }
-
-  /**
-   * レンダリングを停止する。
-   */
-  public stop(): void {
-    if (this.id == null) return;
-    cancelAnimationFrame(this.id);
-    this.lastUpdateTimestamp = null;
-  }
-
-  /**
    * ウィンドウリサイズ時の処理
    * @param w
    * @param h
@@ -112,27 +96,14 @@ export class PostProcessRenderer {
     return this.renderer.getSize(new Vector2());
   }
 
-  /**
-   * requestAnimationFrameハンドラ
-   * @param timestamp
-   */
-  protected onRequestAnimationFrame = (timestamp?: number) => {
-    if (this.lastUpdateTimestamp == null) {
-      this.lastUpdateTimestamp = timestamp;
+  public render = (arg: ThreeTickerEvent | number) => {
+    let delta: number;
+    if (arg instanceof ThreeTickerEvent) {
+      delta = arg.delta;
+    } else {
+      delta = arg;
     }
 
-    const delta = timestamp - this.lastUpdateTimestamp;
-
-    if (this.onBeforeRequestAnimationFrame) {
-      this.onBeforeRequestAnimationFrame(timestamp);
-    }
-    this.render(delta);
-
-    this.lastUpdateTimestamp = timestamp;
-    this.id = requestAnimationFrame(this.onRequestAnimationFrame);
-  };
-
-  protected render(delta): void {
     this._composers.forEach(composer => {
       if (!composer.enabled) return;
 
@@ -140,13 +111,7 @@ export class PostProcessRenderer {
       composer.render(delta);
       if (composer.onAfterRender) composer.onAfterRender(delta);
     });
-  }
-
-  /**
-   * レンダリング処理の前に処理を挟み込むための関数
-   * インスタンスに代入可能なので、任意の処理をさせたい場合はこの関数を書き換える。
-   */
-  public onBeforeRequestAnimationFrame: (delta?: number) => void;
+  };
 }
 
 /**
