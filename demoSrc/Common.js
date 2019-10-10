@@ -61,16 +61,4 @@ export class Common {
     const axesHelper = new AxesHelper(30);
     scene.add(axesHelper);
   }
-
-  static render(control, renderer, scene, camera, onBeforeRender) {
-    const rendering = () => {
-      if (onBeforeRender) {
-        onBeforeRender();
-      }
-      control.update();
-      renderer.render(scene, camera);
-      requestAnimationFrame(rendering);
-    };
-    rendering();
-  }
 }
