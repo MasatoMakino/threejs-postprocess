@@ -4,10 +4,14 @@ import { PostProcessShaderPass } from "../index";
  * 周辺光量の減光を表現するフィルタ。
  */
 export declare class PeripheralLightShaderPass extends PostProcessShaderPass {
-    rate: number;
-    radiusInner: number;
-    radiusOuter: number;
-    color: Color;
+    get rate(): number;
+    set rate(value: number);
+    get radiusInner(): number;
+    set radiusInner(value: number);
+    get radiusOuter(): number;
+    set radiusOuter(value: number);
+    get color(): Color;
+    set color(value: Color);
     constructor();
 }
 //# sourceMappingURL=PeripheralLightShaderPass.d.ts.map

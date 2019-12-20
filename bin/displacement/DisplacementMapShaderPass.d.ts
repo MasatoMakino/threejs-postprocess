@@ -8,7 +8,7 @@ export declare class DisplacementMapShaderPass extends PostProcessShaderPass {
     protected mapSizeH: number;
     protected rendererSizeW: number;
     protected rendererSizeH: number;
-    readonly map: Texture;
+    get map(): Texture;
     /**
      * DisplacementMapを読み込む。
      * 読み込み後にアスペクト比の補正を行う。
@@ -16,8 +16,10 @@ export declare class DisplacementMapShaderPass extends PostProcessShaderPass {
      * @param url
      */
     loadMap(url: string): void;
-    strengthX: number;
-    strengthY: number;
+    get strengthX(): number;
+    set strengthX(value: number);
+    get strengthY(): number;
+    set strengthY(value: number);
     constructor();
     setSize(width: number, height: number): void;
     updateAspect(): void;

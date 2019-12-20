@@ -7,11 +7,16 @@ import { PostProcessShaderPass } from "../index";
  * multiB = 0.0, もしくはaddB = -1.0 でブラックアウト。
  */
 export declare class ColorFilterShaderPass extends PostProcessShaderPass {
-    h: number;
-    multiS: number;
-    multiB: number;
-    addS: number;
-    addB: number;
+    get h(): number;
+    set h(value: number);
+    get multiS(): number;
+    set multiS(value: number);
+    get multiB(): number;
+    set multiB(value: number);
+    get addS(): number;
+    set addS(value: number);
+    get addB(): number;
+    set addB(value: number);
     constructor();
 }
 //# sourceMappingURL=ColorFilterShaderPass.d.ts.map

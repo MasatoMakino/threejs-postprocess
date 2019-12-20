@@ -2,13 +2,13 @@ import { WebGLRenderer, Scene, PerspectiveCamera, Vector2, Camera } from "three"
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass";
 import { Pass } from "three/examples/jsm/postprocessing/Pass";
 import { PostProcessEffectComposer } from "./PostProcessEffectComposer";
-import { ThreeTickerEvent } from "threejs-ticker";
+import { RAFTickerEvent } from "raf-ticker";
 /**
  * 複数のエフェクトコンポーザーと、WebGLRendererを管理し、
  * 連続してポストエフェクト処理を行うためのクラス。
  */
 export declare class PostProcessRenderer {
-    readonly composers: PostProcessEffectComposer[];
+    get composers(): PostProcessEffectComposer[];
     protected renderer: WebGLRenderer;
     private _composers;
     protected scene: Scene;
@@ -37,7 +37,7 @@ export declare class PostProcessRenderer {
      * WebGLRendererのレンダリングサイズを取得する。
      */
     getSize(): Vector2;
-    render: (arg: number | ThreeTickerEvent) => void;
+    render: (arg: number | RAFTickerEvent) => void;
 }
 /**
  * getComposer関数で利用するRenderPass初期化オプション

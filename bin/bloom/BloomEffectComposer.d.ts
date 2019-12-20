@@ -16,6 +16,6 @@ export declare class BloomEffectComposer extends PostProcessEffectComposer {
     /**
      * 描画結果を反映したテクスチャを取得する。
      */
-    readonly result: Texture;
+    get result(): Texture;
 }
 //# sourceMappingURL=BloomEffectComposer.d.ts.map

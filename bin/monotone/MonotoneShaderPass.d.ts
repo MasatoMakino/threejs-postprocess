@@ -4,8 +4,10 @@ import { Color } from "three";
  *
  */
 export declare class MonotoneShaderPass extends PostProcessShaderPass {
-    color: Color;
-    strength: number;
+    get color(): Color;
+    set color(value: Color);
+    get strength(): number;
+    set strength(value: number);
     constructor();
 }
 //# sourceMappingURL=MonotoneShaderPass.d.ts.map

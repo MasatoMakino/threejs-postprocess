@@ -5,6 +5,7 @@ export declare class PostProcessShaderPass extends ShaderPass {
     uniforms: {
         [uniform: string]: IUniform;
     };
-    tDiffuse: Texture;
+    get tDiffuse(): Texture;
+    set tDiffuse(value: Texture);
 }
 //# sourceMappingURL=PostProcessShaderPass.d.ts.map

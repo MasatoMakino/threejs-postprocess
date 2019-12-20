@@ -6,19 +6,7 @@ Collection of post process module for three.js
 
 ## Demo
 
-[Anti-Aliasing](https://masatomakino.github.io/threejs-postprocess/demo/anti_aliasing)
-
-[Bloom](https://masatomakino.github.io/threejs-postprocess/demo/bloom)
-
-[Chromatic Aberration](https://masatomakino.github.io/threejs-postprocess/demo/chromatic)
-
-[Peripheral Light](https://masatomakino.github.io/threejs-postprocess/demo/peripheral)
-
-[DisplacementMap](https://masatomakino.github.io/threejs-postprocess/demo/displacement)
-
-[HSB Color Filter](https://masatomakino.github.io/threejs-postprocess/demo/color_filter)
-
-[Monotone](https://masatomakino.github.io/threejs-postprocess/demo/monotone)
+[Demo pages](https://masatomakino.github.io/threejs-postprocess/demo/)
 
 ## Getting Started
 

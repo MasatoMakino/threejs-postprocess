@@ -1,7 +1,7 @@
 import { Vector2 } from "three";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass";
 import { PostProcessEffectComposer } from "./PostProcessEffectComposer";
-import { ThreeTickerEvent } from "threejs-ticker";
+import { RAFTickerEvent } from "raf-ticker";
 /**
  * 複数のエフェクトコンポーザーと、WebGLRendererを管理し、
  * 連続してポストエフェクト処理を行うためのクラス。
@@ -11,7 +11,7 @@ export class PostProcessRenderer {
         this._composers = [];
         this.render = (arg) => {
             let delta;
-            if (arg instanceof ThreeTickerEvent) {
+            if (arg instanceof RAFTickerEvent) {
                 delta = arg.delta;
             }
             else {
