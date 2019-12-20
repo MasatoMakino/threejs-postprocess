@@ -5,7 +5,7 @@ import { PostProcessRenderer } from "../bin";
 import { DisplacementMapShaderPass } from "../bin";
 import { CommonGUI } from "./CommonGUI";
 import { SMAAPass } from "three/examples/jsm/postprocessing/SMAAPass";
-import { ThreeTicker, ThreeTickerEventType } from "threejs-ticker";
+import { RAFTicker, RAFTickerEventType } from "raf-ticker";
 
 class Study {
   constructor() {
@@ -30,8 +30,8 @@ class Study {
     const aa = new SMAAPass();
     this.postRenderer.addComposer([pass, aa]);
 
-    ThreeTicker.addEventListener(
-      ThreeTickerEventType.tick,
+    RAFTicker.addEventListener(
+      RAFTickerEventType.tick,
       this.postRenderer.render
     );
 

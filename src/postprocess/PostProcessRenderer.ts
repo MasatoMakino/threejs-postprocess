@@ -8,7 +8,7 @@ import {
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass";
 import { Pass } from "three/examples/jsm/postprocessing/Pass";
 import { PostProcessEffectComposer } from "./PostProcessEffectComposer";
-import { ThreeTickerEvent } from "threejs-ticker";
+import { RAFTickerEvent } from "raf-ticker";
 
 /**
  * 複数のエフェクトコンポーザーと、WebGLRendererを管理し、
@@ -96,9 +96,9 @@ export class PostProcessRenderer {
     return this.renderer.getSize(new Vector2());
   }
 
-  public render = (arg: ThreeTickerEvent | number) => {
+  public render = (arg: RAFTickerEvent | number) => {
     let delta: number;
-    if (arg instanceof ThreeTickerEvent) {
+    if (arg instanceof RAFTickerEvent) {
       delta = arg.delta;
     } else {
       delta = arg;

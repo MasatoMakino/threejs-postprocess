@@ -5,7 +5,7 @@ import { PostProcessRenderer } from "../bin";
 import { ColorFilterShaderPass } from "../bin";
 import { CommonGUI } from "./CommonGUI";
 import { SMAAPass } from "three/examples/jsm/postprocessing/SMAAPass";
-import { ThreeTicker, ThreeTickerEventType } from "threejs-ticker";
+import { RAFTicker, RAFTickerEventType } from "raf-ticker";
 
 class Study {
   constructor() {
@@ -25,7 +25,7 @@ class Study {
     const pass = new ColorFilterShaderPass();
     const aa = new SMAAPass();
     render.addComposer([pass, aa]);
-    ThreeTicker.addEventListener(ThreeTickerEventType.tick, render.render);
+    RAFTicker.addEventListener(RAFTickerEventType.tick, render.render);
 
     this.initGUI(pass, render);
   }

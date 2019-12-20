@@ -11,7 +11,7 @@ import { Common } from "./Common";
 import * as dat from "dat.gui";
 import { PostProcessRenderer } from "../bin";
 import { ChromaticAberrationShaderPass } from "../bin";
-import { ThreeTicker, ThreeTickerEventType } from "threejs-ticker";
+import { RAFTicker, RAFTickerEventType } from "raf-ticker";
 
 export class Study {
   constructor() {
@@ -31,8 +31,8 @@ export class Study {
     const pass = new ChromaticAberrationShaderPass();
     postProcessRender.addComposer([pass]);
 
-    ThreeTicker.addEventListener(
-      ThreeTickerEventType.tick,
+    RAFTicker.addEventListener(
+      RAFTickerEventType.tick,
       postProcessRender.render
     );
 

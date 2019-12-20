@@ -17,7 +17,7 @@ import {
 import * as dat from "dat.gui";
 import { SMAAPass } from "three/examples/jsm/postprocessing/SMAAPass";
 import { CommonGUI } from "./CommonGUI";
-import { ThreeTicker, ThreeTickerEventType } from "threejs-ticker";
+import { RAFTicker, RAFTickerEventType } from "raf-ticker";
 
 export class StudyBloom {
   constructor() {
@@ -41,8 +41,8 @@ export class StudyBloom {
     this.fxaaPass = new FXAAShaderPass();
 
     this.postRenderer.addComposer([this.fxaaPass, this.smaaPass]);
-    ThreeTicker.addEventListener(
-      ThreeTickerEventType.tick,
+    RAFTicker.addEventListener(
+      RAFTickerEventType.tick,
       this.postRenderer.render
     );
 
@@ -87,10 +87,8 @@ export class StudyBloom {
     };
 
     const onChanged = val => {
-      console.log(val);
       this.smaaPass.enabled = val == AntiAliasingType.SMAA;
       this.fxaaPass.enabled = val == AntiAliasingType.FXAA;
-      console.log(this.smaaPass.enabled);
     };
 
     folder

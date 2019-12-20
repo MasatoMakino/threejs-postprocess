@@ -3,7 +3,7 @@ import { Common } from "./Common";
 import * as dat from "dat.gui";
 import { PostProcessRenderer } from "../bin";
 import { PeripheralLightShaderPass } from "../bin";
-import { ThreeTicker, ThreeTickerEventType } from "threejs-ticker";
+import { RAFTicker, RAFTickerEventType } from "raf-ticker";
 
 class Study {
   constructor() {
@@ -22,7 +22,7 @@ class Study {
     const render = new PostProcessRenderer(scene, camera, renderer);
     const pass = new PeripheralLightShaderPass();
     render.addComposer([pass]);
-    ThreeTicker.addEventListener(ThreeTickerEventType.tick, render.render);
+    RAFTicker.addEventListener(RAFTickerEventType.tick, render.render);
 
     this.initGUI(pass);
   }
