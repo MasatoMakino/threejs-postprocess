@@ -12,7 +12,7 @@ import {
   BloomEffectComposer,
   MixShaderPass,
   PostProcessRenderer
-} from "../bin";
+} from "../lib";
 import * as dat from "dat.gui";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass";
 import { SMAAPass } from "three/examples/jsm/postprocessing/SMAAPass";

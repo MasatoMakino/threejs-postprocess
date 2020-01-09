@@ -9,8 +9,8 @@ import {
 } from "three";
 import { Common } from "./Common";
 import * as dat from "dat.gui";
-import { PostProcessRenderer } from "../bin";
-import { ChromaticAberrationShaderPass } from "../bin";
+import { PostProcessRenderer } from "../lib";
+import { ChromaticAberrationShaderPass } from "../lib";
 import { RAFTicker, RAFTickerEventType } from "raf-ticker";
 
 export class Study {

@@ -1,8 +1,8 @@
 import { Color, Fog, Mesh, MeshLambertMaterial, SphereGeometry } from "three";
 import { Common } from "./Common";
 import * as dat from "dat.gui";
-import { PostProcessRenderer } from "../bin";
-import { ColorFilterShaderPass } from "../bin";
+import { PostProcessRenderer } from "../lib";
+import { ColorFilterShaderPass } from "../lib";
 import { CommonGUI } from "./CommonGUI";
 import { SMAAPass } from "three/examples/jsm/postprocessing/SMAAPass";
 import { RAFTicker, RAFTickerEventType } from "raf-ticker";

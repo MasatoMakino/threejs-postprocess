@@ -13,7 +13,7 @@ import {
   BloomEffectComposer,
   PostProcessRenderer,
   FXAAShaderPass
-} from "../bin";
+} from "../lib";
 import * as dat from "dat.gui";
 import { SMAAPass } from "three/examples/jsm/postprocessing/SMAAPass";
 import { CommonGUI } from "./CommonGUI";
