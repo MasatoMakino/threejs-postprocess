@@ -25,7 +25,7 @@ At first, import classes,
 ```javascript
 import {
   PostProcessRenderer,
-  ChromaticAberrationShaderPass
+  ChromaticAberrationShaderPass,
 } from "threejs-postprocess";
 ```
 
@@ -52,10 +52,7 @@ postProcessRender.addComposer([pass]);
 ### render
 
 ```javascript
-ThreeTicker.addEventListener(
-  ThreeTickerEventType.tick,
-  postProcessRender.render
-);
+RAFTicker.addEventListener(RAFTickerEventType.tick, postProcessRender.render);
 ```
 
 ## API documents
