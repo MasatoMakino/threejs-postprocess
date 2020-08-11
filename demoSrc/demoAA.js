@@ -6,13 +6,13 @@ import {
   PointLight,
   PointLightHelper,
   SphereGeometry,
-  Vector2
+  Vector2,
 } from "three";
 import { Common } from "./Common";
 import {
   BloomEffectComposer,
+  FXAAShaderPass,
   PostProcessRenderer,
-  FXAAShaderPass
 } from "../lib";
 import * as dat from "dat.gui";
 import { SMAAPass } from "three/examples/jsm/postprocessing/SMAAPass";
@@ -41,10 +41,7 @@ export class StudyBloom {
     this.fxaaPass = new FXAAShaderPass();
 
     this.postRenderer.addComposer([this.fxaaPass, this.smaaPass]);
-    RAFTicker.addEventListener(
-      RAFTickerEventType.tick,
-      this.postRenderer.render
-    );
+    RAFTicker.on(RAFTickerEventType.tick, this.postRenderer.render);
 
     this.initGUI();
   }
@@ -60,7 +57,7 @@ export class StudyBloom {
     const mat = new MeshLambertMaterial({
       fog: scene.fog !== undefined,
       wireframe: true,
-      color: new Color(0xffffff)
+      color: new Color(0xffffff),
     });
 
     this.center = new Mesh(geo, mat);
@@ -80,13 +77,13 @@ export class StudyBloom {
     const AntiAliasingType = {
       None: 0,
       SMAA: 1,
-      FXAA: 2
+      FXAA: 2,
     };
     const prop = {
-      AA_Type: AntiAliasingType.None
+      AA_Type: AntiAliasingType.None,
     };
 
-    const onChanged = val => {
+    const onChanged = (val) => {
       this.smaaPass.enabled = val == AntiAliasingType.SMAA;
       this.fxaaPass.enabled = val == AntiAliasingType.FXAA;
     };
@@ -95,7 +92,7 @@ export class StudyBloom {
       .add(prop, "AA_Type", {
         None: AntiAliasingType.None,
         FXAA: AntiAliasingType.FXAA,
-        SMAA: AntiAliasingType.SMAA
+        SMAA: AntiAliasingType.SMAA,
       })
       .onChange(onChanged);
 

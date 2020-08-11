@@ -1,8 +1,7 @@
 import { Color, Fog, Mesh, MeshLambertMaterial, SphereGeometry } from "three";
 import { Common } from "./Common";
 import * as dat from "dat.gui";
-import { PostProcessRenderer } from "../lib";
-import { DisplacementMapShaderPass } from "../lib";
+import { DisplacementMapShaderPass, PostProcessRenderer } from "../lib";
 import { CommonGUI } from "./CommonGUI";
 import { SMAAPass } from "three/examples/jsm/postprocessing/SMAAPass";
 import { RAFTicker, RAFTickerEventType } from "raf-ticker";
@@ -30,10 +29,7 @@ class Study {
     const aa = new SMAAPass();
     this.postRenderer.addComposer([pass, aa]);
 
-    RAFTicker.addEventListener(
-      RAFTickerEventType.tick,
-      this.postRenderer.render
-    );
+    RAFTicker.on(RAFTickerEventType.tick, this.postRenderer.render);
 
     this.initGUI(pass);
   }
@@ -41,7 +37,7 @@ class Study {
   initObject(scene) {
     const geo = new SphereGeometry(10, 16, 16);
     const mat = new MeshLambertMaterial({
-      fog: scene.fog !== undefined
+      fog: scene.fog !== undefined,
     });
     mat.color = new Color(0xff6666);
     // mat.wireframe = true;

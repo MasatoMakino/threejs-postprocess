@@ -1,8 +1,7 @@
-import { Color, Fog, Mesh, MeshLambertMaterial, SphereGeometry } from "three";
+import { Color, Mesh, MeshLambertMaterial, SphereGeometry } from "three";
 import { Common } from "./Common";
 import * as dat from "dat.gui";
-import { PostProcessRenderer } from "../lib";
-import { MonotoneShaderPass } from "../lib";
+import { MonotoneShaderPass, PostProcessRenderer } from "../lib";
 import { CommonGUI } from "./CommonGUI";
 import { SMAAPass } from "three/examples/jsm/postprocessing/SMAAPass";
 import { RAFTicker, RAFTickerEventType } from "raf-ticker";
@@ -25,10 +24,7 @@ class Study {
     const pass = new MonotoneShaderPass();
     const aa = new SMAAPass();
     this.postRenderer.addComposer([pass, aa]);
-    RAFTicker.addEventListener(
-      RAFTickerEventType.tick,
-      this.postRenderer.render
-    );
+    RAFTicker.on(RAFTickerEventType.tick, this.postRenderer.render);
 
     this.initGUI(pass);
   }
@@ -37,7 +33,7 @@ class Study {
     const geo = new SphereGeometry(10, 16, 16);
     const mat = new MeshLambertMaterial({
       fog: scene.fog !== undefined,
-      color: new Color(0xff0000)
+      color: new Color(0xff0000),
     });
     const center = new Mesh(geo, mat);
     scene.add(center);

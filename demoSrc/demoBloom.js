@@ -5,13 +5,13 @@ import {
   MeshLambertMaterial,
   PointLight,
   PointLightHelper,
-  SphereGeometry
+  SphereGeometry,
 } from "three";
 import { Common } from "./Common";
 import {
   BloomEffectComposer,
   MixShaderPass,
-  PostProcessRenderer
+  PostProcessRenderer,
 } from "../lib";
 import * as dat from "dat.gui";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass";
@@ -37,17 +37,14 @@ export class StudyBloom {
     const size = this.postRenderer.getSize();
     const renderPass = new RenderPass(scene, camera);
     this.bloom = new BloomEffectComposer(scene, renderer, {
-      renderPass: renderPass
+      renderPass: renderPass,
     });
     const mixPass = new MixShaderPass(this.bloom.result);
     const smaaPass = new SMAAPass(size.width, size.height);
 
     this.postRenderer.composers.push(this.bloom);
     this.postRenderer.addComposer([mixPass, smaaPass], renderPass);
-    RAFTicker.addEventListener(
-      RAFTickerEventType.tick,
-      this.postRenderer.render
-    );
+    RAFTicker.on(RAFTickerEventType.tick, this.postRenderer.render);
 
     this.initGUI();
   }
@@ -61,7 +58,7 @@ export class StudyBloom {
 
     const geo = new SphereGeometry(10, 32, 32);
     const mat = new MeshLambertMaterial({
-      fog: scene.fog !== undefined
+      fog: scene.fog !== undefined,
     });
     mat.color = new Color(0xff6666);
     this.center = new Mesh(geo, mat);
@@ -88,7 +85,7 @@ export class StudyBloom {
   initGUIBloom(gui) {
     const prop = {
       bloomCenter: true,
-      bloomSatellite: false
+      bloomSatellite: false,
     };
     const switchBloom = (target, isBloom) => {
       if (isBloom) {
@@ -99,10 +96,10 @@ export class StudyBloom {
     };
 
     const folder = gui.addFolder("bloom");
-    folder.add(prop, "bloomCenter").onChange(val => {
+    folder.add(prop, "bloomCenter").onChange((val) => {
       switchBloom(this.center, val);
     });
-    folder.add(prop, "bloomSatellite").onChange(val => {
+    folder.add(prop, "bloomSatellite").onChange((val) => {
       switchBloom(this.satellite, val);
     });
     folder.open();
@@ -127,21 +124,15 @@ export class StudyBloom {
     const size = this.postRenderer.getSize();
     const prop = {
       width: size.width,
-      height: size.height
+      height: size.height,
     };
 
     const onChange = () => {
       this.postRenderer.setSize(prop.width, prop.height);
     };
     const folder = gui.addFolder("Resolution");
-    folder
-      .add(prop, "width", 2, 1920)
-      .step(1)
-      .onChange(onChange);
-    folder
-      .add(prop, "height", 2, 1080)
-      .step(1)
-      .onChange(onChange);
+    folder.add(prop, "width", 2, 1920).step(1).onChange(onChange);
+    folder.add(prop, "height", 2, 1080).step(1).onChange(onChange);
     folder.open();
   }
 }

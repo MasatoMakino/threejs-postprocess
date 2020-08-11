@@ -5,12 +5,11 @@ import {
   MeshLambertMaterial,
   PointLight,
   PointLightHelper,
-  SphereGeometry
+  SphereGeometry,
 } from "three";
 import { Common } from "./Common";
 import * as dat from "dat.gui";
-import { PostProcessRenderer } from "../lib";
-import { ChromaticAberrationShaderPass } from "../lib";
+import { ChromaticAberrationShaderPass, PostProcessRenderer } from "../lib";
 import { RAFTicker, RAFTickerEventType } from "raf-ticker";
 
 export class Study {
@@ -31,10 +30,7 @@ export class Study {
     const pass = new ChromaticAberrationShaderPass();
     postProcessRender.addComposer([pass]);
 
-    RAFTicker.addEventListener(
-      RAFTickerEventType.tick,
-      postProcessRender.render
-    );
+    RAFTicker.on(RAFTickerEventType.tick, postProcessRender.render);
 
     this.initGUI(pass);
   }
@@ -48,7 +44,7 @@ export class Study {
 
     const geo = new SphereGeometry(10, 6, 6);
     const mat = new MeshLambertMaterial({
-      fog: scene.fog !== undefined
+      fog: scene.fog !== undefined,
     });
     mat.color = new Color(0xff6666);
     mat.wireframe = true;

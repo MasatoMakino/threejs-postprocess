@@ -1,8 +1,7 @@
 import { Color, Fog, Mesh, MeshLambertMaterial, SphereGeometry } from "three";
 import { Common } from "./Common";
 import * as dat from "dat.gui";
-import { PostProcessRenderer } from "../lib";
-import { PeripheralLightShaderPass } from "../lib";
+import { PeripheralLightShaderPass, PostProcessRenderer } from "../lib";
 import { RAFTicker, RAFTickerEventType } from "raf-ticker";
 
 class Study {
@@ -22,7 +21,7 @@ class Study {
     const render = new PostProcessRenderer(scene, camera, renderer);
     const pass = new PeripheralLightShaderPass();
     render.addComposer([pass]);
-    RAFTicker.addEventListener(RAFTickerEventType.tick, render.render);
+    RAFTicker.on(RAFTickerEventType.tick, render.render);
 
     this.initGUI(pass);
   }
@@ -30,7 +29,7 @@ class Study {
   initObject(scene) {
     const geo = new SphereGeometry(10, 16, 16);
     const mat = new MeshLambertMaterial({
-      fog: scene.fog !== undefined
+      fog: scene.fog !== undefined,
     });
     mat.color = new Color(0xff6666);
     const center = new Mesh(geo, mat);
@@ -52,13 +51,13 @@ class Study {
 
   initGUIEffect(gui, pass) {
     const prop = {
-      color: pass.color.getHex()
+      color: pass.color.getHex(),
     };
     const folder = gui.addFolder("PeripheralLightPass");
     folder.add(pass, "rate", 0.0, 10.0);
     folder.add(pass, "radiusInner", 0.0, 3.0);
     folder.add(pass, "radiusOuter", 0.0, 3.0);
-    folder.addColor(prop, "color").onChange(val => {
+    folder.addColor(prop, "color").onChange((val) => {
       pass.color.setHex(val);
     });
     folder.open();
