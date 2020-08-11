@@ -1,8 +1,10 @@
 # threejs-postprocess
 
-Collection of post process module for three.js
+> Collection of post process module for three.js
 
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
+
+[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=MasatoMakino&repo=threejs-postprocess&show_owner=true)](https://github.com/MasatoMakino/threejs-postprocess)
 
 ## Demo
 
