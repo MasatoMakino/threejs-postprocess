@@ -1,9 +1,8 @@
-import { Camera, PerspectiveCamera, Scene, Vector2, WebGLRenderer } from "three";
+import { WebGLRenderer, Scene, PerspectiveCamera, Vector2, Camera } from "three";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass";
 import { Pass } from "three/examples/jsm/postprocessing/Pass";
 import { PostProcessEffectComposer } from "./PostProcessEffectComposer";
 import { RAFTickerEvent } from "raf-ticker";
-
 /**
  * 複数のエフェクトコンポーザーと、WebGLRendererを管理し、
  * 連続してポストエフェクト処理を行うためのクラス。
