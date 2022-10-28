@@ -9,6 +9,7 @@ on:
       - "package.json"
       - "README.md"
       - "tsconfig**.json"
+      - ".github/workflows/*.yml"
 
 jobs:
   publish:
