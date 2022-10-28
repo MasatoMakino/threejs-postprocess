@@ -9,15 +9,11 @@ import {
   Vector2,
 } from "three";
 import { Common } from "./Common";
-import {
-  BloomEffectComposer,
-  FXAAShaderPass,
-  PostProcessRenderer,
-} from "../lib";
+import { BloomEffectComposer, FXAAShaderPass, PostProcessRenderer } from "..";
 import * as dat from "dat.gui";
 import { SMAAPass } from "three/examples/jsm/postprocessing/SMAAPass";
 import { CommonGUI } from "./CommonGUI";
-import { RAFTicker, RAFTickerEventType } from "raf-ticker";
+import { RAFTicker, RAFTickerEventType } from "@masatomakino/raf-ticker";
 
 export class StudyBloom {
   constructor() {

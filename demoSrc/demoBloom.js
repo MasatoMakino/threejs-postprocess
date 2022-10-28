@@ -8,15 +8,11 @@ import {
   SphereGeometry,
 } from "three";
 import { Common } from "./Common";
-import {
-  BloomEffectComposer,
-  MixShaderPass,
-  PostProcessRenderer,
-} from "../lib";
+import { BloomEffectComposer, MixShaderPass, PostProcessRenderer } from "..";
 import * as dat from "dat.gui";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass";
 import { SMAAPass } from "three/examples/jsm/postprocessing/SMAAPass";
-import { RAFTicker, RAFTickerEventType } from "raf-ticker";
+import { RAFTicker, RAFTickerEventType } from "@masatomakino/raf-ticker";
 
 export class StudyBloom {
   constructor() {

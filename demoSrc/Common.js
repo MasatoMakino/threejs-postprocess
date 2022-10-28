@@ -4,7 +4,7 @@ import {
   Color,
   PerspectiveCamera,
   Scene,
-  WebGLRenderer
+  WebGLRenderer,
 } from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
@@ -43,13 +43,13 @@ export class Common {
       {
         color: 0x000000,
         id: "webgl-canvas",
-        antialias: true
+        antialias: true,
       },
       option
     );
     const renderer = new WebGLRenderer({
       canvas: document.getElementById(option.id),
-      antialias: option.antialias
+      antialias: option.antialias,
     });
     renderer.setClearColor(new Color(option.color));
     renderer.setSize(W, H);

@@ -1,8 +1,8 @@
 import { Color, Fog, Mesh, MeshLambertMaterial, SphereGeometry } from "three";
 import { Common } from "./Common";
 import * as dat from "dat.gui";
-import { PeripheralLightShaderPass, PostProcessRenderer } from "../lib";
-import { RAFTicker, RAFTickerEventType } from "raf-ticker";
+import { PeripheralLightShaderPass, PostProcessRenderer } from "..";
+import { RAFTicker, RAFTickerEventType } from "@masatomakino/raf-ticker";
 
 class Study {
   constructor() {
