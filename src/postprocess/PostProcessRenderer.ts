@@ -3,12 +3,12 @@ import {
   Scene,
   PerspectiveCamera,
   Vector2,
-  Camera
+  Camera,
 } from "three";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass";
 import { Pass } from "three/examples/jsm/postprocessing/Pass";
 import { PostProcessEffectComposer } from "./PostProcessEffectComposer";
-import { RAFTickerEvent } from "raf-ticker";
+import { RAFTickerEvent } from "@masatomakino/raf-ticker";
 
 /**
  * 複数のエフェクトコンポーザーと、WebGLRendererを管理し、
@@ -46,7 +46,7 @@ export class PostProcessRenderer {
     const composer = PostProcessRenderer.getComposer(passes, this.renderer, {
       scene: this.scene,
       camera: this.camera,
-      renderPass: renderPass
+      renderPass: renderPass,
     });
 
     this._composers.push(composer);
@@ -67,7 +67,7 @@ export class PostProcessRenderer {
     RenderPassOption.init(renderPassOption);
     const composer = new PostProcessEffectComposer(renderer);
     composer.addPass(renderPassOption.renderPass);
-    passes.forEach(p => {
+    passes.forEach((p) => {
       composer.addPass(p);
     });
     return composer;
@@ -84,7 +84,7 @@ export class PostProcessRenderer {
     this.renderer.setPixelRatio(window.devicePixelRatio);
     this.renderer.setSize(w, h);
 
-    this._composers.forEach(composer => {
+    this._composers.forEach((composer) => {
       composer.setSize(w, h);
     });
   }
@@ -104,7 +104,7 @@ export class PostProcessRenderer {
       delta = arg;
     }
 
-    this._composers.forEach(composer => {
+    this._composers.forEach((composer) => {
       if (!composer.enabled) return;
 
       if (composer.onBeforeRender) composer.onBeforeRender(delta);
