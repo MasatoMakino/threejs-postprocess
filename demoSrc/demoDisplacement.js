@@ -1,6 +1,6 @@
 import { Color, Fog, Mesh, MeshLambertMaterial, SphereGeometry } from "three";
 import { Common } from "./Common";
-import * as dat from "dat.gui";
+import GUI from "lil-gui";
 import { DisplacementMapShaderPass, PostProcessRenderer } from "..";
 import { CommonGUI } from "./CommonGUI";
 import { SMAAPass } from "three/examples/jsm/postprocessing/SMAAPass";
@@ -54,7 +54,7 @@ class Study {
   }
 
   initGUI(pass) {
-    const gui = new dat.GUI();
+    const gui = new GUI();
     this.initGUIEffect(gui, pass);
     CommonGUI.initGUIResolution(gui, this.postRenderer);
   }

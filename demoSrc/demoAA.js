@@ -10,7 +10,7 @@ import {
 } from "three";
 import { Common } from "./Common";
 import { BloomEffectComposer, FXAAShaderPass, PostProcessRenderer } from "..";
-import * as dat from "dat.gui";
+import GUI from "lil-gui";
 import { SMAAPass } from "three/examples/jsm/postprocessing/SMAAPass";
 import { CommonGUI } from "./CommonGUI";
 import { RAFTicker, RAFTickerEventType } from "@masatomakino/raf-ticker";
@@ -62,7 +62,7 @@ export class StudyBloom {
   }
 
   initGUI() {
-    const gui = new dat.GUI();
+    const gui = new GUI();
     this.initPassGUI(gui);
     CommonGUI.initGUIResolution(gui, this.postRenderer);
   }
