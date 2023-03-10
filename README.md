@@ -54,7 +54,7 @@ postProcessRender.addComposer([pass]);
 ### render
 
 ```javascript
-RAFTicker.addEventListener(RAFTickerEventType.tick, postProcessRender.render);
+RAFTicker.on("tick", postProcessRender.render);
 ```
 
 ## API documents
