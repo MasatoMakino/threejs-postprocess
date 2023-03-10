@@ -10,7 +10,7 @@ import {
 import { Common } from "./Common";
 import GUI from "lil-gui";
 import { ChromaticAberrationShaderPass, PostProcessRenderer } from "..";
-import { RAFTicker, RAFTickerEventType } from "@masatomakino/raf-ticker";
+import { RAFTicker } from "@masatomakino/raf-ticker";
 
 export class Study {
   constructor() {
@@ -30,7 +30,7 @@ export class Study {
     const pass = new ChromaticAberrationShaderPass();
     postProcessRender.addComposer([pass]);
 
-    RAFTicker.on(RAFTickerEventType.tick, postProcessRender.render);
+    RAFTicker.on("tick", postProcessRender.render);
 
     this.initGUI(pass);
   }

@@ -12,7 +12,7 @@ import { BloomEffectComposer, MixShaderPass, PostProcessRenderer } from "..";
 import GUI from "lil-gui";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass";
 import { SMAAPass } from "three/examples/jsm/postprocessing/SMAAPass";
-import { RAFTicker, RAFTickerEventType } from "@masatomakino/raf-ticker";
+import { RAFTicker } from "@masatomakino/raf-ticker";
 
 export class StudyBloom {
   constructor() {
@@ -40,7 +40,7 @@ export class StudyBloom {
 
     this.postRenderer.composers.push(this.bloom);
     this.postRenderer.addComposer([mixPass, smaaPass], renderPass);
-    RAFTicker.on(RAFTickerEventType.tick, this.postRenderer.render);
+    RAFTicker.on("tick", this.postRenderer.render);
 
     this.initGUI();
   }

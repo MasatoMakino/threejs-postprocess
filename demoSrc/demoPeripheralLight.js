@@ -21,7 +21,7 @@ class Study {
     const render = new PostProcessRenderer(scene, camera, renderer);
     const pass = new PeripheralLightShaderPass();
     render.addComposer([pass]);
-    RAFTicker.on(RAFTickerEventType.tick, render.render);
+    RAFTicker.on("tick", render.render);
 
     this.initGUI(pass);
   }

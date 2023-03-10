@@ -4,7 +4,7 @@ import GUI from "lil-gui";
 import { ColorFilterShaderPass, PostProcessRenderer } from "..";
 import { CommonGUI } from "./CommonGUI";
 import { SMAAPass } from "three/examples/jsm/postprocessing/SMAAPass";
-import { RAFTicker, RAFTickerEventType } from "@masatomakino/raf-ticker";
+import { RAFTicker } from "@masatomakino/raf-ticker";
 
 class Study {
   constructor() {
@@ -24,7 +24,7 @@ class Study {
     const pass = new ColorFilterShaderPass();
     const aa = new SMAAPass();
     render.addComposer([pass, aa]);
-    RAFTicker.on(RAFTickerEventType.tick, render.render);
+    RAFTicker.on("tick", render.render);
 
     this.initGUI(pass, render);
   }

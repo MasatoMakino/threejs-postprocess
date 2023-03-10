@@ -29,7 +29,7 @@ class Study {
     const aa = new SMAAPass();
     this.postRenderer.addComposer([pass, aa]);
 
-    RAFTicker.on(RAFTickerEventType.tick, this.postRenderer.render);
+    RAFTicker.on("tick", this.postRenderer.render);
 
     this.initGUI(pass);
   }
