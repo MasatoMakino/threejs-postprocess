@@ -6,9 +6,6 @@ import { Vector2 } from "three";
  * DisplacementMapによって画面を歪ませるShaderPass
  */
 export class DisplacementMapShaderPass extends PostProcessShaderPass {
-    constructor() {
-        super(new DisplacementMapShader());
-    }
     get map() {
         return this.uniforms.map.value;
     }
@@ -38,6 +35,9 @@ export class DisplacementMapShaderPass extends PostProcessShaderPass {
     }
     set strengthY(value) {
         this.uniforms.strengthY.value = value;
+    }
+    constructor() {
+        super(new DisplacementMapShader());
     }
     setSize(width, height) {
         super.setSize(width, height);

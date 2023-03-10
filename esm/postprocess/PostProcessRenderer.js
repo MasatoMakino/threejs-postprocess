@@ -1,17 +1,20 @@
 import { Vector2, } from "three";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass";
 import { PostProcessEffectComposer } from "./PostProcessEffectComposer";
-import { RAFTickerEvent } from "@masatomakino/raf-ticker";
+import { RAFTickerEventContext } from "@masatomakino/raf-ticker";
 /**
  * 複数のエフェクトコンポーザーと、WebGLRendererを管理し、
  * 連続してポストエフェクト処理を行うためのクラス。
  */
 export class PostProcessRenderer {
+    get composers() {
+        return this._composers;
+    }
     constructor(scene, camera, renderer) {
         this._composers = [];
         this.render = (arg) => {
             let delta;
-            if (arg instanceof RAFTickerEvent) {
+            if (arg instanceof RAFTickerEventContext) {
                 delta = arg.delta;
             }
             else {
@@ -30,9 +33,6 @@ export class PostProcessRenderer {
         this.renderer = renderer;
         this.scene = scene;
         this.camera = camera;
-    }
-    get composers() {
-        return this._composers;
     }
     /**
      * シェーダーパスを挟んだEffectComposerを生成、登録する。
