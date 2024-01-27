@@ -12,21 +12,22 @@
   "repository": "https://MasatoMakino@github.com/MasatoMakino/threejs-postprocess.git",
   "author": "MasatoMakino <unagiinu.g@gmail.com>",
   "license": "MIT",
+  "dependencies": {
+    "@masatomakino/raf-ticker": "0.4.2"
+  },
   "peerDependencies": {
     "three": "^0.150.1"
   },
   "devDependencies": {
-    "@masatomakino/gulptask-demo-page": "^0.6.0",
-    "@types/three": "^0.149.0",
+    "@masatomakino/gulptask-demo-page": "^0.8.0",
+    "@types/three": "^0.160.0",
     "browser-sync": "^3.0.2",
     "husky": "^9.0.6",
-    "lil-gui": "^0.18.0",
+    "lil-gui": "^0.19.1",
     "lint-staged": "^15.2.0",
     "prettier": "^3.2.4",
-    "three": "^0.150.1",
-    "ts-node": "^10.9.1",
-    "typedoc": "^0.23.26",
-    "typescript": "4.9.5"
+    "typedoc": "^0.25.7",
+    "typescript": "^5.3.3"
   },
   "scripts": {
     "start:dev": "npm run server & npm run watch:tsc & npm run watch:demo",
@@ -38,9 +39,6 @@
     "typedocs": "npx typedoc --out ./docs/api src/index.ts",
     "server": "browser-sync ./docs/demo -w",
     "prepare": "husky"
-  },
-  "dependencies": {
-    "@masatomakino/raf-ticker": "0.4.2"
   },
   "lint-staged": {
     "*.{js,ts,css,md}": "prettier --write"

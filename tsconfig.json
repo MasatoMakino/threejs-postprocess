@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     /* Basic Options */
+    "lib": ["DOM"],
     "target": "ES2015",
     "module": "commonjs",
     "declaration": true /* Generates corresponding '.d.ts' file. */,
@@ -10,7 +11,8 @@
 
     /* Module Resolution Options */
     "moduleResolution": "node",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "skipLibCheck": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "**/*.spec.ts"]
