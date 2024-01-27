@@ -19,10 +19,10 @@
     "@masatomakino/gulptask-demo-page": "^0.6.0",
     "@types/three": "^0.149.0",
     "browser-sync": "^3.0.2",
-    "husky": "^8.0.3",
+    "husky": "^9.0.6",
     "lil-gui": "^0.18.0",
-    "prettier": "^2.8.4",
-    "pretty-quick": "^3.1.3",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.2.4",
     "three": "^0.150.1",
     "ts-node": "^10.9.1",
     "typedoc": "^0.23.26",
@@ -37,9 +37,12 @@
     "watch:demo": "npm run demo -- -W",
     "typedocs": "npx typedoc --out ./docs/api src/index.ts",
     "server": "browser-sync ./docs/demo -w",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "dependencies": {
     "@masatomakino/raf-ticker": "0.4.2"
+  },
+  "lint-staged": {
+    "*.{js,ts,css,md}": "prettier --write"
   }
 }
