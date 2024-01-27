@@ -12,11 +12,9 @@
   "repository": "https://MasatoMakino@github.com/MasatoMakino/threejs-postprocess.git",
   "author": "MasatoMakino <unagiinu.g@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "@masatomakino/raf-ticker": "0.4.2"
-  },
   "peerDependencies": {
-    "three": "^0.150.1"
+    "three": "^0.160.0",
+    "@masatomakino/raf-ticker": "0.5.3 - 0.6.x"
   },
   "devDependencies": {
     "@masatomakino/gulptask-demo-page": "^0.8.0",
