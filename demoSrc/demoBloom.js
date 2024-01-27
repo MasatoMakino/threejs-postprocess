@@ -20,7 +20,6 @@ export class StudyBloom {
     const H = 480;
 
     const scene = Common.initScene();
-    scene.fog = new Fog(0x000000, 80, 160);
     Common.initLight(scene);
     const camera = Common.initCamera(scene, W, H);
     const renderer = Common.initRenderer(W, H);
@@ -35,6 +34,9 @@ export class StudyBloom {
     this.bloom = new BloomEffectComposer(scene, renderer, {
       renderPass: renderPass,
     });
+    this.bloom.bloomPass.threshold = 0.385;
+    this.bloom.bloomPass.strength = 1.25;
+
     const mixPass = new MixShaderPass(this.bloom.result);
     const smaaPass = new SMAAPass(size.width, size.height);
 
@@ -46,7 +48,7 @@ export class StudyBloom {
   }
 
   initObject(scene) {
-    const spot = new PointLight(0xffffff, 3, 0, 2);
+    const spot = new PointLight(0xffffff, 6_000);
     spot.position.set(0, 0, 0);
     scene.add(spot);
     const helper = new PointLightHelper(spot, 2, 0);

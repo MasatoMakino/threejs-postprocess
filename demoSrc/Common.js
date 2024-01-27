@@ -15,7 +15,7 @@ export class Common {
   }
 
   static initLight(scene) {
-    const ambientLight = new AmbientLight(0xffffff, 1.0);
+    const ambientLight = new AmbientLight(0xffffff, Math.PI);
     scene.add(ambientLight);
     return ambientLight;
   }
@@ -45,7 +45,7 @@ export class Common {
         id: "webgl-canvas",
         antialias: true,
       },
-      option
+      option,
     );
     const renderer = new WebGLRenderer({
       canvas: document.getElementById(option.id),

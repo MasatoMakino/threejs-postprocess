@@ -18,7 +18,6 @@ export class Study {
     const H = 480;
 
     const scene = Common.initScene();
-    scene.fog = new Fog(0x000000, 80, 160);
     Common.initLight(scene);
     const camera = Common.initCamera(scene, W, H);
     const renderer = Common.initRenderer(W, H);
@@ -36,7 +35,7 @@ export class Study {
   }
 
   initObject(scene) {
-    const spot = new PointLight(0xffffff, 3, 0, 2);
+    const spot = new PointLight(0xffffff, 6000);
     spot.position.set(0, 0, 0);
     scene.add(spot);
     const helper = new PointLightHelper(spot, 2, 0);
