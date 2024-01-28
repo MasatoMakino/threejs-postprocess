@@ -1,5 +1,5 @@
-import { MonotoneShader } from "./MonotoneShader";
-import { PostProcessShaderPass } from "../index";
+import { MonotoneShader } from "./MonotoneShader.js";
+import { PostProcessShaderPass } from "../index.js";
 /**
  *
  */

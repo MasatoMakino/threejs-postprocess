@@ -1,1 +1,1 @@
-export * from "./BloomEffectComposer";
+export * from "./BloomEffectComposer.js";

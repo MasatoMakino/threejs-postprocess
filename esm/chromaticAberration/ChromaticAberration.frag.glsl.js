@@ -1,6 +1,6 @@
 export default () => {
     //language=GLSL
-    return `
+    return /* GLSL */ `
 uniform sampler2D tDiffuse;
 uniform float rate;
 uniform float radiusInner;

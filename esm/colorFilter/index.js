@@ -1,1 +1,1 @@
-export * from "./ColorFilterShaderPass";
+export * from "./ColorFilterShaderPass.js";

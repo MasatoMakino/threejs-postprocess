@@ -1,5 +1,5 @@
-import { PeripheralLightShader } from "./PeripheralLightShader";
-import { PostProcessShaderPass } from "../index";
+import { PeripheralLightShader } from "./PeripheralLightShader.js";
+import { PostProcessShaderPass } from "../index.js";
 /**
  * 周辺光量の減光を表現するフィルタ。
  */

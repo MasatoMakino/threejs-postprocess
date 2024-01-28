@@ -1,5 +1,5 @@
-import { ColorFilterShader } from "./ColorFilterShader";
-import { PostProcessShaderPass } from "../index";
+import { ColorFilterShader } from "./ColorFilterShader.js";
+import { PostProcessShaderPass } from "../index.js";
 /**
  * hsb値をオフセットして、色を変化させるシェーダーパス
  *

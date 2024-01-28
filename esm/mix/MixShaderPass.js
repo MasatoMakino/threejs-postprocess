@@ -1,5 +1,5 @@
-import { PostProcessShaderPass } from "../index";
-import { MixShader } from "./MixShader";
+import { PostProcessShaderPass } from "../index.js";
+import { MixShader } from "./MixShader.js";
 /**
  * 他のエフェクトコンポーザーの描画結果を受け取り、自身のレンダリング結果に乗算するShaderPass
  */

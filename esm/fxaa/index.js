@@ -1,1 +1,1 @@
-export * from "./FXAAShaderPass";
+export * from "./FXAAShaderPass.js";

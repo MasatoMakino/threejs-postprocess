@@ -1,1 +1,1 @@
-export * from "./ChromaticAberrationShaderPass";
+export * from "./ChromaticAberrationShaderPass.js";

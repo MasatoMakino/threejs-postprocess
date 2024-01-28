@@ -1,6 +1,6 @@
 import { Vector2, } from "three";
-import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass";
-import { PostProcessEffectComposer } from "./PostProcessEffectComposer";
+import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
+import { PostProcessEffectComposer } from "./PostProcessEffectComposer.js";
 import { RAFTickerEventContext } from "@masatomakino/raf-ticker";
 /**
  * 複数のエフェクトコンポーザーと、WebGLRendererを管理し、
