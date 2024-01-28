@@ -1,6 +1,6 @@
 import { Scene, Layers, Object3D, Mesh } from "three";
-import { BloomEffectComposer } from "./BloomEffectComposer";
-import { MaterialStorage } from "./MaterialStorage";
+import { BloomEffectComposer } from "./BloomEffectComposer.js";
+import { MaterialStorage } from "./MaterialStorage.js";
 
 /**
  * 切り替え可能なUnrealBloomPassにおいて、マテリアルの切り替え処理を担当するクラス。

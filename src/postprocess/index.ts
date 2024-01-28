@@ -1,3 +1,3 @@
-export * from "./PostProcessRenderer";
-export * from "./PostProcessShader";
-export * from "./PostProcessShaderPass";
+export * from "./PostProcessRenderer.js";
+export * from "./PostProcessShader.js";
+export * from "./PostProcessShaderPass.js";

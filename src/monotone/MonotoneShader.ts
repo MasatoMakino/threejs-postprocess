@@ -1,6 +1,6 @@
 import { UniformsUtils, Color } from "three";
-import { PostProcessShader } from "../index";
-import FragmentShader from "./Monotone.frag.glsl";
+import { PostProcessShader } from "../index.js";
+import FragmentShader from "./Monotone.frag.glsl.js";
 
 export class MonotoneShader extends PostProcessShader {
   constructor() {
@@ -14,8 +14,8 @@ export class MonotoneShader extends PostProcessShader {
       this.uniforms,
       {
         strength: { value: 1.0 },
-        color: { value: new Color(0xffffff) }
-      }
+        color: { value: new Color(0xffffff) },
+      },
     ]);
   }
 }

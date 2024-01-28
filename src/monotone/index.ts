@@ -1,1 +1,1 @@
-export * from "./MonotoneShaderPass";
+export * from "./MonotoneShaderPass.js";

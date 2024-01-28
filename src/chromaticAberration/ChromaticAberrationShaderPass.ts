@@ -1,5 +1,5 @@
-import { ChromaticAberrationShader } from "./ChromaticAberrationShader";
-import { PostProcessShaderPass } from "../index";
+import { ChromaticAberrationShader } from "./ChromaticAberrationShader.js";
+import { PostProcessShaderPass } from "../index.js";
 
 export class ChromaticAberrationShaderPass extends PostProcessShaderPass {
   get rate(): number {

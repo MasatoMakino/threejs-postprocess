@@ -2,15 +2,14 @@
   "compilerOptions": {
     /* Basic Options */
     "lib": ["DOM"],
-    "target": "ES2015",
-    "module": "commonjs",
+    "target": "ES2021",
+    "module": "Node16",
     "declaration": true /* Generates corresponding '.d.ts' file. */,
     "declarationMap": true /* Generates a sourcemap for each corresponding '.d.ts' file. */,
-    "outDir": "./lib" /* Redirect output structure to the directory. */,
-    "rootDir": "./src",
-
+    "outDir": "./esm" /* Redirect output structure to the directory. */,
+    
     /* Module Resolution Options */
-    "moduleResolution": "node",
+    "moduleResolution": "Node16",
     "esModuleInterop": true,
     "skipLibCheck": true
   },

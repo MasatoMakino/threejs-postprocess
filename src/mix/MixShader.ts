@@ -1,5 +1,5 @@
-import { PostProcessShader } from "../index";
-import FragmentShader from "./MixShader.frag.glsl";
+import { PostProcessShader } from "../index.js";
+import FragmentShader from "./MixShader.frag.glsl.js";
 import { UniformsUtils } from "three";
 
 export class MixShader extends PostProcessShader {
@@ -13,8 +13,8 @@ export class MixShader extends PostProcessShader {
     this.uniforms = UniformsUtils.merge([
       this.uniforms,
       {
-        mixTexture: { value: null }
-      }
+        mixTexture: { value: null },
+      },
     ]);
   }
 }

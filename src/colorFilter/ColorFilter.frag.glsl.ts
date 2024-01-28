@@ -1,6 +1,6 @@
 export default () => {
   //language=GLSL
-  return `
+  return /* GLSL */ `
 uniform sampler2D tDiffuse;
 varying vec2 vUv;
 
