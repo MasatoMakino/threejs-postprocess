@@ -1,9 +1,12 @@
 import { Color, Fog, Mesh, MeshLambertMaterial, SphereGeometry } from "three";
-import { Common } from "./Common";
+import { Common } from "./Common.js";
 import GUI from "lil-gui";
-import { DisplacementMapShaderPass, PostProcessRenderer } from "..";
-import { CommonGUI } from "./CommonGUI";
-import { SMAAPass } from "three/examples/jsm/postprocessing/SMAAPass";
+import {
+  DisplacementMapShaderPass,
+  PostProcessRenderer,
+} from "../esm/index.js";
+import { CommonGUI } from "./CommonGUI.js";
+import { SMAAPass } from "three/examples/jsm/postprocessing/SMAAPass.js";
 import { RAFTicker, RAFTickerEventType } from "@masatomakino/raf-ticker";
 
 class Study {

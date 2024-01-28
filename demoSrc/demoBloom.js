@@ -7,11 +7,15 @@ import {
   PointLightHelper,
   SphereGeometry,
 } from "three";
-import { Common } from "./Common";
-import { BloomEffectComposer, MixShaderPass, PostProcessRenderer } from "..";
+import { Common } from "./Common.js";
+import {
+  BloomEffectComposer,
+  MixShaderPass,
+  PostProcessRenderer,
+} from "../esm/index.js";
 import GUI from "lil-gui";
-import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass";
-import { SMAAPass } from "three/examples/jsm/postprocessing/SMAAPass";
+import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
+import { SMAAPass } from "three/examples/jsm/postprocessing/SMAAPass.js";
 import { RAFTicker } from "@masatomakino/raf-ticker";
 
 export class StudyBloom {

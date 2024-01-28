@@ -1,15 +1,17 @@
 import {
   Color,
-  Fog,
   Mesh,
   MeshLambertMaterial,
   PointLight,
   PointLightHelper,
   SphereGeometry,
 } from "three";
-import { Common } from "./Common";
+import { Common } from "./Common.js";
 import GUI from "lil-gui";
-import { ChromaticAberrationShaderPass, PostProcessRenderer } from "..";
+import {
+  ChromaticAberrationShaderPass,
+  PostProcessRenderer,
+} from "../esm/index.js";
 import { RAFTicker } from "@masatomakino/raf-ticker";
 
 export class Study {

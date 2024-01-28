@@ -8,11 +8,15 @@ import {
   SphereGeometry,
   Vector2,
 } from "three";
-import { Common } from "./Common";
-import { BloomEffectComposer, FXAAShaderPass, PostProcessRenderer } from "..";
+import { Common } from "./Common.js";
+import {
+  BloomEffectComposer,
+  FXAAShaderPass,
+  PostProcessRenderer,
+} from "../esm/index.js";
 import GUI from "lil-gui";
-import { SMAAPass } from "three/examples/jsm/postprocessing/SMAAPass";
-import { CommonGUI } from "./CommonGUI";
+import { SMAAPass } from "three/examples/jsm/postprocessing/SMAAPass.js";
+import { CommonGUI } from "./CommonGUI.js";
 import { RAFTicker } from "@masatomakino/raf-ticker";
 
 export class StudyBloom {

@@ -1,8 +1,11 @@
 import { Color, Fog, Mesh, MeshLambertMaterial, SphereGeometry } from "three";
-import { Common } from "./Common";
+import { Common } from "./Common.js";
 import GUI from "lil-gui";
-import { PeripheralLightShaderPass, PostProcessRenderer } from "..";
-import { RAFTicker, RAFTickerEventType } from "@masatomakino/raf-ticker";
+import {
+  PeripheralLightShaderPass,
+  PostProcessRenderer,
+} from "../esm/index.js";
+import { RAFTicker } from "@masatomakino/raf-ticker";
 
 class Study {
   constructor() {
