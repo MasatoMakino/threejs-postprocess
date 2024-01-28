@@ -1,1 +1,1 @@
-export * from "./DisplacementMapShaderPass";
+export * from "./DisplacementMapShaderPass.js";

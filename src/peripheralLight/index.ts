@@ -1,1 +1,1 @@
-export * from "./PeripheralLightShaderPass";
+export * from "./PeripheralLightShaderPass.js";

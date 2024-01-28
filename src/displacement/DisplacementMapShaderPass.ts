@@ -1,5 +1,5 @@
-import { DisplacementMapShader } from "./DisplacementMapShader";
-import { PostProcessShaderPass } from "../index";
+import { DisplacementMapShader } from "./DisplacementMapShader.js";
+import { PostProcessShaderPass } from "../index.js";
 import { Texture, TextureLoader } from "three";
 import { Vector2 } from "three";
 
@@ -23,7 +23,7 @@ export class DisplacementMapShaderPass extends PostProcessShaderPass {
    * @param url
    */
   loadMap(url: string) {
-    const texture = new TextureLoader().load(url, texture => {
+    const texture = new TextureLoader().load(url, (texture) => {
       this.mapSizeW = texture.image.width;
       this.mapSizeH = texture.image.height;
       this.updateAspect();

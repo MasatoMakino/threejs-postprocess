@@ -1,6 +1,6 @@
-import * as FXAAShaderModule from "three/examples/jsm/shaders/FXAAShader";
+import * as FXAAShaderModule from "three/examples/jsm/shaders/FXAAShader.js";
 import { ShaderMaterial } from "three";
-import { PostProcessShaderPass } from "../postprocess";
+import { PostProcessShaderPass } from "../postprocess/index.js";
 
 /**
  * FXAAShaderを組み込み済みのShaderPass

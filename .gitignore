@@ -62,3 +62,4 @@ typings/
 .idea
 *.tsbuildinfo
 docs
+.lib

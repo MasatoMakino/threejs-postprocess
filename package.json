@@ -2,11 +2,15 @@
   "name": "threejs-postprocess",
   "discription": "Collection of post process modules for three.js",
   "version": "0.3.0",
-  "main": "./lib/index.js",
-  "types": "./lib/index.d.ts",
-  "module": "./esm/index.js",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./esm/index.d.ts",
+      "default": "./esm/index.js"
+    }
+  },
+  "types": "./esm/index.d.ts",
   "files": [
-    "lib",
     "esm"
   ],
   "repository": "https://MasatoMakino@github.com/MasatoMakino/threejs-postprocess.git",
@@ -30,8 +34,8 @@
   "scripts": {
     "start:dev": "npm run server & npm run watch:tsc & npm run watch:demo",
     "build": "npm run buildTS && npm run demo && npm run typedocs",
-    "buildTS": "tsc --project tsconfig.json & tsc --project tsconfig.esm.json",
-    "watch:tsc": "tsc -W --incremental --project tsconfig.json & tsc -W --incremental --project tsconfig.esm.json",
+    "buildTS": "tsc",
+    "watch:tsc": "tsc -W --incremental",
     "demo": "npx @masatomakino/gulptask-demo-page --body '<canvas id=\"webgl-canvas\" width=\"640\" height=\"480\"></canvas>'",
     "watch:demo": "npm run demo -- -W",
     "typedocs": "npx typedoc --out ./docs/api src/index.ts",

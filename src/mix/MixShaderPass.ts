@@ -1,6 +1,6 @@
-import { PostProcessShaderPass } from "../index";
+import { PostProcessShaderPass } from "../index.js";
 import { Texture } from "three";
-import { MixShader } from "./MixShader";
+import { MixShader } from "./MixShader.js";
 
 /**
  * 他のエフェクトコンポーザーの描画結果を受け取り、自身のレンダリング結果に乗算するShaderPass

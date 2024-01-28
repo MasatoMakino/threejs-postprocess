@@ -1,6 +1,6 @@
 import { UniformsUtils, Color } from "three";
-import { PostProcessShader } from "../index";
-import FragmentShader from "./PeripheralLight.frag.glsl";
+import { PostProcessShader } from "../index.js";
+import FragmentShader from "./PeripheralLight.frag.glsl.js";
 
 export class PeripheralLightShader extends PostProcessShader {
   constructor() {
@@ -16,8 +16,8 @@ export class PeripheralLightShader extends PostProcessShader {
         rate: { value: 5.0 },
         radiusInner: { value: 0.75 },
         radiusOuter: { value: Math.sqrt(2.0) },
-        color: { value: new Color(0, 0, 0) }
-      }
+        color: { value: new Color(0, 0, 0) },
+      },
     ]);
   }
 }

@@ -1,8 +1,8 @@
 import { Vector2, WebGLRenderer, Scene, Texture } from "three";
-import { PostProcessEffectComposer } from "../postprocess/PostProcessEffectComposer";
-import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass";
-import { RenderPassOption } from "../postprocess";
-import { MaterialSwitcher } from "./MaterialSwitcher";
+import { PostProcessEffectComposer } from "../postprocess/PostProcessEffectComposer.js";
+import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass.js";
+import { RenderPassOption } from "../postprocess/index.js";
+import { MaterialSwitcher } from "./MaterialSwitcher.js";
 
 /**
  * 切り替え可能なUnrealBloomPassを内包したEffectComposer.
@@ -18,7 +18,7 @@ export class BloomEffectComposer extends PostProcessEffectComposer {
   constructor(
     scene: Scene,
     renderer: WebGLRenderer,
-    renderPassOption: RenderPassOption
+    renderPassOption: RenderPassOption,
   ) {
     super(renderer);
 
@@ -27,8 +27,6 @@ export class BloomEffectComposer extends PostProcessEffectComposer {
     const size = renderer.getSize(new Vector2());
     this.bloomPass = new UnrealBloomPass(size, 1.5, 0.4, 0.4);
 
-    // TODO : PR d.ts
-    // @ts-ignore
     this.renderToScreen = false;
 
     RenderPassOption.init(renderPassOption);

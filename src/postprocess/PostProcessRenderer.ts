@@ -5,9 +5,9 @@ import {
   Vector2,
   Camera,
 } from "three";
-import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass";
-import { Pass } from "three/examples/jsm/postprocessing/Pass";
-import { PostProcessEffectComposer } from "./PostProcessEffectComposer";
+import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
+import { Pass } from "three/examples/jsm/postprocessing/Pass.js";
+import { PostProcessEffectComposer } from "./PostProcessEffectComposer.js";
 import { RAFTickerEventContext } from "@masatomakino/raf-ticker";
 
 /**
@@ -27,7 +27,7 @@ export class PostProcessRenderer {
   constructor(
     scene: Scene,
     camera: PerspectiveCamera,
-    renderer: WebGLRenderer
+    renderer: WebGLRenderer,
   ) {
     this.renderer = renderer;
     this.scene = scene;
@@ -41,7 +41,7 @@ export class PostProcessRenderer {
    */
   public addComposer(
     passes: Pass[],
-    renderPass?: RenderPass
+    renderPass?: RenderPass,
   ): PostProcessEffectComposer {
     const composer = PostProcessRenderer.getComposer(passes, this.renderer, {
       scene: this.scene,
@@ -62,7 +62,7 @@ export class PostProcessRenderer {
   public static getComposer(
     passes: Pass[],
     renderer: WebGLRenderer,
-    renderPassOption: RenderPassOption
+    renderPassOption: RenderPassOption,
   ): PostProcessEffectComposer {
     RenderPassOption.init(renderPassOption);
     const composer = new PostProcessEffectComposer(renderer);

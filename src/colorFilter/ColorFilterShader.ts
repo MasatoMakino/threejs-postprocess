@@ -1,6 +1,6 @@
 import { UniformsUtils } from "three";
-import { PostProcessShader } from "../index";
-import FragmentShader from "./ColorFilter.frag.glsl";
+import { PostProcessShader } from "../index.js";
+import FragmentShader from "./ColorFilter.frag.glsl.js";
 
 export class ColorFilterShader extends PostProcessShader {
   constructor() {
@@ -17,8 +17,8 @@ export class ColorFilterShader extends PostProcessShader {
         multiS: { value: 1.0 },
         multiB: { value: 1.0 },
         addS: { value: 0.0 },
-        addB: { value: 0.0 }
-      }
+        addB: { value: 0.0 },
+      },
     ]);
   }
 }
