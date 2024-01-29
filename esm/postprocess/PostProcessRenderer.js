@@ -1,5 +1,6 @@
 import { Vector2, } from "three";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
+import { OutputPass } from "three/examples/jsm/postprocessing/OutputPass.js";
 import { PostProcessEffectComposer } from "./PostProcessEffectComposer.js";
 import { RAFTickerEventContext } from "@masatomakino/raf-ticker";
 /**
@@ -57,10 +58,14 @@ export class PostProcessRenderer {
     static getComposer(passes, renderer, renderPassOption) {
         RenderPassOption.init(renderPassOption);
         const composer = new PostProcessEffectComposer(renderer);
+        //先頭にレンダーパスを挿入
         composer.addPass(renderPassOption.renderPass);
+        //中間にエフェクトパスを挿入
         passes.forEach((p) => {
             composer.addPass(p);
         });
+        //末端にOutputPassを挿入
+        composer.addPass(new OutputPass());
         return composer;
     }
     /**
