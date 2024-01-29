@@ -1,6 +1,7 @@
 import {
   Color,
   Fog,
+  Light,
   Mesh,
   MeshLambertMaterial,
   PointLight,
@@ -15,7 +16,7 @@ import {
 } from "../esm/index.js";
 import GUI from "lil-gui";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
-import { SMAAPass } from "three/examples/jsm/postprocessing/SMAAPass.js";
+import { OutputPass } from "three/examples/jsm/postprocessing/OutputPass.js";
 import { RAFTicker } from "@masatomakino/raf-ticker";
 
 export class StudyBloom {
@@ -24,7 +25,7 @@ export class StudyBloom {
     const H = 480;
 
     const scene = Common.initScene();
-    Common.initLight(scene);
+    Common.initLight(scene, 1.6);
     const camera = Common.initCamera(scene, W, H);
     const renderer = Common.initRenderer(W, H);
     const control = Common.initControl(camera, renderer);
@@ -36,23 +37,22 @@ export class StudyBloom {
     const size = this.postRenderer.getSize();
     const renderPass = new RenderPass(scene, camera);
     this.bloom = new BloomEffectComposer(scene, renderer, {
-      renderPass: renderPass,
+      renderPass,
     });
-    this.bloom.bloomPass.threshold = 0.385;
-    this.bloom.bloomPass.strength = 1.25;
+    this.bloom.bloomPass.threshold = 0.1;
+    this.bloom.bloomPass.strength = 1;
 
     const mixPass = new MixShaderPass(this.bloom.result);
-    const smaaPass = new SMAAPass(size.width, size.height);
 
     this.postRenderer.composers.push(this.bloom);
-    this.postRenderer.addComposer([mixPass, smaaPass], renderPass);
+    this.postRenderer.addComposer([mixPass, new OutputPass()], renderPass);
     RAFTicker.on("tick", this.postRenderer.render);
 
     this.initGUI();
   }
 
   initObject(scene) {
-    const spot = new PointLight(0xffffff, 6_000);
+    const spot = new PointLight(0xffffff, 2_000);
     spot.position.set(0, 0, 0);
     scene.add(spot);
     const helper = new PointLightHelper(spot, 2, 0);
@@ -117,7 +117,7 @@ export class StudyBloom {
   initPassGUI(gui) {
     const folder = gui.addFolder("renderer");
     folder.add(this.bloom.bloomPass, "threshold", 0.0, 1.0);
-    folder.add(this.bloom.bloomPass, "strength", 0.0, 4.0);
+    folder.add(this.bloom.bloomPass, "strength", 0.0, 3.0);
     folder.add(this.bloom.bloomPass, "radius", 0.0, 1.0);
     folder.open();
   }
