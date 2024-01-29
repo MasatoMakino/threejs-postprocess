@@ -16,7 +16,6 @@ import {
 } from "../esm/index.js";
 import GUI from "lil-gui";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
-import { OutputPass } from "three/examples/jsm/postprocessing/OutputPass.js";
 import { RAFTicker } from "@masatomakino/raf-ticker";
 
 export class StudyBloom {
@@ -25,7 +24,7 @@ export class StudyBloom {
     const H = 480;
 
     const scene = Common.initScene();
-    Common.initLight(scene, 1.6);
+    Common.initLight(scene);
     const camera = Common.initCamera(scene, W, H);
     const renderer = Common.initRenderer(W, H);
     const control = Common.initControl(camera, renderer);
@@ -45,7 +44,7 @@ export class StudyBloom {
     const mixPass = new MixShaderPass(this.bloom.result);
 
     this.postRenderer.composers.push(this.bloom);
-    this.postRenderer.addComposer([mixPass, new OutputPass()], renderPass);
+    this.postRenderer.addComposer([mixPass], renderPass);
     RAFTicker.on("tick", this.postRenderer.render);
 
     this.initGUI();
