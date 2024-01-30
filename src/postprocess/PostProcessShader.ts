@@ -1,13 +1,18 @@
 import { IUniform } from "three";
 
 /**
- * EffectComposer用のShaderオブジェクトに必要な要素を定義したクラス。
+ * EffectComposer用のShaderオブジェクトに必要な要素を持つクラス。
+ * 具体的には、uniformsとvertexShader, fragmentShaderをメンバーとして持つ。
+ *
  * このクラスのインスタンスをShaderPassに渡すことで、任意のシェーダーエフェクトコンポーザーになる。
+ * 参照関係はPostProcessEffectComposer → PostProcessShaderPass → PostProcessShader
+ *
+ * 型としては、ShaderPassのコンストラクター第一引数に渡すオブジェクトに相当する。
  */
-export class PostProcessShader {
+export class PostProcessShader implements IPostProcessShader {
   uniforms: { [uniform: string]: IUniform };
   //language=GLSL
-  vertexShader: string = `
+  vertexShader: string = /* GLSL */ `
     varying vec2 vUv;
     void main() {
       vUv = uv;
@@ -21,7 +26,13 @@ export class PostProcessShader {
   }
   protected initUniform() {
     this.uniforms = {
-      tDiffuse: { value: null }
+      tDiffuse: { value: null },
     };
   }
+}
+
+export interface IPostProcessShader {
+  uniforms: { [uniform: string]: IUniform };
+  vertexShader: string;
+  fragmentShader: string;
 }
