@@ -12,8 +12,7 @@ import { PostProcessEffectComposer } from "./PostProcessEffectComposer.js";
 import { RAFTickerEventContext } from "@masatomakino/raf-ticker";
 
 /**
- * 複数のエフェクトコンポーザーと、WebGLRendererを管理し、
- * 連続してポストエフェクト処理を行うためのクラス。
+ * 複数のエフェクトコンポーザーと、WebGLRendererを管理し、連続してポストエフェクト処理を行うためのクラス。
  */
 export class PostProcessRenderer {
   get composers(): PostProcessEffectComposer[] {
@@ -21,6 +20,14 @@ export class PostProcessRenderer {
   }
 
   protected renderer: WebGLRenderer;
+
+  /**
+   * このクラスが管理するEffectComposerの配列。
+   *
+   * エフェクトによっては、複数のEffectComposerを利用する場合がある。
+   *  - 例えばUnrealBloomエフェクトの場合は、bloomをオフスクリーンで描画し、レンダリング結果とmixすることでエフェクトを実現している。
+   * そのため、このクラスでは複数のEffectComposerを管理する。
+   */
   private _composers: PostProcessEffectComposer[] = [];
   protected scene: Scene;
   protected camera: PerspectiveCamera;
@@ -37,8 +44,9 @@ export class PostProcessRenderer {
 
   /**
    * シェーダーパスを挟んだEffectComposerを生成、登録する。
+   *
    * @param passes
-   * @param renderPass
+   * @param renderPass レンダリングパス。省略した場合は、sceneとcameraを利用して自動生成する。複数のコンポーザーで同じレンダリングパスを共有する場合は、この引数にインスタンスを渡す。
    */
   public addComposer(
     passes: Pass[],
