@@ -3,11 +3,15 @@ import { PostProcessEffectComposer } from "../../src/postprocess/PostProcessEffe
 import { WebGLRenderer } from "three";
 
 describe("PostProcessEffectComposer", () => {
-  it("should correctly instantiate PostProcessEffectComposer with default properties", () => {
+  const generateRenderer = () => {
     const canvas = document.createElement("canvas");
     const gl = require("gl")(1, 1);
     const renderer = new WebGLRenderer({ context: gl, canvas: canvas });
-    const composer = new PostProcessEffectComposer(renderer);
+    return renderer;
+  };
+
+  it("should correctly instantiate PostProcessEffectComposer with default properties", () => {
+    const composer = new PostProcessEffectComposer(generateRenderer());
     expect(composer).toBeInstanceOf(PostProcessEffectComposer);
     expect(composer.enabled).toBe(true);
     expect(composer.onBeforeRender).toBeUndefined();
