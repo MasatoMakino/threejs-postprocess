@@ -1,4 +1,4 @@
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, vi } from "vitest";
 import { FXAAShaderPass, PostProcessRenderer } from "../../src/index.js";
 import { PerspectiveCamera, Scene, WebGLRenderer } from "three";
 
@@ -55,5 +55,20 @@ describe("PostProcessRenderer", () => {
 
     expect(pass.uniforms.resolution.value.x).toBe(1 / 100);
     expect(pass.uniforms.resolution.value.y).toBe(1 / 200);
+  });
+
+  it("should be able to render", () => {
+    const { scene, camera } = generateScene();
+    const webGLRenderer = generateWebGLRenderer();
+    const renderer = new PostProcessRenderer(scene, camera, webGLRenderer);
+
+    const pass = new FXAAShaderPass();
+    const composer = renderer.addComposer([pass]);
+    composer.onAfterRender = vi.fn();
+    composer.onBeforeRender = vi.fn();
+
+    renderer.render(0);
+    expect(composer.onAfterRender).toBeCalled();
+    expect(composer.onBeforeRender).toBeCalled();
   });
 });
