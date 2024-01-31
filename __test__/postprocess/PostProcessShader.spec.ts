@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { PostProcessShader } from "../../src/postprocess/PostProcessShader.js";
+import { PostProcessShader } from "../../src/index.js";
 
 describe("PostProcessShader", () => {
   it("should correctly instantiate PostProcessShader with default properties", () => {

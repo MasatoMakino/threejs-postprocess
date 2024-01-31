@@ -1,6 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { PostProcessShader } from "../../src/postprocess/PostProcessShader.js";
-import { PostProcessShaderPass } from "../../src/postprocess/PostProcessShaderPass.js";
+import { PostProcessShader, PostProcessShaderPass } from "../../src/index.js";
 import { Texture } from "three";
 
 describe("PostProcessShaderPass", () => {
