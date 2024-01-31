@@ -30,7 +30,7 @@ class Study {
     // pass.loadMap("./texture/uv_grid_w.jpg");
 
     const aa = new SMAAPass();
-    this.postRenderer.addComposer([pass, aa]);
+    this.postRenderer.createScreenRenderingComposer([pass, aa]);
 
     RAFTicker.on("tick", this.postRenderer.render);
 

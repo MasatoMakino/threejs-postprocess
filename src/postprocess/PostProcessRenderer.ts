@@ -48,7 +48,7 @@ export class PostProcessRenderer {
    * @param passes
    * @param renderPass レンダリングパス。省略した場合は、sceneとcameraを利用して自動生成する。複数のコンポーザーで同じレンダリングパスを共有する場合は、この引数にインスタンスを渡す。
    */
-  public addComposer(
+  public createScreenRenderingComposer(
     passes: Pass[],
     renderPass?: RenderPass,
   ): PostProcessEffectComposer {

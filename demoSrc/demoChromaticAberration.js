@@ -29,7 +29,7 @@ export class Study {
 
     const postProcessRender = new PostProcessRenderer(scene, camera, renderer);
     const pass = new ChromaticAberrationShaderPass();
-    postProcessRender.addComposer([pass]);
+    postProcessRender.createScreenRenderingComposer([pass]);
 
     RAFTicker.on("tick", postProcessRender.render);
 

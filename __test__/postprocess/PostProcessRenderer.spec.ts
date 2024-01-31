@@ -30,7 +30,7 @@ describe("PostProcessRenderer", () => {
     const renderer = new PostProcessRenderer(scene, camera, webGLRenderer);
 
     const pass = new FXAAShaderPass();
-    renderer.addComposer([pass]);
+    renderer.createScreenRenderingComposer([pass]);
     expect(renderer.composers.length).toBe(1);
   });
 
@@ -50,7 +50,7 @@ describe("PostProcessRenderer", () => {
     const renderer = new PostProcessRenderer(scene, camera, webGLRenderer);
 
     const pass = new FXAAShaderPass();
-    renderer.addComposer([pass]);
+    renderer.createScreenRenderingComposer([pass]);
     renderer.setSize(100, 200);
 
     expect(pass.uniforms.resolution.value.x).toBe(1 / 100);
@@ -63,7 +63,7 @@ describe("PostProcessRenderer", () => {
     const renderer = new PostProcessRenderer(scene, camera, webGLRenderer);
 
     const pass = new FXAAShaderPass();
-    const composer = renderer.addComposer([pass]);
+    const composer = renderer.createScreenRenderingComposer([pass]);
     composer.onAfterRender = vi.fn();
     composer.onBeforeRender = vi.fn();
 

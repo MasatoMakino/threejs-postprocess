@@ -23,7 +23,7 @@ class Study {
     const render = new PostProcessRenderer(scene, camera, renderer);
     const pass = new ColorFilterShaderPass();
     const aa = new SMAAPass();
-    render.addComposer([pass, aa]);
+    render.createScreenRenderingComposer([pass, aa]);
     RAFTicker.on("tick", render.render);
 
     this.initGUI(pass, render);

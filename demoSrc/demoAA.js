@@ -40,7 +40,10 @@ export class StudyBloom {
     this.smaaPass = new SMAAPass(size.width, size.height);
     this.fxaaPass = new FXAAShaderPass();
 
-    this.postRenderer.addComposer([this.fxaaPass, this.smaaPass]);
+    this.postRenderer.createScreenRenderingComposer([
+      this.fxaaPass,
+      this.smaaPass,
+    ]);
     RAFTicker.on("tick", this.postRenderer.render);
 
     this.initGUI();
