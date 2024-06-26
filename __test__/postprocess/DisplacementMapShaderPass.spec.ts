@@ -24,4 +24,8 @@ describe("DisplacementMapShaderPass.accessor", () => {
     pass.strengthY = 0.5;
     expect(pass.strengthY).toBe(0.5);
   });
+
+  test("map getter and setter", () => {
+    expect(pass.map).toBeNull();
+  });
 });
