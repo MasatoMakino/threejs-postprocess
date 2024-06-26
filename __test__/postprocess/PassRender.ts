@@ -10,7 +10,15 @@ export const renderingPass = (message: string, pass: PostProcessShaderPass) => {
   composer.onAfterRender = vi.fn();
   composer.onBeforeRender = vi.fn();
 
+  const errorSpy = vi.spyOn(console, "error").mockImplementation(() => {});
+
   renderer.render(0);
   expect(composer.onAfterRender, message).toBeCalled();
   expect(composer.onBeforeRender, message).toBeCalled();
+  expect(
+    errorSpy,
+    message + " : The compilation of the fragmentShader",
+  ).not.toBeCalled();
+
+  errorSpy.mockRestore();
 };
