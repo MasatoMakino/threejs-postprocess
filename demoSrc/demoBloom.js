@@ -44,7 +44,7 @@ export class StudyBloom {
     const mixPass = new MixShaderPass(this.bloom.result);
 
     this.postRenderer.composers.push(this.bloom);
-    this.postRenderer.addComposer([mixPass], renderPass);
+    this.postRenderer.createScreenRenderingComposer([mixPass], renderPass);
     RAFTicker.on("tick", this.postRenderer.render);
 
     this.initGUI();

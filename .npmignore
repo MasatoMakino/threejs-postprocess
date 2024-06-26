@@ -1,8 +1,0 @@
-# .npmignore
-/.husky
-/src
-/docs
-/demoSrc
-gulpfile.ts
-tsconfig.esm.json
-tsconfig.json

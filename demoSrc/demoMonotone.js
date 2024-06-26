@@ -23,7 +23,7 @@ class Study {
     this.postRenderer = new PostProcessRenderer(scene, camera, renderer);
     const pass = new MonotoneShaderPass();
     const aa = new SMAAPass();
-    this.postRenderer.addComposer([pass, aa]);
+    this.postRenderer.createScreenRenderingComposer([pass, aa]);
     RAFTicker.on("tick", this.postRenderer.render);
 
     this.initGUI(pass);
