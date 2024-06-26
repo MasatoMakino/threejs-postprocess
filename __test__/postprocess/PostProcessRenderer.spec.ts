@@ -1,30 +1,16 @@
 import { describe, it, expect, vi } from "vitest";
 import { FXAAShaderPass, PostProcessRenderer } from "../../src/index.js";
-import { PerspectiveCamera, Scene, WebGLRenderer } from "three";
+import { generateScene } from "./SceneGenerator.js";
 
 describe("PostProcessRenderer", () => {
-  const generateWebGLRenderer = () => {
-    const renderer = new WebGLRenderer();
-    return renderer;
-  };
-
-  const generateScene = () => {
-    const scene = new Scene();
-    const camera = new PerspectiveCamera(75, 1, 0.1, 1000);
-    return { scene, camera };
-  };
-
   it("should be able to create an instance", () => {
-    const { scene, camera } = generateScene();
-    const webGLRenderer = generateWebGLRenderer();
+    const { scene, camera, webGLRenderer } = generateScene();
     const renderer = new PostProcessRenderer(scene, camera, webGLRenderer);
-
     expect(renderer).toBeInstanceOf(PostProcessRenderer);
   });
 
   it("should be able to add composer", () => {
-    const { scene, camera } = generateScene();
-    const webGLRenderer = generateWebGLRenderer();
+    const { scene, camera, webGLRenderer } = generateScene();
     const renderer = new PostProcessRenderer(scene, camera, webGLRenderer);
 
     const pass = new FXAAShaderPass();
@@ -33,8 +19,7 @@ describe("PostProcessRenderer", () => {
   });
 
   it("should be able to resize renderer", () => {
-    const { scene, camera } = generateScene();
-    const webGLRenderer = generateWebGLRenderer();
+    const { scene, camera, webGLRenderer } = generateScene();
     const renderer = new PostProcessRenderer(scene, camera, webGLRenderer);
 
     renderer.setSize(100, 200);
@@ -43,8 +28,7 @@ describe("PostProcessRenderer", () => {
   });
 
   it("should be able to resize composers", () => {
-    const { scene, camera } = generateScene();
-    const webGLRenderer = generateWebGLRenderer();
+    const { scene, camera, webGLRenderer } = generateScene();
     const renderer = new PostProcessRenderer(scene, camera, webGLRenderer);
 
     const pass = new FXAAShaderPass();
@@ -56,8 +40,7 @@ describe("PostProcessRenderer", () => {
   });
 
   it("should be able to render", () => {
-    const { scene, camera } = generateScene();
-    const webGLRenderer = generateWebGLRenderer();
+    const { scene, camera, webGLRenderer } = generateScene();
     const renderer = new PostProcessRenderer(scene, camera, webGLRenderer);
 
     const pass = new FXAAShaderPass();

@@ -4,7 +4,9 @@ import { Texture } from "three";
 
 describe("PostProcessShaderPass", () => {
   it("should correctly instantiate PostProcessShaderPass with default properties", () => {
-    const pass = new PostProcessShaderPass(new PostProcessShader());
+    const shader = new PostProcessShader();
+    shader.fragmentShader = "";
+    const pass = new PostProcessShaderPass(shader);
 
     expect(pass).toBeInstanceOf(PostProcessShaderPass);
     expect(pass.uniforms).toBeDefined();
