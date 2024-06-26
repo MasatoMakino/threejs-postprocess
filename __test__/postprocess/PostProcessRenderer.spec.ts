@@ -4,9 +4,7 @@ import { PerspectiveCamera, Scene, WebGLRenderer } from "three";
 
 describe("PostProcessRenderer", () => {
   const generateWebGLRenderer = () => {
-    const canvas = document.createElement("canvas");
-    const gl = require("gl")(1, 1);
-    const renderer = new WebGLRenderer({ context: gl, canvas: canvas });
+    const renderer = new WebGLRenderer();
     return renderer;
   };
 
