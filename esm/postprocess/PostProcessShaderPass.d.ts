@@ -9,11 +9,11 @@ import { IPostProcessShader } from "./PostProcessShader.js";
  * コンストラクターでPostProcessShaderを受け取り、そのシェーダーのuniformを操作する。
  */
 export declare class PostProcessShaderPass extends ShaderPass {
-  uniforms: {
-    [uniform: string]: IUniform;
-  };
-  constructor(shader: IPostProcessShader, textureID?: string);
-  get tDiffuse(): Texture;
-  set tDiffuse(value: Texture);
+    uniforms: {
+        [uniform: string]: IUniform;
+    };
+    constructor(shader: IPostProcessShader, textureID?: string);
+    get tDiffuse(): Texture;
+    set tDiffuse(value: Texture);
 }
 //# sourceMappingURL=PostProcessShaderPass.d.ts.map

@@ -9,19 +9,19 @@ import { IUniform } from "three";
  * 型としては、ShaderPassのコンストラクター第一引数に渡すオブジェクトに相当する。
  */
 export declare class PostProcessShader implements IPostProcessShader {
-  uniforms: {
-    [uniform: string]: IUniform;
-  };
-  vertexShader: string;
-  fragmentShader: string;
-  constructor();
-  protected initUniform(): void;
+    uniforms: {
+        [uniform: string]: IUniform;
+    };
+    vertexShader: string;
+    fragmentShader: string;
+    constructor();
+    protected initUniform(): void;
 }
 export interface IPostProcessShader {
-  uniforms: {
-    [uniform: string]: IUniform;
-  };
-  vertexShader: string;
-  fragmentShader: string;
+    uniforms: {
+        [uniform: string]: IUniform;
+    };
+    vertexShader: string;
+    fragmentShader: string;
 }
 //# sourceMappingURL=PostProcessShader.d.ts.map

@@ -6,13 +6,13 @@ import { ShaderPass } from "three/examples/jsm/postprocessing/ShaderPass.js";
  * コンストラクターでPostProcessShaderを受け取り、そのシェーダーのuniformを操作する。
  */
 export class PostProcessShaderPass extends ShaderPass {
-  constructor(shader, textureID) {
-    super(shader, textureID);
-  }
-  get tDiffuse() {
-    return this.uniforms.tDiffuse.value;
-  }
-  set tDiffuse(value) {
-    this.uniforms.tDiffuse.value = value;
-  }
+    constructor(shader, textureID) {
+        super(shader, textureID);
+    }
+    get tDiffuse() {
+        return this.uniforms.tDiffuse.value;
+    }
+    set tDiffuse(value) {
+        this.uniforms.tDiffuse.value = value;
+    }
 }
