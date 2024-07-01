@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@masatomakino/gulptask-demo-page": "^0.8.3",
-    "@types/three": "^0.165.0",
+    "@types/three": "^0.166.0",
     "@vitest/browser": "^1.6.0",
     "@vitest/coverage-istanbul": "^1.6.0",
     "browser-sync": "^3.0.2",
@@ -30,7 +30,7 @@
     "lil-gui": "^0.19.2",
     "lint-staged": "^15.2.7",
     "prettier": "^3.3.2",
-    "three": "^0.165.0",
+    "three": "^0.166.0",
     "typedoc": "^0.26.3",
     "typescript": "^5.5.3",
     "webdriverio": "^8.39.0"
