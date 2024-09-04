@@ -1,12 +1,11 @@
-import { beforeEach, describe, expect, it, test, vi } from "vitest";
-import { renderingPass } from "./PassRender.js";
+import { describe, expect, it, vi } from "vitest";
 import {
   BloomEffectComposer,
   MixShaderPass,
   PostProcessRenderer,
 } from "../../src/index.js";
 import { generateScene } from "./SceneGenerator.js";
-import { RenderPass } from "three/examples/jsm/Addons.js";
+import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
 import { BoxGeometry, Mesh, MeshBasicMaterial, MeshPhongMaterial } from "three";
 
 describe("BloomEffectComposer", () => {
