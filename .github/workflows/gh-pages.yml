@@ -10,22 +10,30 @@ on:
       - "README.md"
       - "tsconfig**.json"
       - ".github/workflows/*.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "src/**"
+      - "__test__/**"
+      - "package.json"
+      - "tsconfig*.json"
+      - ".github/workflows/*.yml"    
 
 jobs:
   publish:
-    if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "18"
+          node-version: "20"
           cache: "npm"
       - run: npm ci
       - run: npm run build
       - name: Deploy Github pages
         uses: peaceiris/actions-gh-pages@v4
+        if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs
