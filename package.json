@@ -26,7 +26,7 @@
     "@vitest/browser": "*",
     "@vitest/coverage-istanbul": "^2.1.5",
     "browser-sync": "^3.0.3",
-    "husky": "^9.1.6",
+    "husky": "^9.1.7",
     "lil-gui": "^0.20.0",
     "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",
