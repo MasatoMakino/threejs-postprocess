@@ -28,12 +28,12 @@
     "browser-sync": "^3.0.3",
     "husky": "^9.1.7",
     "lil-gui": "^0.20.0",
-    "lint-staged": "^15.2.10",
-    "prettier": "^3.4.1",
+    "lint-staged": "^15.2.11",
+    "prettier": "^3.4.2",
     "three": "^0.171.0",
-    "typedoc": "^0.27.2",
+    "typedoc": "^0.27.5",
     "typescript": "^5.7.2",
-    "webdriverio": "^9.4.1"
+    "webdriverio": "^9.4.2"
   },
   "scripts": {
     "test": "vitest --run",
