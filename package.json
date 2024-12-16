@@ -31,7 +31,7 @@
     "lint-staged": "^15.2.10",
     "prettier": "^3.4.2",
     "three": "^0.171.0",
-    "typedoc": "^0.27.3",
+    "typedoc": "^0.27.5",
     "typescript": "^5.7.2",
     "webdriverio": "^9.4.2"
   },
