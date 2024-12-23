@@ -1,6 +1,6 @@
 {
-  "name": "threejs-postprocess",
-  "discription": "Collection of post process modules for three.js",
+  "name": "@masatomakino/threejs-postprocess",
+  "description": "Collection of post process module for three.js",
   "version": "0.3.0",
   "type": "module",
   "exports": {
@@ -13,7 +13,10 @@
   "files": [
     "esm"
   ],
-  "repository": "https://MasatoMakino@github.com/MasatoMakino/threejs-postprocess.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://MasatoMakino@github.com/MasatoMakino/threejs-postprocess.git"
+  },
   "author": "MasatoMakino <unagiinu.g@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
@@ -51,5 +54,12 @@
   },
   "lint-staged": {
     "*.{js,ts,css,md}": "prettier --write"
-  }
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "bugs": {
+    "url": "https://github.com/MasatoMakino/threejs-postprocess/issues"
+  },
+  "homepage": "https://github.com/MasatoMakino/threejs-postprocess#readme"
 }
