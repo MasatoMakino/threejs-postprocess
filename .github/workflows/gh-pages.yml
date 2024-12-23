@@ -3,21 +3,9 @@ name: Publish github pages
 on:
   push:
     branches: [main]
-    paths:
-      - "src/**"
-      - "demoSrc/**"
-      - "package.json"
-      - "README.md"
-      - "tsconfig**.json"
-      - ".github/workflows/*.yml"
   pull_request:
     branches: [main]
-    paths:
-      - "src/**"
-      - "__test__/**"
-      - "package.json"
-      - "tsconfig*.json"
-      - ".github/workflows/*.yml"    
+   
 
 jobs:
   publish:
