@@ -1,7 +1,7 @@
 {
   "name": "@masatomakino/threejs-postprocess",
   "description": "Collection of post process module for three.js",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "type": "module",
   "exports": {
     ".": {
