@@ -63,3 +63,4 @@ typings/
 *.tsbuildinfo
 docs
 .lib
+esm
