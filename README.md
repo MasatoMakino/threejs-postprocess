@@ -2,7 +2,9 @@
 
 > Collection of post process module for three.js
 
-[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
+[![npm version](https://badge.fury.io/js/@masatomakino%2Fthreejs-postprocess.svg)](https://badge.fury.io/js/@masatomakino%2Fthreejs-postprocess)
+[![Build test](https://github.com/MasatoMakino/threejs-postprocess/actions/workflows/buildTest.yml/badge.svg)](https://github.com/MasatoMakino/threejs-postprocess/actions/workflows/buildTest.yml)
 
 [![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=MasatoMakino&repo=threejs-postprocess&show_owner=true)](https://github.com/MasatoMakino/threejs-postprocess)
 
@@ -15,7 +17,7 @@
 ### Install
 
 ```bash
-npm install https://github.com/MasatoMakino/threejs-postprocess.git --save-dev
+npm i -D @masatomakino/threejs-postprocess
 ```
 
 ### Import
