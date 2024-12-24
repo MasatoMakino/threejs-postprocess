@@ -30,7 +30,7 @@ At first, import classes,
 import {
   PostProcessRenderer,
   ChromaticAberrationShaderPass,
-} from "threejs-postprocess";
+} from "@masatomakino/threejs-postprocess";
 ```
 
 ### create `PostProcessRenderer` instance
