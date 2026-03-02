@@ -6,14 +6,16 @@ export default defineConfig({
       enabled: true,
       provider: "webdriverio",
       headless: true,
-      instances: [{ browser: "chrome" }],
-      providerOptions: {
-        capabilities: {
-          "goog:chromeOptions": {
-            args: ["--use-gl=angle", "--use-angle=swiftshader"],
+      instances: [
+        {
+          browser: "chrome",
+          capabilities: {
+            "goog:chromeOptions": {
+              args: ["--use-gl=angle", "--use-angle=swiftshader"],
+            },
           },
         },
-      },
+      ],
     },
     poolOptions: {
       threads: {
