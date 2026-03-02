@@ -30,9 +30,7 @@
     "@vitest/browser": "*",
     "@vitest/coverage-istanbul": "^3.0.2",
     "browser-sync": "^3.0.3",
-    "husky": "^9.1.7",
     "lil-gui": "^0.20.0",
-    "lint-staged": "^16.1.0",
     "prettier": "^3.4.2",
     "three": "^0.183.1",
     "typedoc": "^0.28.0",
@@ -50,13 +48,11 @@
     "demo": "npx @masatomakino/gulptask-demo-page --body '<canvas id=\"webgl-canvas\" width=\"640\" height=\"480\"></canvas>'",
     "watch:demo": "npm run demo -- -W",
     "typedocs": "npx typedoc --out ./docs/api src/index.ts",
-    "server": "browser-sync ./docs/demo -w",
-    "prepare": "husky",
+    "server": "browser-sync ./docs/demo -w --port 3000 --no-open",
+    "pre-commit": "prettier --write --ignore-unknown",
+    "pre-push": "vitest --run",
     "preversion": "npx @masatomakino/release-helper preversion",
     "postversion": "npx @masatomakino/release-helper postversion"
-  },
-  "lint-staged": {
-    "*.{js,ts,css,md}": "prettier --write"
   },
   "directories": {
     "doc": "docs"
