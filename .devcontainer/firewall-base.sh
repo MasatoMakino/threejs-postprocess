@@ -22,6 +22,15 @@ done
 # 1. Extract Docker DNS info BEFORE any flushing
 DOCKER_DNS_RULES=$(iptables-save -t nat | grep "127\.0\.0\.11" || true)
 
+# Reset default policies to ACCEPT before flushing for idempotent reruns.
+# On rerun, previous DROP policies would block bootstrap curl otherwise.
+iptables -P INPUT ACCEPT
+iptables -P FORWARD ACCEPT
+iptables -P OUTPUT ACCEPT
+ip6tables -P INPUT ACCEPT 2>/dev/null || true
+ip6tables -P FORWARD ACCEPT 2>/dev/null || true
+ip6tables -P OUTPUT ACCEPT 2>/dev/null || true
+
 # Flush existing rules and delete existing ipsets
 iptables -F
 iptables -X
