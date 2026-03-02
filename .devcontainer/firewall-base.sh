@@ -38,6 +38,8 @@ iptables -t nat -F
 iptables -t nat -X
 iptables -t mangle -F
 iptables -t mangle -X
+ip6tables -F 2>/dev/null || true
+ip6tables -X 2>/dev/null || true
 ipset destroy allowed-domains 2>/dev/null || true
 
 # 2. Selectively restore ONLY internal Docker DNS resolution
@@ -93,6 +95,10 @@ fi
 
 echo "Processing GitHub IPs..."
 while read -r cidr; do
+    # Skip IPv6 ranges (IPv4 firewall only)
+    if [[ "$cidr" == *:* ]]; then
+        continue
+    fi
     if [[ ! "$cidr" =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}/[0-9]{1,2}$ ]]; then
         echo "ERROR: Invalid CIDR range from GitHub meta: $cidr"
         exit 1
