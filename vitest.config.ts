@@ -11,7 +11,11 @@ export default defineConfig({
           browser: "chrome",
           capabilities: {
             "goog:chromeOptions": {
-              args: ["--use-gl=angle", "--use-angle=swiftshader"],
+              args: [
+                "--use-gl=angle",
+                "--use-angle=swiftshader",
+                "--disable-background-networking",
+              ],
             },
           },
         },
