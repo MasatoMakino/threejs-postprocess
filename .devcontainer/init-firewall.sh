@@ -39,9 +39,6 @@ echo "Using DNS server: $DNS_SERVER"
 # Allow outbound DNS to container's resolver only (prevents DNS tunneling)
 iptables -A OUTPUT -p udp -d "$DNS_SERVER" --dport 53 -j ACCEPT
 iptables -A OUTPUT -p tcp -d "$DNS_SERVER" --dport 53 -j ACCEPT
-# Inbound DNS responses are covered by ESTABLISHED,RELATED rule
-# Allow outbound SSH (inbound responses covered by ESTABLISHED,RELATED)
-iptables -A OUTPUT -p tcp --dport 22 -j ACCEPT
 # Allow localhost
 iptables -A INPUT -i lo -j ACCEPT
 iptables -A OUTPUT -o lo -j ACCEPT
@@ -76,15 +73,11 @@ while read -r cidr; do
 done < <(echo "$gh_ranges" | jq -r '(.web + .api + .git)[]' | aggregate -q)
 
 # Resolve and add other allowed domains
+# npm runner needs: npm registry + ChromeDriver downloads (for Vitest browser tests)
 for domain in \
     "registry.npmjs.org" \
-    "api.anthropic.com" \
-    "sentry.io" \
-    "statsig.anthropic.com" \
-    "statsig.com" \
-    "marketplace.visualstudio.com" \
-    "vscode.blob.core.windows.net" \
-    "update.code.visualstudio.com"; do
+    "storage.googleapis.com" \
+    "edgedl.me.gvt1.com"; do
     echo "Resolving $domain..."
     ips=$(dig +noall +answer A "$domain" | awk '$4 == "A" {print $5}')
     if [ -z "$ips" ]; then
@@ -143,10 +136,10 @@ else
     echo "Firewall verification passed - unable to reach https://example.com as expected"
 fi
 
-# Verify GitHub API access
-if ! curl --connect-timeout 5 https://api.github.com/zen >/dev/null 2>&1; then
-    echo "ERROR: Firewall verification failed - unable to reach https://api.github.com"
+# Verify npm registry access
+if ! curl --connect-timeout 5 https://registry.npmjs.org/ >/dev/null 2>&1; then
+    echo "ERROR: Firewall verification failed - unable to reach https://registry.npmjs.org"
     exit 1
 else
-    echo "Firewall verification passed - able to reach https://api.github.com as expected"
+    echo "Firewall verification passed - able to reach https://registry.npmjs.org as expected"
 fi

@@ -8,6 +8,8 @@ RUN set -eux; \
         ca-certificates \
         curl \
         gnupg \
+        sudo \
+        iptables ipset iproute2 dnsutils aggregate jq \
     ; \
     curl -fsSL https://dl.google.com/linux/linux_signing_key.pub \
         | gpg --dearmor -o /usr/share/keyrings/google-chrome.gpg; \
@@ -20,5 +22,10 @@ RUN set -eux; \
         xvfb \
     ; \
     rm -rf /var/lib/apt/lists/*
+
+COPY init-firewall.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/init-firewall.sh && \
+    echo "node ALL=(root) NOPASSWD: /usr/local/bin/init-firewall.sh" > /etc/sudoers.d/node-firewall && \
+    chmod 0440 /etc/sudoers.d/node-firewall
 
 RUN node --version && npm --version && google-chrome --version
